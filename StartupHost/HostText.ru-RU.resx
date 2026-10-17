@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Управляйте службой запуска в настройках Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Для управления службой запуска требуются права администратора.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Выполняется другая операция настройки службы запуска.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: служба запуска с высоким приоритетом</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Путь запуска должен указывать на локальный файл WallpaperSwitch.exe.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Приложение Wallpaper Switch не найдено.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Запуск Wallpaper Switch с высоким приоритетом</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Запускает Wallpaper Switch заранее от имени вошедшего пользователя. Включите службу вручную в настройках приложения.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Каталог установки службы не может быть символической ссылкой или точкой соединения.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Не удалось управлять службой (код ошибки {0}): {1}{2}</value></data>
+</root>

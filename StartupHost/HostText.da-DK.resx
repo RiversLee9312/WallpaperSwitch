@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Administrer starttjenesten i Wallpaper Switch-indstillingerne.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Det kræver administratortilladelse at administrere starttjenesten.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>En anden konfiguration af starttjenesten er stadig i gang.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: starttjeneste med høj prioritet</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Startstien skal pege på en lokal WallpaperSwitch.exe-fil.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Wallpaper Switch-appen blev ikke fundet.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch-start med høj prioritet</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Starter Wallpaper Switch tidligt som den bruger, der er logget på. Aktivér tjenesten manuelt i appindstillingerne.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Tjenestens installationsmappe må ikke være et symbolsk link eller en junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Administration af tjenesten mislykkedes (fejlkode {0}): {1}{2}</value></data>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Gestisci il servizio di avvio dalle impostazioni di Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Per gestire il servizio di avvio sono necessari i privilegi di amministratore.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>È ancora in corso un’altra operazione di configurazione del servizio di avvio.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: servizio di avvio ad alta priorità</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Il percorso di avvio deve puntare a un file WallpaperSwitch.exe locale.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>L’app Wallpaper Switch non è stata trovata.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Avvio ad alta priorità di Wallpaper Switch</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Avvia Wallpaper Switch in anticipo con l’account dell’utente connesso. Attiva manualmente il servizio nelle impostazioni dell’app.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>La directory di installazione del servizio non può essere un collegamento simbolico o una junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Gestione del servizio non riuscita (codice di errore {0}): {1}{2}</value></data>
+</root>

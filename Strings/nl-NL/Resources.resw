@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>Er is een fout opgetreden in Wallpaper Switch</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>Wallpaper Switch kan niet worden gestart</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>De bron voor het systeemvakpictogram ontbreekt.</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>Wallpaper Switch</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>Pas de lichte of donkere modus toe op apps die deze instelling ondersteunen, zoals de weergave van macOS.</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>Appthema wijzigen</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>Schema nu toepassen</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>Werk de locatie voor zonsopgang en zonsondergang met de gekozen frequentie bij zolang de app op de achtergrond actief is.</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>Locatie automatisch bijwerken</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>Thema en achtergrond automatisch wijzigen bij zonsopgang, overdag, bij zonsondergang en ’s nachts</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>Automatisch schakelen inschakelen</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>Zonnehoogte van −6° tot 10°</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>Zonsopgang</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>Geen afbeelding geselecteerd</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>Gebruik in deze periode de achtergrond en het thema voor zonsopgang.</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>Zonsopgang begint</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>Van ochtend tot middag</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>Overdag</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>Geen afbeelding geselecteerd</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>De dag begint zodra de zonsopgang is afgelopen.</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>Dag begint</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>Gebruik voor elke periode de hieronder geselecteerde afbeelding.</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>Ook de bureaubladachtergrond wijzigen</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>Rond zonsondergang</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>Schemering</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>Geen afbeelding geselecteerd</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>De schemering begint zodra de dag is afgelopen.</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>Schemering begint</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>De bureaubladachtergrond is gewijzigd, maar synchroniseren met het vergrendelscherm is mislukt: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>AppearanceController moet worden gestart op de UI-thread.</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>Er wordt al een locatie bijgewerkt. Probeer het zo meteen opnieuw.</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>Locatietoegang is uitgeschakeld. Geef deze app toegang tot je locatie via Windows-instellingen.</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>Time-out bij het ophalen van je locatie. Controleer de Windows-locatieservice en probeer het opnieuw.</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>LocationUpdateService moet worden gestart op de UI-thread.</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>Het bestand met de achtergrond voor het vergrendelscherm is niet gevonden.</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>Volgende wijziging om {0}: {1}</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>De opstartinstellingen zijn mislukt (foutcode {0}). Bekijk het Windows-bericht voor meer informatie.</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>Het onderdeel van de opstartservice is niet gevonden. Installeer de app opnieuw.</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>Het installatieprogramma van de opstartservice kan niet worden gestart.</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>Het pad van de huidige toepassing is niet gevonden.</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>De registersleutel voor Windows Persoonlijke instellingen kan niet worden geopend.</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>De bron voor het systeemvakpictogram ontbreekt.</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>De bureaubladachtergrond kan niet worden ingesteld.</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>Het achtergrondbestand is niet gevonden.</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>Elke dag</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>Elke 12 uur</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>Elk uur</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>Elke maand</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>Elke week</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>Handmatige configuratie en beheerdersmachtiging vereist. Een Windows-service start de app vroeg bij het aanmelden.</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>Opstarten met hoge prioriteit</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Opstarten met hoge prioriteit</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>De taal is gewijzigd in {0}. Start Wallpaper Switch opnieuw om de wijziging toe te passen.</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>Windows volgen</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>Kies een taal voor de app. Start de app opnieuw om de wijziging toe te passen.</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>App-taal</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>App-taal</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>Automatische updates zijn uitgeschakeld</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>Breedtegraad {0:F4}, lengtegraad {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>Automatische locatie-updates inschakelen is mislukt: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>Automatische locatie-updates zijn ingeschakeld en de eerste locatiecontrole is voltooid.</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>Huidige locatie ophalen…</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>De laatste automatische update is mislukt: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>Laatst bijgewerkt: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>Uit. Je kunt nog steeds 'Huidige locatie gebruiken' kiezen om de locatie handmatig bij te werken.</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>De geselecteerde updatefrequentie wordt na deze update hervat</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; volgende update rond {1:g}</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>Geen locatie ingesteld</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>Locatie ophalen is mislukt: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; er wordt binnenkort een update op de achtergrond uitgevoerd</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>De tijden van zonsopgang en zonsondergang zijn berekend op basis van je huidige locatie.</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>Wachten op de eerste automatische update</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>Geen locatie ingesteld</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>Locatie voor zonsopgang en zonsondergang</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>Elke dag</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>Elke 12 uur</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>Automatische updates zijn uitgeschakeld</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>Frequentie van locatie-updates</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>Elk uur</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>Elke maand</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>Elke week</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>Gebruik dezelfde afbeelding voor het vergrendelscherm wanneer de bureaubladachtergrond wijzigt.</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>Vergrendelscherm en bureaublad synchroniseren</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>Huidige status laden…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>Na zonsondergang tot zonsopgang</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>Nacht</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>Geen afbeelding geselecteerd</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>De nacht begint na de schemering en duurt tot zonsopgang de volgende dag.</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>Nacht begint</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>Zonsopgang</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>Overdag</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>Schemering</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>Nacht</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>Achtergrond</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>Kiezen…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>Een andere modus bekijken</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>Aangepaste tijden zijn eenvoudiger; van zonsopgang tot zonsondergang werkt meer zoals de automatische weergave van macOS.</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>Planningsmethode</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>Aangepaste tijden</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>Zonsopgang tot zonsondergang</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>Weergave per periode</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>Algemeen</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>Schema</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>Windows-kleuren</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>Opstarten is uitgeschakeld.</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>De beheerdersaanvraag is geannuleerd. De opstartinstellingen zijn niet gewijzigd.</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>Schakel eerst 'Starten bij aanmelden' in. Deze functie is standaard uitgeschakeld en vereist beheerdersmachtiging.</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>Opstarten met hoge prioriteit is ingeschakeld. De Windows-service start de app op de achtergrond wanneer je je aanmeldt.</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>Standaard opstarten is ingeschakeld.</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>Handmatige configuratie en beheerdersmachtiging vereist. Een Windows-service start de app vroeg bij het aanmelden.</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>De service is gestopt of uitgeschakeld. Schakel deze optie uit en weer in om de service te herstellen (beheerdersmachtiging vereist).</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>Ingeschakeld: de Windows-service start de app op de achtergrond bij aanmelden als de huidige gebruiker.</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>De opstartstatus kan niet worden gelezen: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>De opstartinstellingen kunnen niet worden bijgewerkt: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>Opstartinstellingen bijwerken. Voltooi eventuele beheerdersprompt die verschijnt…</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>Blijf op de achtergrond schakelen nadat je je bij Windows hebt aangemeld</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>Starten bij aanmelden</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Starten bij aanmelden</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>Huidige periode: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>Donkere modus</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>Rond {0}–{1} (zonnehoogte −6° tot 10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>Automatisch schakelen is uitgeschakeld. Voorbeeld van {0} in {1}.</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>Er is iets misgegaan</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>Lichte modus</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>Voorbeeld ({0}). {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>Voorbeeld van {0}</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>Begint rond {0}</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>Gereed</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>Zonsopgang {0}–{1} · Zonsopkomst {2} · Zonsondergang {3} · Schemering {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>Voor plannen op basis van zonsopgang en zonsondergang is een locatie nodig. Kies 'Huidige locatie gebruiken' of schakel terug naar aangepaste tijden.</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>Nog één stap</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>Ook de lichte of donkere modus voor de taakbalk, het menu Start en Windows wijzigen.</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>Windows-thema wijzigen</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>Donker</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>Licht</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>Wallpaper Switch</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>Schema nu toepassen</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>Hoofdvenster openen</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>De app op de achtergrond actief houden wanneer je het venster sluit.</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>Naar het systeemvak minimaliseren bij sluiten</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>Huidige locatie gebruiken</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>Centreren</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>Vullen</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>Passend maken</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>Komt overeen met Vullen, Passend maken, Uitrekken en andere opties in Windows Persoonlijke instellingen.</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>Achtergrond passend maken</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>Over meerdere beeldschermen</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>Uitrekken</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>Tegels</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>Wallpaper Switch</value>
+  </data>
+</root>

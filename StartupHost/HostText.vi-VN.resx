@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Quản lý dịch vụ khởi động trong phần cài đặt Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Cần có quyền quản trị viên để quản lý dịch vụ khởi động.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Một thao tác cấu hình dịch vụ khởi động khác vẫn đang diễn ra.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: dịch vụ khởi động ưu tiên cao</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Đường dẫn khởi động phải trỏ đến tệp WallpaperSwitch.exe cục bộ.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Không tìm thấy ứng dụng Wallpaper Switch.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Khởi động ưu tiên cao Wallpaper Switch</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Khởi chạy Wallpaper Switch sớm bằng tài khoản người dùng đã đăng nhập. Hãy bật thủ công trong phần cài đặt ứng dụng.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Thư mục cài đặt dịch vụ không được là liên kết tượng trưng hoặc junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Không thể quản lý dịch vụ (mã lỗi {0}): {1}{2}</value></data>
+</root>

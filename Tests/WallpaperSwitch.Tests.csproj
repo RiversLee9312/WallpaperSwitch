@@ -1,0 +1,21 @@
+<Project Sdk="MSTest.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TestingExtensionsProfile>None</TestingExtensionsProfile>
+    <EnableMicrosoftTestingExtensionsTrxReport>true</EnableMicrosoftTestingExtensionsTrxReport>
+    <AssemblyName>WallpaperSwitch.Tests</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0" />
+    <Compile Include="..\Shared\StartupConfiguration.cs" Link="StartupConfiguration.cs" />
+    <Compile Include="..\Shared\StartupModeController.cs" Link="StartupModeController.cs" />
+    <Compile Include="..\Models\AppSettings.cs" Link="AppSettings.cs" />
+    <Compile Include="..\Localization\LanguageCatalog.cs" Link="Localization\LanguageCatalog.cs" />
+    <Content Include="..\Strings\**\Resources.resw" Link="Strings\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\StartupHost\HostText*.resx" Link="HostResources\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\MainWindow.xaml" Link="MainWindow.xaml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>נהלו את שירות ההפעלה דרך ההגדרות של Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>ניהול שירות ההפעלה דורש הרשאת מנהל מערכת.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>פעולה אחרת להגדרת שירות ההפעלה עדיין מתבצעת.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: שירות הפעלה בעדיפות גבוהה</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>נתיב ההפעלה חייב להפנות לקובץ WallpaperSwitch.exe מקומי.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>האפליקציה Wallpaper Switch לא נמצאה.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>הפעלה בעדיפות גבוהה של Wallpaper Switch</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>מפעיל את Wallpaper Switch מוקדם בשם המשתמש המחובר. יש להפעיל את השירות ידנית בהגדרות האפליקציה.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>תיקיית התקנת השירות אינה יכולה להיות קישור סמלי או junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>ניהול השירות נכשל (קוד שגיאה {0}): {1}{2}</value></data>
+</root>

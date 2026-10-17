@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Kelola layanan startup melalui pengaturan Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Pengelolaan layanan startup memerlukan izin administrator.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Operasi konfigurasi layanan startup lainnya masih berlangsung.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: layanan startup prioritas tinggi</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Jalur startup harus mengarah ke file WallpaperSwitch.exe lokal.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Aplikasi Wallpaper Switch tidak ditemukan.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Startup prioritas tinggi Wallpaper Switch</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Memulai Wallpaper Switch lebih awal atas nama pengguna yang masuk. Aktifkan secara manual di pengaturan aplikasi.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Direktori instalasi layanan tidak boleh berupa tautan simbolis atau junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Pengelolaan layanan gagal (kode kesalahan {0}): {1}{2}</value></data>
+</root>

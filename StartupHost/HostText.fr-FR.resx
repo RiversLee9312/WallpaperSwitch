@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Gérez le service de démarrage dans les paramètres de Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>La gestion du service de démarrage nécessite des droits d’administrateur.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Une autre opération de configuration du service de démarrage est en cours.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch : service de démarrage prioritaire</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Le chemin de démarrage doit pointer vers un fichier WallpaperSwitch.exe local.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>L’application Wallpaper Switch est introuvable.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Démarrage prioritaire de Wallpaper Switch</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Démarre Wallpaper Switch en avance pour l’utilisateur connecté. Activez le service manuellement dans les paramètres de l’application.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Le répertoire d’installation du service ne peut pas être un lien symbolique ou une jonction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Échec de la gestion du service (code d’erreur {0}) : {1}{2}</value></data>
+</root>

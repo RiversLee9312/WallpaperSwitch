@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Wallpaper Switch की सेटिंग से स्टार्टअप सेवा प्रबंधित करें।</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>स्टार्टअप सेवा प्रबंधित करने के लिए व्यवस्थापक अनुमति आवश्यक है।</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>स्टार्टअप सेवा कॉन्फ़िगरेशन का एक अन्य कार्य अभी चल रहा है।</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: उच्च-प्राथमिकता स्टार्टअप सेवा</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>स्टार्टअप पथ किसी स्थानीय WallpaperSwitch.exe फ़ाइल की ओर होना चाहिए।</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Wallpaper Switch ऐप नहीं मिला।</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch उच्च-प्राथमिकता स्टार्टअप</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>साइन इन किए हुए उपयोगकर्ता के रूप में Wallpaper Switch को जल्दी शुरू करता है। ऐप सेटिंग में इसे स्वयं सक्षम करें।</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>सेवा इंस्टॉलेशन डायरेक्टरी प्रतीकात्मक लिंक या जंक्शन नहीं हो सकती।</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>सेवा प्रबंधन विफल हुआ (त्रुटि कोड {0}): {1}{2}</value></data>
+</root>

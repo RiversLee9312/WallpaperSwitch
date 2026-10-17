@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>배경화면 전환에 오류가 발생했습니다.</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>배경화면 전환을 시작할 수 없습니다.</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>트레이 아이콘 리소스가 누락되었습니다.</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>배경화면 전환</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>macOS Appearance와 유사하게 이 설정을 지원하는 앱에 밝은 모드 또는 어두운 모드를 적용합니다.</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>앱 테마 전환</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>일정 지금 적용</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>앱이 백그라운드에서 실행되는 동안 선택한 빈도로 새벽과 황혼에 사용되는 위치를 업데이트합니다.</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>자동으로 위치 업데이트</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>새벽, 낮, 황혼, 밤에 테마와 배경화면이 자동으로 전환됩니다.</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>자동 전환 활성화</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>태양 고도 −6° ~ 10°</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>새벽</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>선택한 이미지가 없습니다.</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>이 기간 동안 새벽 배경화면과 테마를 사용해보세요.</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>새벽이 시작된다</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>오전부터 오후까지</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>주간</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>선택한 이미지가 없습니다.</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>낮은 새벽이 끝난 후에 시작됩니다.</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>주간 시작</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>각 기간에 대해 아래에서 선택한 이미지를 사용하십시오.</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>바탕화면도 바꿔보세요</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>일몰 무렵</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>황혼</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>선택한 이미지가 없습니다.</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>황혼은 낮이 끝난 후에 시작됩니다.</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>황혼이 시작된다</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>바탕 화면 배경화면이 변경되었지만 잠금 화면 동기화에 실패했습니다: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>AppearanceController는 UI 스레드에서 시작되어야 합니다.</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>위치 업데이트가 이미 진행 중입니다. 잠시 후 다시 시도하세요.</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>위치 액세스가 사용 중지되었습니다. Windows 설정에서 이 앱이 위치를 사용하도록 허용하세요.</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>위치 확인 시간이 초과되었습니다. Windows 위치 서비스를 확인하고 다시 시도하세요.</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>LocationUpdateService는 UI 스레드에서 시작되어야 합니다.</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>잠금 화면 배경화면 파일을 찾을 수 없습니다.</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>다음 {0}에서 {1}로 전환하세요</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>시작 설정에 실패했습니다(오류 코드 {0}). 자세한 내용은 Windows 메시지를 참조하세요.</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>시작 서비스 구성 요소를 찾을 수 없습니다. 앱을 다시 설치하세요.</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>시작 서비스 설치 프로그램을 시작할 수 없습니다.</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>현재 애플리케이션 경로를 찾을 수 없습니다.</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>Windows 개인화 레지스트리 키를 열 수 없습니다.</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>트레이 아이콘 리소스가 누락되었습니다.</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>바탕화면 배경화면을 설정할 수 없습니다.</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>배경화면 파일을 찾을 수 없습니다.</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>매일</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>12시간마다</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>매시간</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>매달</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>매주</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>수동 설정 및 관리자 권한이 필요합니다. Windows 서비스를 사용하여 로그인 시 일찍 앱을 시작합니다.</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>우선순위가 높은 스타트업</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>우선순위가 높은 스타트업</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>앱 언어를 {0}(으)로 변경했습니다. 적용하려면 배경화면 전환을 다시 시작하세요.</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>Windows 설정 따르기</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>앱의 언어를 선택하세요. 변경 사항을 적용하려면 앱을 다시 시작하세요.</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>앱 언어</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>앱 언어</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>자동 업데이트 꺼짐</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>위도 {0:F4}, 경도 {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>자동 위치 업데이트를 활성화할 수 없습니다: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>자동 위치 업데이트가 활성화되고 첫 번째 위치 확인이 완료됩니다.</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>현재 위치를 가져오는 중…</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>마지막 자동 업데이트 실패: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>마지막 업데이트: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>꺼짐. '현재 위치 사용'을 선택하여 수동으로 업데이트할 수도 있습니다.</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>선택한 업데이트 빈도는 이 업데이트 후에 다시 시작됩니다.</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; 다음 업데이트는 {1:g}쯤입니다.</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>설정된 위치 없음</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>위치를 가져올 수 없습니다: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; 업데이트가 곧 백그라운드에서 실행됩니다</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>일출 및 일몰 시간은 현재 위치를 기준으로 계산되었습니다.</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>첫 번째 자동 업데이트를 기다리는 중</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>설정된 위치 없음</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>일출과 일몰의 위치</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>매일</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>12시간마다</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>자동 업데이트가 사용 중지되었습니다.</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>위치 업데이트 빈도</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>매시간</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>매달</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>매주</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>바탕 화면 배경 무늬가 변경되면 잠금 화면에 동일한 이미지를 사용하세요.</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>잠금 화면과 데스크톱 동기화</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>현재 상태 로드 중…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>일몰 후부터 새벽까지</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>밤</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>선택한 이미지가 없습니다.</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>밤은 해가 진 후에 시작되어 다음날 새벽까지 지속됩니다.</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>밤이 시작된다</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>새벽</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>주간</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>황혼</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>밤</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>바탕화면</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>선택하세요…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>다른 모드 미리보기</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>사용자 정의 시간은 더 간단합니다. 일출부터 일몰까지의 동작은 macOS Auto Appearance와 유사합니다.</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>일정 방법</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>맞춤 시간</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>일출부터 일몰까지</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>시대별 모습</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>일정</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>Windows 색상</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>시작이 비활성화되었습니다.</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>관리자 승인이 취소되었습니다. 시작 설정이 변경되지 않았습니다.</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>먼저 '로그인 시 시작'을 켭니다. 이 기능은 기본적으로 꺼져 있으며 관리자 권한이 필요합니다.</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>우선순위가 높은 시작이 활성화되었습니다. Windows 서비스는 로그인 시 백그라운드에서 앱을 시작합니다.</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>표준 시작이 활성화되었습니다.</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>수동 설정 및 관리자 권한이 필요합니다. Windows 서비스를 사용하여 로그인 시 일찍 앱을 시작합니다.</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>서비스가 중지되었거나 비활성화되었습니다. 수리하려면 이 기능을 껐다가 다시 켜세요(관리자 권한 필요).</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>활성화됨: Windows 서비스가 현재 사용자로 백그라운드에서 앱을 시작합니다.</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>시작 상태를 읽을 수 없습니다: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>시작 설정을 업데이트할 수 없습니다: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>시작 설정을 업데이트하는 중입니다. 표시되는 관리자 프롬프트를 완료하세요…</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>Windows에 로그인한 후 백그라운드에서 계속 전환합니다.</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>로그인부터 시작</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>로그인부터 시작</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>현재 시간대: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>어두운 모드</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>약 {0}~{1}(태양 고도 −6°~10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>자동 전환이 꺼져 있습니다. {1}에서 {0} 미리보기 중입니다.</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>문제가 발생했습니다.</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>밝은 모드</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>미리보기({0}). {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>미리보기 {0}</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>약 {0}번 시작</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>새벽 {0}–{1} · 일출 {2} · 일몰 {3} · 황혼 {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>일출 및 일몰 일정을 예약하려면 위치가 필요합니다. '현재 위치 사용'을 선택하거나 맞춤 시간으로 다시 전환하세요.</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>한 단계만 더</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>또한 작업 표시줄, 시작 메뉴 및 Windows 인터페이스의 밝은 모드 또는 어두운 모드를 변경합니다.</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>Windows 테마 전환</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>어둡게</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>밝게</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>테마</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>배경화면 전환</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>지금 일정을 신청하세요</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>메인 창 열기</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>창을 닫아도 앱이 백그라운드에서 계속 실행됩니다.</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>닫을 때 트레이로 최소화</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>현재 위치 사용</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>센터</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>채우기</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>핏</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>Windows 개인화의 채우기, 맞춤, 늘이기 및 기타 옵션과 일치합니다.</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>벽지 맞춤</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>스팬</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>스트레칭</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>타일</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>끄기</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>배경화면 전환</value>
+  </data>
+</root>

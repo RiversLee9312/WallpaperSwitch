@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>จัดการบริการเริ่มต้นระบบได้จากการตั้งค่า Wallpaper Switch</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>การจัดการบริการเริ่มต้นระบบต้องใช้สิทธิ์ผู้ดูแลระบบ</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>ยังมีการดำเนินการกำหนดค่าบริการเริ่มต้นระบบอื่นอยู่</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: บริการเริ่มต้นระบบลำดับความสำคัญสูง</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>เส้นทางเริ่มต้นระบบต้องชี้ไปยังไฟล์ WallpaperSwitch.exe ภายในเครื่อง</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>ไม่พบแอป Wallpaper Switch</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>การเริ่มต้น Wallpaper Switch ลำดับความสำคัญสูง</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>เริ่ม Wallpaper Switch ก่อนโดยใช้บัญชีผู้ใช้ที่ลงชื่อเข้าใช้ เปิดใช้บริการด้วยตนเองจากการตั้งค่าแอป</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>ไดเรกทอรีติดตั้งบริการต้องไม่เป็นลิงก์สัญลักษณ์หรือจังก์ชัน</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>จัดการบริการไม่สำเร็จ (รหัสข้อผิดพลาด {0}): {1}{2}</value></data>
+</root>

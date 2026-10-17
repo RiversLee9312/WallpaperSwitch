@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>Wallpaper Switch พบข้อผิดพลาด</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>ไม่สามารถเริ่ม Wallpaper Switch ได้</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>ไม่พบไอคอนในถาดระบบ</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>สลับวอลเปเปอร์</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>ใช้โหมดสว่างหรือมืดกับแอปที่รองรับการตั้งค่านี้ เช่น Appearance ใน macOS</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>เปลี่ยนธีมของแอป</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>ใช้กำหนดการตอนนี้</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>อัปเดตตำแหน่งสำหรับรุ่งเช้าและพลบค่ำตามความถี่ที่เลือกขณะแอปทำงานในเบื้องหลัง</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>อัปเดตตำแหน่งอัตโนมัติ</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>เปลี่ยนธีมและวอลเปเปอร์อัตโนมัติในช่วงรุ่งเช้า กลางวัน พลบค่ำ และกลางคืน</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>เปิดการสลับอัตโนมัติ</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>มุมเงยของดวงอาทิตย์ตั้งแต่ −6° ถึง 10°</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>รุ่งเช้า</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>ยังไม่ได้เลือกรูปภาพ</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>ใช้วอลเปเปอร์และธีมรุ่งเช้าในช่วงเวลานี้</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>เริ่มรุ่งเช้า</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>ช่วงเช้าถึงบ่าย</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>กลางวัน</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>ยังไม่ได้เลือกรูปภาพ</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>ช่วงกลางวันเริ่มหลังจากรุ่งเช้าสิ้นสุด</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>เริ่มกลางวัน</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>ใช้รูปภาพที่เลือกด้านล่างในแต่ละช่วงเวลา</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>เปลี่ยนวอลเปเปอร์เดสก์ท็อปด้วย</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>ช่วงเวลาพระอาทิตย์ตก</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>พลบค่ำ</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>ยังไม่ได้เลือกรูปภาพ</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>ช่วงพลบค่ำเริ่มหลังจากกลางวันสิ้นสุด</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>เริ่มพลบค่ำ</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>เปลี่ยนวอลเปเปอร์เดสก์ท็อปแล้ว แต่ซิงค์หน้าจอเมื่อล็อกไม่สำเร็จ: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>ต้องเริ่ม AppearanceController บนเธรด UI</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>กำลังอัปเดตตำแหน่งอยู่แล้ว โปรดลองอีกครั้งในอีกสักครู่</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>ปิดการเข้าถึงตำแหน่งแล้ว อนุญาตให้แอปนี้ใช้ตำแหน่งในการตั้งค่า Windows</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>หมดเวลารับตำแหน่ง ตรวจสอบบริการตำแหน่งของ Windows แล้วลองอีกครั้ง</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>ต้องเริ่ม LocationUpdateService บนเธรด UI</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>ไม่พบไฟล์วอลเปเปอร์หน้าจอเมื่อล็อก</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>สลับครั้งถัดไปเวลา {0} เป็น{1}</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>อัปเดตการตั้งค่าเริ่มต้นไม่สำเร็จ (รหัสข้อผิดพลาด {0}) ดูรายละเอียดในข้อความของ Windows</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>ไม่พบคอมโพเนนต์บริการเริ่มต้น โปรดติดตั้งแอปอีกครั้ง</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>ไม่สามารถเริ่มตัวติดตั้งบริการเริ่มต้นได้</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>ไม่พบพาธแอปพลิเคชันปัจจุบัน</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>เปิดรีจิสทรีการตั้งค่าส่วนบุคคลของ Windows ไม่ได้</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>ไม่พบไอคอนในถาดระบบ</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>ตั้งวอลเปเปอร์เดสก์ท็อปไม่ได้</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>ไม่พบไฟล์วอลเปเปอร์</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>ทุกวัน</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>ทุก 12 ชั่วโมง</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>ทุกชั่วโมง</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>ทุกเดือน</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>ทุกสัปดาห์</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>ต้องตั้งค่าด้วยตนเองและมีสิทธิ์ผู้ดูแลระบบ บริการ Windows จะเริ่มแอปก่อนเมื่อคุณลงชื่อเข้าใช้</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>เริ่มต้นด้วยลำดับความสำคัญสูง</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>เริ่มต้นด้วยลำดับความสำคัญสูง</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>เปลี่ยนภาษาเป็น {0} แล้ว เริ่ม Wallpaper Switch ใหม่เพื่อใช้การเปลี่ยนแปลง</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>ใช้ภาษาของ Windows</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>เลือกภาษาของแอป เริ่มแอปใหม่เพื่อให้การเปลี่ยนแปลงมีผล</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>ภาษาแอป</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>ภาษาแอป</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>ปิดการอัปเดตอัตโนมัติ</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>ละติจูด {0:F4} ลองจิจูด {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>เปิดการอัปเดตตำแหน่งอัตโนมัติไม่ได้: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>เปิดการอัปเดตตำแหน่งอัตโนมัติแล้ว และตรวจสอบตำแหน่งครั้งแรกเสร็จแล้ว</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>กำลังรับตำแหน่งปัจจุบัน…</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>การอัปเดตอัตโนมัติครั้งล่าสุดไม่สำเร็จ: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>อัปเดตล่าสุด: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>ปิดอยู่ คุณยังเลือก “ใช้ตำแหน่งปัจจุบัน” เพื่ออัปเดตด้วยตนเองได้</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>ความถี่การอัปเดตที่เลือกจะกลับมาทำงานหลังจากการอัปเดตนี้</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; อัปเดตครั้งถัดไปประมาณ {1:g}</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>ยังไม่ได้ตั้งค่าตำแหน่ง</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>รับตำแหน่งไม่ได้: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; จะอัปเดตในเบื้องหลังเร็ว ๆ นี้</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>คำนวณเวลารุ่งเช้าและพระอาทิตย์ตกจากตำแหน่งปัจจุบันของคุณแล้ว</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>กำลังรอการอัปเดตอัตโนมัติครั้งแรก</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>ยังไม่ได้ตั้งค่าตำแหน่ง</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>ตำแหน่งสำหรับรุ่งเช้าและพลบค่ำ</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>ทุกวัน</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>ทุก 12 ชั่วโมง</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>ปิดการอัปเดตอัตโนมัติ</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>ความถี่ในการอัปเดตตำแหน่ง</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>ทุกชั่วโมง</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>ทุกเดือน</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>ทุกสัปดาห์</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>ใช้รูปภาพเดียวกันกับหน้าจอเมื่อล็อกเมื่อเปลี่ยนวอลเปเปอร์เดสก์ท็อป</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>ซิงค์หน้าจอเมื่อล็อกกับเดสก์ท็อป</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>กำลังโหลดสถานะปัจจุบัน…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>หลังพระอาทิตย์ตกจนถึงรุ่งเช้า</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>กลางคืน</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>ยังไม่ได้เลือกรูปภาพ</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>ช่วงกลางคืนเริ่มหลังพลบค่ำและต่อเนื่องจนถึงรุ่งเช้าของวันถัดไป</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>เริ่มกลางคืน</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>รุ่งเช้า</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>กลางวัน</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>พลบค่ำ</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>กลางคืน</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>วอลเปเปอร์</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>เลือก…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>ดูตัวอย่างโหมดอื่น</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>กำหนดเวลาเองได้ง่ายกว่า ส่วนกำหนดการตั้งแต่พระอาทิตย์ขึ้นถึงตกจะทำงานคล้าย Appearance อัตโนมัติของ macOS</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>วิธีกำหนดเวลา</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>กำหนดเวลาเอง</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>พระอาทิตย์ขึ้นถึงตก</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>ลักษณะที่ปรากฏในแต่ละช่วง</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>ทั่วไป</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>ภาษา</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>กำหนดการ</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>สีของ Windows</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>ปิดการเริ่มต้นพร้อมระบบแล้ว</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>ยกเลิกการอนุมัติจากผู้ดูแลระบบแล้ว ไม่มีการเปลี่ยนการตั้งค่าเริ่มต้น</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>เปิด “เริ่มเมื่อเข้าสู่ระบบ” ก่อน ฟีเจอร์นี้ปิดไว้ตามค่าเริ่มต้นและต้องใช้สิทธิ์ผู้ดูแลระบบ</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>เปิดการเริ่มต้นลำดับความสำคัญสูงแล้ว บริการ Windows จะเริ่มแอปในเบื้องหลังเมื่อเข้าสู่ระบบ</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>เปิดการเริ่มต้นแบบมาตรฐานแล้ว</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>ต้องตั้งค่าด้วยตนเองและมีสิทธิ์ผู้ดูแลระบบ บริการ Windows จะเริ่มแอปก่อนเมื่อคุณลงชื่อเข้าใช้</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>บริการหยุดทำงานหรือถูกปิด ปิดแล้วเปิดอีกครั้งเพื่อซ่อมแซม (ต้องมีสิทธิ์ผู้ดูแลระบบ)</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>เปิดใช้งาน: บริการ Windows จะเริ่มแอปในเบื้องหลังในฐานะผู้ใช้ปัจจุบัน</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>อ่านสถานะการเริ่มต้นไม่ได้: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>อัปเดตการตั้งค่าการเริ่มต้นไม่ได้: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>กำลังอัปเดตการตั้งค่าการเริ่มต้น หากมีข้อความขอสิทธิ์ผู้ดูแลระบบ โปรดดำเนินการให้เสร็จ…</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>สลับต่อไปในเบื้องหลังหลังจากคุณลงชื่อเข้าใช้ Windows</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>เริ่มเมื่อเข้าสู่ระบบ</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>เริ่มเมื่อเข้าสู่ระบบ</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>ช่วงเวลาปัจจุบัน: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>โหมดมืด</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>ประมาณ {0}–{1} (มุมเงยดวงอาทิตย์ −6° ถึง 10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>ปิดการสลับอัตโนมัติ กำลังดูตัวอย่าง{0}ในโหมด{1}</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>เกิดข้อผิดพลาด</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>โหมดสว่าง</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>ดูตัวอย่าง ({0}) {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>ดูตัวอย่าง {0}</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>เริ่มประมาณ {0}</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>เสร็จแล้ว</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>รุ่งเช้า {0}–{1} · พระอาทิตย์ขึ้น {2} · พระอาทิตย์ตก {3} · พลบค่ำ {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>กำหนดเวลาพระอาทิตย์ขึ้นและตกต้องใช้ตำแหน่ง เลือก “ใช้ตำแหน่งปัจจุบัน” หรือกลับไปกำหนดเวลาเอง</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>อีกเพียงขั้นตอนเดียว</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>เปลี่ยนโหมดสว่างหรือมืดของแถบงาน เมนูเริ่มต้น และส่วนติดต่อ Windows ด้วย</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>เปลี่ยนธีม Windows</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>มืด</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>สว่าง</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>ธีม</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>สลับวอลเปเปอร์</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>ใช้กำหนดการตอนนี้</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>เปิดหน้าต่างหลัก</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>ให้แอปทำงานในเบื้องหลังต่อเมื่อคุณปิดหน้าต่าง</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>ย่อไปยังถาดระบบเมื่อปิดหน้าต่าง</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>ใช้ตำแหน่งปัจจุบัน</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>กึ่งกลาง</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>เติม</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>พอดี</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>ตรงกับตัวเลือก เติม พอดี ยืด และตัวเลือกอื่น ๆ ในการตั้งค่าส่วนบุคคลของ Windows</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>การจัดวางวอลเปเปอร์</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>ขยายเต็มพื้นที่</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>ยืด</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>เรียงต่อกัน</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>สลับวอลเปเปอร์</value>
+  </data>
+</root>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>Wallpaper Switch encontró un error</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>No se pudo iniciar Wallpaper Switch</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>Falta el recurso del icono del área de notificación.</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>Wallpaper Switch</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>Aplicar el modo claro u oscuro a las aplicaciones que admiten esta opción, como el aspecto de macOS.</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>Cambiar el tema de las aplicaciones</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>Aplicar el horario ahora</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>Actualizar la ubicación usada para el amanecer y el anochecer con la frecuencia seleccionada mientras la aplicación se ejecuta en segundo plano.</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>Actualizar la ubicación automáticamente</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>Cambiar automáticamente el tema y el fondo de pantalla al amanecer, durante el día, al anochecer y por la noche</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>Activar el cambio automático</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>Altura solar de −6° a 10°</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>Amanecer</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>No hay ninguna imagen seleccionada</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>Usar el fondo de pantalla y el tema del amanecer durante este periodo.</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>Empieza el amanecer</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>De la mañana a la tarde</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>Durante el día</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>No hay ninguna imagen seleccionada</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>El día comienza cuando termina el amanecer.</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>Empieza el día</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>Usar la imagen seleccionada abajo para cada periodo.</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>Cambiar también el fondo de pantalla del escritorio</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>Alrededor del atardecer</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>Anochecer</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>No hay ninguna imagen seleccionada</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>El anochecer comienza cuando termina el día.</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>Empieza el anochecer</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>El fondo de pantalla del escritorio cambió, pero no se pudo sincronizar la pantalla de bloqueo: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>AppearanceController debe iniciarse en el subproceso de la interfaz de usuario.</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>Ya hay una actualización de ubicación en curso. Vuelve a intentarlo en breve.</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>El acceso a la ubicación está desactivado. Permite que esta aplicación acceda a la ubicación en Configuración de Windows.</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>Se agotó el tiempo de espera al obtener la ubicación. Comprueba el servicio de ubicación de Windows e inténtalo de nuevo.</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>LocationUpdateService debe iniciarse en el subproceso de la interfaz de usuario.</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>No se encontró el archivo del fondo de pantalla de bloqueo.</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>Próximo cambio a las {0}: {1}</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>No se pudieron cambiar las opciones de inicio (código de error {0}). Consulta el mensaje de Windows para obtener más información.</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>No se encontró el componente del servicio de inicio. Vuelve a instalar la aplicación.</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>No se pudo iniciar el instalador del servicio de inicio.</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>No se encontró la ruta de la aplicación actual.</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>No se pudo abrir la clave del Registro de personalización de Windows.</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>Falta el recurso del icono del área de notificación.</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>No se pudo establecer el fondo de pantalla del escritorio.</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>No se encontró el archivo del fondo de pantalla.</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>Todos los días</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>Cada 12 horas</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>Cada hora</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>Cada mes</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>Cada semana</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>Requiere configuración manual y permisos de administrador. Un servicio de Windows inicia la aplicación al principio del inicio de sesión.</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>Inicio de alta prioridad</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Inicio de alta prioridad</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>El idioma cambió a {0}. Reinicia Wallpaper Switch para aplicar el cambio.</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>Seguir Windows</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>Elige un idioma para la aplicación. Reiníciala para que el cambio surta efecto.</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>Idioma de la aplicación</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Idioma de la aplicación</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>Las actualizaciones automáticas están desactivadas</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>Latitud {0:F4}, longitud {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>No se pudieron activar las actualizaciones automáticas de ubicación: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>Las actualizaciones automáticas de ubicación están activadas y se completó la primera comprobación.</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>Obteniendo la ubicación actual…</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>Error en la última actualización automática: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>Última actualización: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>Desactivado. Aun así, puedes seleccionar «Usar ubicación actual» para actualizarla manualmente.</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>La frecuencia de actualización seleccionada se reanudará después de esta actualización</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; próxima actualización alrededor de {1:g}</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>No hay ninguna ubicación configurada</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>No se pudo obtener la ubicación: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; pronto se ejecutará una actualización en segundo plano</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>Las horas de amanecer y atardecer se calcularon a partir de tu ubicación actual.</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>Esperando la primera actualización automática</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>No hay ninguna ubicación configurada</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>Ubicación para el amanecer y el atardecer</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>Todos los días</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>Cada 12 horas</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>Las actualizaciones automáticas están desactivadas</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>Frecuencia de actualización de la ubicación</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>Cada hora</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>Cada mes</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>Cada semana</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>Usar la misma imagen para la pantalla de bloqueo cuando cambie el fondo de pantalla del escritorio.</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>Sincronizar la pantalla de bloqueo y el escritorio</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>Cargando el estado actual…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>Desde el atardecer hasta el amanecer</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>Noche</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>No hay ninguna imagen seleccionada</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>La noche comienza después del anochecer y dura hasta el amanecer del día siguiente.</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>Empieza la noche</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>Amanecer</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>Durante el día</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>Anochecer</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>Noche</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>Fondo de pantalla</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>Elegir…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>Vista previa de otro modo</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>Las horas personalizadas son más sencillas; del amanecer al atardecer se parece más al aspecto automático de macOS.</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>Método de programación</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>Horas personalizadas</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>Del amanecer al atardecer</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>Aspecto por periodo</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>Programación</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>Colores de Windows</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>El inicio automático está desactivado.</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>Se canceló la aprobación del administrador. No se cambiaron las opciones de inicio.</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>Activa primero «Iniciar al iniciar sesión». Esta función está desactivada de forma predeterminada y requiere permisos de administrador.</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>El inicio de alta prioridad está activado. El servicio de Windows iniciará la aplicación en segundo plano al iniciar sesión.</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>El inicio estándar está activado.</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>Requiere configuración manual y permisos de administrador. Un servicio de Windows inicia la aplicación al principio del inicio de sesión.</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>El servicio está detenido o deshabilitado. Desactiva esta opción y vuelve a activarla para repararlo (se requieren permisos de administrador).</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>Activado: el servicio de Windows inicia la aplicación en segundo plano al iniciar sesión como usuario actual.</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>No se pudo leer el estado del inicio: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>No se pudieron actualizar las opciones de inicio: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>Actualizando las opciones de inicio. Completa cualquier solicitud de administrador que aparezca…</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>Mantener el cambio en segundo plano después de iniciar sesión en Windows</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>Iniciar al iniciar sesión</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Iniciar al iniciar sesión</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>Periodo actual: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>Modo oscuro</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>Alrededor de {0}–{1} (altura solar de −6° a 10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>El cambio automático está desactivado. Vista previa de {0} en {1}.</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>Se ha producido un error</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>Modo claro</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>Vista previa ({0}). {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>Vista previa de {0}</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>Empieza alrededor de las {0}</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>Hecho</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>Amanecer {0}–{1} · Salida del sol {2} · Puesta del sol {3} · Anochecer {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>La programación del amanecer y el atardecer necesita una ubicación. Selecciona «Usar ubicación actual» o vuelve a las horas personalizadas.</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>Un paso más</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>Cambiar también el modo claro u oscuro de la barra de tareas, el menú Inicio y la interfaz de Windows.</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>Cambiar el tema de Windows</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>Oscuro</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>Wallpaper Switch</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>Aplicar el horario ahora</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>Abrir ventana principal</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>Mantener la aplicación en segundo plano al cerrar la ventana.</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>Minimizar al área de notificación al cerrar</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>Usar ubicación actual</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>Centrar</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>Rellenar</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>Ajustar</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>Coincide con las opciones Rellenar, Ajustar, Estirar y otras de Personalización de Windows.</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>Ajuste del fondo de pantalla</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>Extender</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>Estirar</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>Mosaico</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>Wallpaper Switch</value>
+  </data>
+</root>

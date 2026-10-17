@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Hallitse käynnistyspalvelua Wallpaper Switchin asetuksista.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Käynnistyspalvelun hallinta edellyttää järjestelmänvalvojan oikeuksia.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Toinen käynnistyspalvelun määritystoiminto on yhä käynnissä.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: tärkeän prioriteetin käynnistyspalvelu</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Käynnistyspolun on osoitettava paikalliseen WallpaperSwitch.exe-tiedostoon.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Wallpaper Switch -sovellusta ei löytynyt.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switchin tärkeän prioriteetin käynnistys</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Käynnistää Wallpaper Switchin aikaisin sisäänkirjautuneena käyttäjänä. Ota palvelu käyttöön manuaalisesti sovelluksen asetuksista.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Palvelun asennushakemisto ei voi olla symbolinen linkki tai liitos.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Palvelun hallinta epäonnistui (virhekoodi {0}): {1}{2}</value></data>
+</root>

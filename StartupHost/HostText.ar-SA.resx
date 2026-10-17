@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>أدِر خدمة بدء التشغيل من إعدادات Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>تتطلب إدارة خدمة بدء التشغيل إذن المسؤول.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>لا تزال هناك عملية أخرى لإعداد خدمة بدء التشغيل قيد التنفيذ.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: خدمة بدء التشغيل ذات الأولوية العالية</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>يجب أن يشير مسار بدء التشغيل إلى ملف WallpaperSwitch.exe محلي.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>تعذر العثور على تطبيق Wallpaper Switch.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>بدء تشغيل Wallpaper Switch بأولوية عالية</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>يشغّل Wallpaper Switch مبكرًا باسم المستخدم الذي سجل الدخول. فعّل الخدمة يدويًا من إعدادات التطبيق.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>لا يمكن أن يكون دليل تثبيت الخدمة رابطًا رمزيًا أو وصلة مجلد.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>فشلت إدارة الخدمة (رمز الخطأ {0}): {1}{2}</value></data>
+</root>

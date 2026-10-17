@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>Wallpaper Switch में एक त्रुटि हुई</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>Wallpaper Switch प्रारंभ नहीं हो सका</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>सूचना क्षेत्र का आइकन नहीं मिला।</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>वॉलपेपर स्विच</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>macOS Appearance की तरह, इस सेटिंग का समर्थन करने वाले ऐप्स पर हल्की या गहरी मोड लागू करें।</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>ऐप थीम बदलें</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>अभी शेड्यूल लागू करें</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>ऐप के पृष्ठभूमि में चलते समय चुनी गई अवधि पर भोर और सांझ के लिए उपयोग की जाने वाली जगह अपडेट करें।</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>स्थान अपने-आप अपडेट करें</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>भोर, दिन, सांझ और रात में थीम और वॉलपेपर अपने-आप बदलें</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>अपने-आप बदलना चालू करें</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>सूर्य का उन्नयन −6° से 10° तक</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>भोर</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>कोई छवि नहीं चुनी गई</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>इस अवधि में भोर का वॉलपेपर और थीम उपयोग करें।</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>भोर शुरू होती है</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>सुबह से दोपहर तक</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>दिन</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>कोई छवि नहीं चुनी गई</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>भोर समाप्त होने के बाद दिन शुरू होता है।</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>दिन शुरू होता है</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>हर अवधि के लिए नीचे चुनी गई छवि उपयोग करें।</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>डेस्कटॉप वॉलपेपर भी बदलें</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>सूर्यास्त के आसपास</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>सांझ</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>कोई छवि नहीं चुनी गई</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>दिन समाप्त होने के बाद सांझ शुरू होती है।</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>सांझ शुरू होती है</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>डेस्कटॉप वॉलपेपर बदल गया, लेकिन लॉक स्क्रीन के साथ सिंक नहीं हो सका: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>AppearanceController को UI थ्रेड पर शुरू करना आवश्यक है।</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>स्थान अपडेट पहले से जारी है। थोड़ी देर बाद फिर कोशिश करें।</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>स्थान की पहुँच बंद है। Windows सेटिंग में इस ऐप को स्थान का उपयोग करने दें।</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>स्थान पाने का समय समाप्त हो गया। Windows स्थान सेवा जाँचें और फिर कोशिश करें।</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>LocationUpdateService को UI थ्रेड पर शुरू करना आवश्यक है।</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>लॉक स्क्रीन की वॉलपेपर फ़ाइल नहीं मिली।</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>अगला बदलाव {0} बजे {1} पर होगा</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>स्टार्टअप सेटिंग विफल हुई (त्रुटि कोड {0})। विवरण के लिए Windows संदेश देखें।</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>स्टार्टअप सेवा घटक नहीं मिला। ऐप फिर से इंस्टॉल करें।</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>स्टार्टअप सेवा इंस्टॉलर शुरू नहीं हो सका।</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>मौजूदा ऐप पथ नहीं मिल सका।</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>Windows वैयक्तिकरण रजिस्ट्री कुंजी नहीं खोली जा सकी।</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>सूचना क्षेत्र का आइकन नहीं मिला।</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>डेस्कटॉप वॉलपेपर सेट नहीं किया जा सका।</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>वॉलपेपर फ़ाइल नहीं मिली।</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>हर दिन</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>हर 12 घंटे</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>हर घंटे</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>हर महीने</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>हर सप्ताह</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>मैन्युअल सेटअप और व्यवस्थापक की अनुमति आवश्यक है। Windows सेवा साइन-इन के समय ऐप को जल्दी शुरू करती है।</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>उच्च प्राथमिकता वाला स्टार्टअप</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>उच्च प्राथमिकता वाला स्टार्टअप</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>भाषा {0} पर बदल दी गई। इसे लागू करने के लिए Wallpaper Switch फिर से शुरू करें।</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>Windows की भाषा अपनाएँ</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>ऐप की भाषा चुनें। बदलाव लागू करने के लिए ऐप फिर से शुरू करें।</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>ऐप की भाषा</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>ऐप की भाषा</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>अपने-आप अपडेट बंद हैं</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>अक्षांश {0:F4}, देशांतर {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>स्थान के अपने-आप अपडेट चालू नहीं किए जा सके: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>स्थान के अपने-आप अपडेट चालू हैं और पहली स्थान जाँच पूरी हो गई है।</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>मौजूदा स्थान प्राप्त किया जा रहा है…</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>पिछला अपने-आप अपडेट विफल हुआ: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>पिछली बार अपडेट: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>बंद। आप फिर भी मैन्युअल रूप से अपडेट करने के लिए “मौजूदा स्थान उपयोग करें” चुन सकते हैं।</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>इस अपडेट के बाद चुनी गई अपडेट आवृत्ति फिर शुरू होगी</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; अगला अपडेट लगभग {1:g} पर</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>कोई स्थान सेट नहीं है</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>स्थान प्राप्त नहीं हो सका: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; जल्द ही पृष्ठभूमि में अपडेट चलेगा</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>आपके मौजूदा स्थान से भोर और सूर्यास्त का समय निकाला गया।</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>पहले अपने-आप अपडेट की प्रतीक्षा है</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>कोई स्थान सेट नहीं है</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>भोर और सांझ का स्थान</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>हर दिन</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>हर 12 घंटे</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>अपने-आप अपडेट बंद हैं</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>स्थान अपडेट की आवृत्ति</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>हर घंटे</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>हर महीने</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>हर सप्ताह</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>डेस्कटॉप वॉलपेपर बदलने पर लॉक स्क्रीन के लिए भी यही छवि उपयोग करें।</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>लॉक स्क्रीन और डेस्कटॉप सिंक करें</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>मौजूदा स्थिति लोड हो रही है…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>सूर्यास्त के बाद से भोर तक</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>रात</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>कोई छवि नहीं चुनी गई</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>सांझ के बाद रात शुरू होती है और अगले दिन भोर तक रहती है।</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>रात शुरू होती है</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>भोर</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>दिन</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>सांझ</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>रात</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>वॉलपेपर</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>चुनें…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>दूसरे मोड का पूर्वावलोकन करें</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>कस्टम समय सरल हैं; सूर्योदय से सूर्यास्त तक का शेड्यूल macOS Auto Appearance जैसा है।</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>शेड्यूल का तरीका</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>कस्टम समय</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>सूर्योदय से सूर्यास्त तक</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>अवधि के अनुसार दिखावट</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>सामान्य</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>भाषा</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>शेड्यूल</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>Windows के रंग</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>स्टार्टअप बंद है।</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>व्यवस्थापक की स्वीकृति रद्द कर दी गई। स्टार्टअप सेटिंग नहीं बदली गईं।</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>पहले “साइन-इन पर शुरू करें” चालू करें। यह सुविधा डिफ़ॉल्ट रूप से बंद है और इसके लिए व्यवस्थापक की अनुमति आवश्यक है।</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>उच्च प्राथमिकता वाला स्टार्टअप चालू है। Windows सेवा साइन-इन पर ऐप को पृष्ठभूमि में शुरू करेगी।</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>मानक स्टार्टअप चालू है।</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>मैन्युअल सेटअप और व्यवस्थापक की अनुमति आवश्यक है। Windows सेवा साइन-इन के समय ऐप को जल्दी शुरू करती है।</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>सेवा रुकी हुई या बंद है। इसे सुधारने के लिए इसे बंद करके फिर चालू करें (व्यवस्थापक की अनुमति आवश्यक)।</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>चालू: Windows सेवा मौजूदा उपयोगकर्ता के रूप में ऐप को पृष्ठभूमि में शुरू करती है।</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>स्टार्टअप स्थिति पढ़ी नहीं जा सकी: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>स्टार्टअप सेटिंग अपडेट नहीं हो सकीं: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>स्टार्टअप सेटिंग अपडेट हो रही हैं। व्यवस्थापक का अनुरोध दिखे तो उसे पूरा करें…</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>Windows में साइन-इन करने के बाद भी पृष्ठभूमि में बदलाव जारी रखें</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>साइन-इन पर शुरू करें</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>साइन-इन पर शुरू करें</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>मौजूदा अवधि: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>गहरा मोड</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>लगभग {0}–{1} (सूर्य का उन्नयन −6° से 10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>अपने-आप बदलना बंद है। {1} में {0} का पूर्वावलोकन हो रहा है।</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>कुछ गलत हुआ</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>हल्का मोड</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>पूर्वावलोकन ({0})। {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>{0} का पूर्वावलोकन</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>लगभग {0} पर शुरू होता है</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>हो गया</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>भोर {0}–{1} · सूर्योदय {2} · सूर्यास्त {3} · सांझ {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>सूर्योदय और सूर्यास्त के शेड्यूल के लिए स्थान आवश्यक है। “मौजूदा स्थान उपयोग करें” चुनें या कस्टम समय पर लौटें।</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>एक और चरण</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>टास्कबार, प्रारंभ मेनू और Windows इंटरफ़ेस के लिए हल्का या गहरा मोड भी बदलें।</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>Windows थीम बदलें</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>गहरा</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>हल्का</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>थीम</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>वॉलपेपर स्विच</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>अभी शेड्यूल लागू करें</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>बाहर निकलें</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>मुख्य विंडो खोलें</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>विंडो बंद करने पर ऐप को पृष्ठभूमि में चलता रहने दें।</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>बंद करने पर सूचना क्षेत्र में छोटा करें</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>मौजूदा स्थान उपयोग करें</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>केंद्र</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>भरें</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>फ़िट</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>Windows वैयक्तिकरण में भरें, फ़िट, खींचें और अन्य विकल्पों से मेल खाता है।</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>वॉलपेपर फिट</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>फैलाएँ</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>खींचें</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>टाइल</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>वॉलपेपर स्विच</value>
+  </data>
+</root>

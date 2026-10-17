@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Beheer de opstartservice via de instellingen van Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Voor het beheren van de opstartservice zijn beheerdersrechten vereist.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Er wordt nog een andere configuratiebewerking voor de opstartservice uitgevoerd.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: opstartservice met hoge prioriteit</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Het opstartpad moet verwijzen naar een lokaal WallpaperSwitch.exe-bestand.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>De Wallpaper Switch-app is niet gevonden.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch-opstart met hoge prioriteit</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Start Wallpaper Switch vroeg als de aangemelde gebruiker. Schakel de service handmatig in via de app-instellingen.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>De installatiemap van de service mag geen symbolische koppeling of junction zijn.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Servicebeheer is mislukt (foutcode {0}): {1}{2}</value></data>
+</root>

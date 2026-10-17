@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>請在 Wallpaper Switch 設定中管理開機啟動服務。</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>管理開機啟動服務需要系統管理員權限。</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>另一個開機啟動服務設定作業尚未完成。</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch：高優先順序開機啟動服務</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>啟動路徑必須指向本機磁碟上的 WallpaperSwitch.exe 檔案。</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>找不到 Wallpaper Switch 主程式。</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch 高優先順序開機啟動</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>使用者登入時，以該使用者身分儘早啟動 Wallpaper Switch。請在應用程式設定中手動啟用。</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>服務安裝目錄不能是符號連結或目錄接合點。</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>服務管理失敗（錯誤代碼 {0}）：{1}{2}</value></data>
+</root>

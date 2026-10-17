@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Zarządzaj usługą uruchamiania w ustawieniach Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Do zarządzania usługą uruchamiania są wymagane uprawnienia administratora.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Trwa inna operacja konfiguracji usługi uruchamiania.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: usługa uruchamiania o wysokim priorytecie</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Ścieżka uruchamiania musi wskazywać lokalny plik WallpaperSwitch.exe.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Nie znaleziono aplikacji Wallpaper Switch.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Uruchamianie Wallpaper Switch o wysokim priorytecie</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Uruchamia wcześniej Wallpaper Switch jako zalogowany użytkownik. Włącz usługę ręcznie w ustawieniach aplikacji.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Katalog instalacyjny usługi nie może być dowiązaniem symbolicznym ani junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Nie można zarządzać usługą (kod błędu {0}): {1}{2}</value></data>
+</root>

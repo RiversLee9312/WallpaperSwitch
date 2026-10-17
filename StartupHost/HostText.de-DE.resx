@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Verwalten Sie den Startdienst in den Einstellungen von Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Zum Verwalten des Startdienstes sind Administratorrechte erforderlich.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Ein anderer Vorgang zum Konfigurieren des Startdienstes läuft noch.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: Startdienst mit hoher Priorität</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Der Startpfad muss auf eine lokale WallpaperSwitch.exe-Datei verweisen.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Die Wallpaper Switch-App wurde nicht gefunden.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch-Start mit hoher Priorität</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Startet Wallpaper Switch frühzeitig als angemeldeter Benutzer. Aktivieren Sie den Dienst manuell in den App-Einstellungen.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Das Installationsverzeichnis des Dienstes darf kein symbolischer Link und keine Junction sein.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Die Dienstverwaltung ist fehlgeschlagen (Fehlercode {0}): {1}{2}</value></data>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Gerencie o serviço de inicialização nas configurações do Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>É necessária permissão de administrador para gerenciar o serviço de inicialização.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Outra operação de configuração do serviço de inicialização ainda está em andamento.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: serviço de inicialização de alta prioridade</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>O caminho de inicialização deve apontar para um arquivo WallpaperSwitch.exe local.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>O aplicativo Wallpaper Switch não foi encontrado.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Inicialização de alta prioridade do Wallpaper Switch</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Inicia o Wallpaper Switch antecipadamente como o usuário conectado. Ative o serviço manualmente nas configurações do aplicativo.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>O diretório de instalação do serviço não pode ser um link simbólico nem uma junção.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Falha ao gerenciar o serviço (código de erro {0}): {1}{2}</value></data>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Hantera starttjänsten i inställningarna för Wallpaper Switch.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Det krävs administratörsbehörighet för att hantera starttjänsten.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>En annan åtgärd för att konfigurera starttjänsten pågår fortfarande.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: starttjänst med hög prioritet</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Startökvägen måste peka på en lokal WallpaperSwitch.exe-fil.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Det gick inte att hitta Wallpaper Switch-appen.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch-start med hög prioritet</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Startar Wallpaper Switch tidigt som den inloggade användaren. Aktivera tjänsten manuellt i appinställningarna.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Tjänstens installationskatalog får inte vara en symbolisk länk eller junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Det gick inte att hantera tjänsten (felkod {0}): {1}{2}</value></data>
+</root>

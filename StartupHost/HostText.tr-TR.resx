@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Başlangıç hizmetini Wallpaper Switch ayarlarından yönetin.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Başlangıç hizmetini yönetmek için yönetici izni gerekir.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Başka bir başlangıç hizmeti yapılandırma işlemi sürüyor.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: yüksek öncelikli başlangıç hizmeti</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>Başlangıç yolu yerel bir WallpaperSwitch.exe dosyasını göstermelidir.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>Wallpaper Switch uygulaması bulunamadı.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch yüksek öncelikli başlangıç</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Wallpaper Switch'i oturum açmış kullanıcı olarak erken başlatır. Uygulama ayarlarından el ile etkinleştirin.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>Hizmet yükleme dizini sembolik bağlantı veya junction olamaz.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Hizmet yönetimi başarısız oldu (hata kodu {0}): {1}{2}</value></data>
+</root>

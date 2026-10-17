@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>Wallpaper Switch mengalami kesalahan</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>Wallpaper Switch tidak dapat dimulai</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>Ikon area notifikasi tidak ditemukan.</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>Ganti Wallpaper</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>Terapkan mode terang atau gelap ke aplikasi yang mendukung pengaturan ini, seperti fitur Tampilan di macOS.</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>Ganti tema aplikasi</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>Terapkan jadwal sekarang</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>Perbarui lokasi untuk fajar dan senja sesuai frekuensi yang dipilih saat aplikasi berjalan di latar belakang.</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>Perbarui lokasi secara otomatis</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>Ganti tema dan wallpaper secara otomatis saat fajar, siang, senja, dan malam</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>Aktifkan pergantian otomatis</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>Ketinggian matahari dari −6° hingga 10°</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>Fajar</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>Tidak ada gambar yang dipilih</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>Gunakan wallpaper dan tema fajar selama periode ini.</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>Fajar dimulai</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>Pagi hingga sore</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>Siang</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>Tidak ada gambar yang dipilih</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>Siang dimulai setelah fajar berakhir.</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>Siang dimulai</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>Gunakan gambar yang dipilih di bawah untuk setiap periode.</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>Ganti juga wallpaper desktop</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>Sekitar matahari terbenam</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>Senja</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>Tidak ada gambar yang dipilih</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>Senja dimulai setelah siang berakhir.</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>Senja dimulai</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>Wallpaper desktop berubah, tetapi sinkronisasi layar kunci gagal: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>AppearanceController harus dijalankan di utas antarmuka pengguna.</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>Pembaruan lokasi sedang berlangsung. Coba lagi sebentar lagi.</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>Akses lokasi tidak aktif. Izinkan aplikasi ini menggunakan lokasi di Pengaturan Windows.</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>Waktu untuk mendapatkan lokasi habis. Periksa layanan Lokasi Windows dan coba lagi.</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>LocationUpdateService harus dijalankan di utas antarmuka pengguna.</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>File wallpaper layar kunci tidak ditemukan.</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>Pergantian berikutnya pukul {0} ke {1}</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>Pengaturan startup gagal (kode kesalahan {0}). Lihat pesan Windows untuk detailnya.</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>Komponen layanan startup tidak ditemukan. Instal ulang aplikasi.</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>Penginstal layanan startup tidak dapat dijalankan.</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>Jalur aplikasi saat ini tidak dapat ditemukan.</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>Kunci registri Personalisasi Windows tidak dapat dibuka.</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>Ikon area notifikasi tidak ditemukan.</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>Wallpaper desktop tidak dapat diatur.</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>File wallpaper tidak ditemukan.</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>Setiap hari</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>Setiap 12 jam</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>Setiap jam</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>Setiap bulan</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>Setiap minggu</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>Memerlukan penyiapan manual dan izin administrator. Layanan Windows akan memulai aplikasi lebih awal saat Anda masuk.</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>Startup prioritas tinggi</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Startup prioritas tinggi</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>Bahasa diubah ke {0}. Mulai ulang Wallpaper Switch untuk menerapkannya.</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>Ikuti pengaturan Windows</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>Pilih bahasa untuk aplikasi. Mulai ulang aplikasi agar perubahan diterapkan.</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>Bahasa aplikasi</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Bahasa aplikasi</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>Pembaruan otomatis nonaktif</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>Lintang {0:F4}, bujur {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>Pembaruan lokasi otomatis tidak dapat diaktifkan: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>Pembaruan lokasi otomatis aktif dan pemeriksaan lokasi pertama selesai.</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>Mendapatkan lokasi saat ini…</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>Pembaruan otomatis terakhir gagal: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>Terakhir diperbarui: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>Nonaktif. Anda masih dapat memilih “Gunakan lokasi saat ini” untuk memperbarui secara manual.</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>Frekuensi pembaruan yang dipilih akan dilanjutkan setelah pembaruan ini</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; pembaruan berikutnya sekitar {1:g}</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>Lokasi belum diatur</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>Lokasi tidak dapat diperoleh: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; pembaruan akan segera dijalankan di latar belakang</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>Waktu fajar dan senja dihitung berdasarkan lokasi Anda saat ini.</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>Menunggu pembaruan otomatis pertama</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>Lokasi belum diatur</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>Lokasi untuk fajar dan senja</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>Setiap hari</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>Setiap 12 jam</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>Pembaruan otomatis nonaktif</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>Frekuensi pembaruan lokasi</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>Setiap jam</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>Setiap bulan</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>Setiap minggu</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>Gunakan gambar yang sama untuk layar kunci saat wallpaper desktop berubah.</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>Sinkronkan layar kunci dan desktop</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>Memuat status saat ini…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>Setelah matahari terbenam hingga fajar</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>Malam</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>Tidak ada gambar yang dipilih</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>Malam dimulai setelah senja dan berlangsung hingga fajar hari berikutnya.</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>Malam dimulai</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>Fajar</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>Siang</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>Senja</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>Malam</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>Wallpaper</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>Pilih…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>Pratinjau mode lain</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>Waktu khusus lebih sederhana; jadwal dari matahari terbit hingga terbenam bekerja mirip Tampilan Otomatis macOS.</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>Metode jadwal</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>Waktu khusus</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>Matahari terbit hingga terbenam</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>Tampilan menurut periode</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>Umum</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>Bahasa</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>Jadwal</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>Warna Windows</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>Startup dinonaktifkan.</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>Persetujuan administrator dibatalkan. Pengaturan startup tidak berubah.</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>Aktifkan “Mulai saat masuk” terlebih dahulu. Fitur ini nonaktif secara default dan memerlukan izin administrator.</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>Startup prioritas tinggi aktif. Layanan Windows akan menjalankan aplikasi di latar belakang saat Anda masuk.</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>Startup standar aktif.</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>Memerlukan penyiapan manual dan izin administrator. Layanan Windows akan memulai aplikasi lebih awal saat Anda masuk.</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>Layanan berhenti atau dinonaktifkan. Nonaktifkan lalu aktifkan lagi untuk memperbaikinya (memerlukan izin administrator).</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>Aktif: layanan Windows menjalankan aplikasi di latar belakang sebagai pengguna saat ini.</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>Status startup tidak dapat dibaca: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>Pengaturan startup tidak dapat diperbarui: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>Pengaturan startup sedang diperbarui. Selesaikan permintaan administrator jika muncul…</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>Tetap jalankan pergantian di latar belakang setelah Anda masuk ke Windows</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>Mulai saat masuk</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Mulai saat masuk</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>Periode saat ini: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>Mode gelap</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>Sekitar pukul {0}–{1} (ketinggian matahari −6° hingga 10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>Pergantian otomatis nonaktif. Pratinjau {0} dalam mode {1}.</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>Terjadi kesalahan</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>Mode terang</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>Pratinjau ({0}). {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>Pratinjau {0}</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>Sekitar pukul {0} dimulai</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>Selesai</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>Fajar {0}–{1} · Matahari terbit {2} · Matahari terbenam {3} · Senja {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>Jadwal matahari terbit dan terbenam memerlukan lokasi. Pilih “Gunakan lokasi saat ini” atau beralih kembali ke waktu khusus.</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>Satu langkah lagi</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>Ubah juga mode terang atau gelap untuk taskbar, menu Mulai, dan antarmuka Windows.</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>Ganti tema Windows</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>Gelap</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>Terang</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>Ganti Wallpaper</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>Terapkan jadwal sekarang</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>Keluar</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>Buka jendela utama</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>Tetap jalankan aplikasi di latar belakang saat Anda menutup jendela.</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>Minimalkan ke area notifikasi saat ditutup</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>Gunakan lokasi saat ini</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>Tengah</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>Isi</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>Sesuaikan</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>Sesuai dengan opsi Isi, Sesuaikan, Regangkan, dan lainnya di Personalisasi Windows.</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>Penyesuaian wallpaper</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>Bentangkan</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>Regangkan</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>Ubin</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>Ganti Wallpaper</value>
+  </data>
+</root>

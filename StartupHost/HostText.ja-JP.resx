@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>壁紙スイッチの設定からスタートアップサービスを管理してください。</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>スタートアップサービスの管理には管理者権限が必要です。</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>別のスタートアップサービス設定処理が進行中です。</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>壁紙スイッチ：優先スタートアップサービス</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>スタートアップのパスには、ローカルの WallpaperSwitch.exe ファイルを指定してください。</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>壁紙スイッチ アプリが見つかりません。</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch 優先スタートアップ</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>サインイン中のユーザーとして Wallpaper Switch を早期に起動します。アプリの設定から手動で有効にしてください。</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>サービスのインストール先をシンボリックリンクまたはジャンクションにすることはできません。</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>サービス管理に失敗しました（エラーコード {0}）：{1}{2}</value></data>
+</root>

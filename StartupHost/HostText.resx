@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="UsageHint" xml:space="preserve"><value>Manage the startup service from Wallpaper Switch settings.</value></data>
+  <data name="AdminRequired" xml:space="preserve"><value>Managing the startup service requires administrator permission.</value></data>
+  <data name="OperationInProgress" xml:space="preserve"><value>Another startup service configuration operation is still in progress.</value></data>
+  <data name="DialogTitle" xml:space="preserve"><value>Wallpaper Switch: high-priority startup service</value></data>
+  <data name="InvalidStartupPath" xml:space="preserve"><value>The startup path must point to a local WallpaperSwitch.exe file.</value></data>
+  <data name="ApplicationMissing" xml:space="preserve"><value>The Wallpaper Switch application was not found.</value></data>
+  <data name="ServiceDisplayName" xml:space="preserve"><value>Wallpaper Switch high-priority startup</value></data>
+  <data name="ServiceDescription" xml:space="preserve"><value>Starts Wallpaper Switch early as the signed-in user. Enable it manually from app settings.</value></data>
+  <data name="UnsafeServiceDirectory" xml:space="preserve"><value>The service installation directory cannot be a symbolic link or junction.</value></data>
+  <data name="ServiceManagementFailed" xml:space="preserve"><value>Service management failed (error code {0}): {1}{2}</value></data>
+</root>

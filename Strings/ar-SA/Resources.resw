@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <data name="App.ErrorTitle" xml:space="preserve">
+    <value>حدث خطأ في تبديل الخلفية</value>
+  </data>
+  <data name="App.LaunchFailed" xml:space="preserve">
+    <value>تعذر بدء تبديل الخلفية</value>
+  </data>
+  <data name="App.TrayIconMissing" xml:space="preserve">
+    <value>مورد رمز الدرج مفقود.</value>
+  </data>
+  <data name="App.TrayTooltip" xml:space="preserve">
+    <value>تبديل الخلفية</value>
+  </data>
+  <data name="AppThemeCard.Description" xml:space="preserve">
+    <value>قم بتطبيق الوضع الفاتح أو الداكن على التطبيقات التي تدعم هذا الإعداد، على غرار مظهر macOS.</value>
+  </data>
+  <data name="AppThemeCard.Header" xml:space="preserve">
+    <value>تبديل موضوع التطبيق</value>
+  </data>
+  <data name="AppThemeToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="AppThemeToggle.OnContent" xml:space="preserve">
+    <value>تشغيل</value>
+  </data>
+  <data name="ApplyNowButton.Content" xml:space="preserve">
+    <value>تطبيق الجدول الزمني الآن</value>
+  </data>
+  <data name="AutoLocationCard.Description" xml:space="preserve">
+    <value>قم بتحديث الموقع المستخدم للفجر والغسق بالتردد المحدد أثناء تشغيل التطبيق في الخلفية.</value>
+  </data>
+  <data name="AutoLocationCard.Header" xml:space="preserve">
+    <value>تحديث الموقع تلقائيا</value>
+  </data>
+  <data name="AutoLocationToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="AutoLocationToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="AutoSwitchCard.Description" xml:space="preserve">
+    <value>قم بتبديل السمة وخلفية الشاشة تلقائيًا عند الفجر والنهار والغسق والليل</value>
+  </data>
+  <data name="AutoSwitchCard.Header" xml:space="preserve">
+    <value>تمكين التبديل التلقائي</value>
+  </data>
+  <data name="DawnExpander.Description" xml:space="preserve">
+    <value>الارتفاع الشمسي من -6° إلى 10°</value>
+  </data>
+  <data name="DawnExpander.Header" xml:space="preserve">
+    <value>الفجر</value>
+  </data>
+  <data name="DawnPlaceholder.Text" xml:space="preserve">
+    <value>لم يتم تحديد أي صورة</value>
+  </data>
+  <data name="DawnStartCard.Description" xml:space="preserve">
+    <value>استخدم خلفية وموضوع الفجر خلال هذه الفترة.</value>
+  </data>
+  <data name="DawnStartCard.Header" xml:space="preserve">
+    <value>يبدأ الفجر</value>
+  </data>
+  <data name="DayExpander.Description" xml:space="preserve">
+    <value>من الصباح حتى بعد الظهر</value>
+  </data>
+  <data name="DayExpander.Header" xml:space="preserve">
+    <value>النهار</value>
+  </data>
+  <data name="DayPlaceholder.Text" xml:space="preserve">
+    <value>لم يتم تحديد أي صورة</value>
+  </data>
+  <data name="DayStartCard.Description" xml:space="preserve">
+    <value>يبدأ النهار بعد انتهاء الفجر.</value>
+  </data>
+  <data name="DayStartCard.Header" xml:space="preserve">
+    <value>يبدأ النهار</value>
+  </data>
+  <data name="DesktopWallpaperCard.Description" xml:space="preserve">
+    <value>استخدم الصورة المحددة أدناه لكل فترة.</value>
+  </data>
+  <data name="DesktopWallpaperCard.Header" xml:space="preserve">
+    <value>قم أيضًا بتغيير خلفية سطح المكتب</value>
+  </data>
+  <data name="DuskExpander.Description" xml:space="preserve">
+    <value>قرب غروب الشمس</value>
+  </data>
+  <data name="DuskExpander.Header" xml:space="preserve">
+    <value>الغسق</value>
+  </data>
+  <data name="DuskPlaceholder.Text" xml:space="preserve">
+    <value>لم يتم تحديد أي صورة</value>
+  </data>
+  <data name="DuskStartCard.Description" xml:space="preserve">
+    <value>يبدأ الغسق بعد انتهاء النهار.</value>
+  </data>
+  <data name="DuskStartCard.Header" xml:space="preserve">
+    <value>يبدأ الغسق</value>
+  </data>
+  <data name="EnabledToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="EnabledToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="Error.AppearanceLockScreen" xml:space="preserve">
+    <value>تم تغيير خلفية سطح المكتب، ولكن فشلت مزامنة شاشة القفل: {0}</value>
+  </data>
+  <data name="Error.AppearanceUiThread" xml:space="preserve">
+    <value>يجب أن يبدأ AppearanceController في مؤشر ترابط واجهة المستخدم.</value>
+  </data>
+  <data name="Error.LocationInProgress" xml:space="preserve">
+    <value>تحديث الموقع قيد التقدم بالفعل. حاول مرة أخرى قريبا.</value>
+  </data>
+  <data name="Error.LocationPermission" xml:space="preserve">
+    <value>الوصول إلى الموقع معطل. السماح لهذا التطبيق باستخدام الموقع في إعدادات Windows.</value>
+  </data>
+  <data name="Error.LocationTimeout" xml:space="preserve">
+    <value>انتهت مهلة الحصول على موقعك. تحقق من خدمة الموقع في Windows وحاول مرة أخرى.</value>
+  </data>
+  <data name="Error.LocationUiThread" xml:space="preserve">
+    <value>يجب بدء تشغيل LocationUpdateService على مؤشر ترابط واجهة المستخدم.</value>
+  </data>
+  <data name="Error.LockScreenFileMissing" xml:space="preserve">
+    <value>لم يتم العثور على ملف خلفية شاشة القفل.</value>
+  </data>
+  <data name="Error.ScheduleNextSwitch" xml:space="preserve">
+    <value>التبديل التالي عند {0} إلى {1}</value>
+  </data>
+  <data name="Error.StartupHelperExit" xml:space="preserve">
+    <value>فشلت إعدادات بدء التشغيل (رمز الخطأ {0}). راجع رسالة Windows للحصول على التفاصيل.</value>
+  </data>
+  <data name="Error.StartupHelperMissing" xml:space="preserve">
+    <value>لم يتم العثور على مكون خدمة بدء التشغيل. أعد تثبيت التطبيق.</value>
+  </data>
+  <data name="Error.StartupHelperStart" xml:space="preserve">
+    <value>تعذر بدء تشغيل مثبت خدمة بدء التشغيل.</value>
+  </data>
+  <data name="Error.StartupPathMissing" xml:space="preserve">
+    <value>تعذر العثور على مسار التطبيق الحالي.</value>
+  </data>
+  <data name="Error.ThemeRegistry" xml:space="preserve">
+    <value>تعذر فتح مفتاح تسجيل Windows Personalization.</value>
+  </data>
+  <data name="Error.TrayIconMissing" xml:space="preserve">
+    <value>مورد رمز الدرج مفقود.</value>
+  </data>
+  <data name="Error.WallpaperApply" xml:space="preserve">
+    <value>لا يمكن تعيين خلفية سطح المكتب.</value>
+  </data>
+  <data name="Error.WallpaperFileMissing" xml:space="preserve">
+    <value>لم يتم العثور على ملف الخلفية.</value>
+  </data>
+  <data name="Frequency.Daily" xml:space="preserve">
+    <value>كل يوم</value>
+  </data>
+  <data name="Frequency.Every12Hours" xml:space="preserve">
+    <value>كل 12 ساعة</value>
+  </data>
+  <data name="Frequency.Hourly" xml:space="preserve">
+    <value>كل ساعة</value>
+  </data>
+  <data name="Frequency.Monthly" xml:space="preserve">
+    <value>كل شهر</value>
+  </data>
+  <data name="Frequency.Weekly" xml:space="preserve">
+    <value>كل أسبوع</value>
+  </data>
+  <data name="HighPriorityStartupCard.Description" xml:space="preserve">
+    <value>يتطلب الإعداد اليدوي وإذن المسؤول. يستخدم خدمة Windows لبدء التطبيق مبكرًا عند تسجيل الدخول.</value>
+  </data>
+  <data name="HighPriorityStartupCard.Header" xml:space="preserve">
+    <value>بدء التشغيل ذو الأولوية العالية</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="HighPriorityStartupToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="HighPriorityStartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>بدء التشغيل ذو الأولوية العالية</value>
+  </data>
+  <data name="Language.RestartRequired" xml:space="preserve">
+    <value>تم تغيير اللغة إلى {0}. أعد تشغيل تبديل الخلفية لتطبيق التغيير.</value>
+  </data>
+  <data name="Language.System" xml:space="preserve">
+    <value>استخدام لغة Windows</value>
+  </data>
+  <data name="LanguageCard.Description" xml:space="preserve">
+    <value>اختر لغة للتطبيق. أعد تشغيل التطبيق ليصبح التغيير ساري المفعول.</value>
+  </data>
+  <data name="LanguageCard.Header" xml:space="preserve">
+    <value>لغة التطبيق</value>
+  </data>
+  <data name="LanguageCombo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>لغة التطبيق</value>
+  </data>
+  <data name="Location.AutomaticOff" xml:space="preserve">
+    <value>التحديثات التلقائية معطلة</value>
+  </data>
+  <data name="Location.Coordinates" xml:space="preserve">
+    <value>خط العرض {0:F4}، خط الطول {1:F4}</value>
+  </data>
+  <data name="Location.EnableFailed" xml:space="preserve">
+    <value>تعذر تمكين التحديثات التلقائية للموقع: {0}</value>
+  </data>
+  <data name="Location.Enabled" xml:space="preserve">
+    <value>تم تمكين تحديثات الموقع التلقائية، واكتمل التحقق من الموقع الأول.</value>
+  </data>
+  <data name="Location.Fetching" xml:space="preserve">
+    <value>الحصول على الموقع الحالي...</value>
+  </data>
+  <data name="Location.LastFailed" xml:space="preserve">
+    <value>فشل التحديث التلقائي الأخير: {0}</value>
+  </data>
+  <data name="Location.LastUpdated" xml:space="preserve">
+    <value>آخر تحديث: {0:g}</value>
+  </data>
+  <data name="Location.ManualAvailable" xml:space="preserve">
+    <value>إيقاف. لا يزال بإمكانك تحديد "استخدام الموقع الحالي" للتحديث يدويًا.</value>
+  </data>
+  <data name="Location.NextAfterComplete" xml:space="preserve">
+    <value>سيتم استئناف تكرار التحديث المحدد بعد هذا التحديث</value>
+  </data>
+  <data name="Location.NextUpdate" xml:space="preserve">
+    <value>{0}; التحديث القادم حوالي {1:g}</value>
+  </data>
+  <data name="Location.NoLocation" xml:space="preserve">
+    <value>لم يتم تحديد الموقع</value>
+  </data>
+  <data name="Location.RefreshFailed" xml:space="preserve">
+    <value>تعذر الحصول على الموقع: {0}</value>
+  </data>
+  <data name="Location.UpdateSoon" xml:space="preserve">
+    <value>{0}; سيتم تشغيل التحديث في الخلفية قريبًا</value>
+  </data>
+  <data name="Location.Updated" xml:space="preserve">
+    <value>تم حساب أوقات شروق الشمس وغروبها من موقعك الحالي.</value>
+  </data>
+  <data name="Location.WaitingFirst" xml:space="preserve">
+    <value>في انتظار التحديث التلقائي الأول</value>
+  </data>
+  <data name="LocationCard.Description" xml:space="preserve">
+    <value>لم يتم تحديد الموقع</value>
+  </data>
+  <data name="LocationCard.Header" xml:space="preserve">
+    <value>موقع شروق الشمس وغروبها</value>
+  </data>
+  <data name="LocationDaily.Content" xml:space="preserve">
+    <value>كل يوم</value>
+  </data>
+  <data name="LocationEvery12Hours.Content" xml:space="preserve">
+    <value>كل 12 ساعة</value>
+  </data>
+  <data name="LocationFrequencyCard.Description" xml:space="preserve">
+    <value>التحديثات التلقائية معطلة</value>
+  </data>
+  <data name="LocationFrequencyCard.Header" xml:space="preserve">
+    <value>تردد تحديث الموقع</value>
+  </data>
+  <data name="LocationHourly.Content" xml:space="preserve">
+    <value>كل ساعة</value>
+  </data>
+  <data name="LocationMonthly.Content" xml:space="preserve">
+    <value>كل شهر</value>
+  </data>
+  <data name="LocationWeekly.Content" xml:space="preserve">
+    <value>كل أسبوع</value>
+  </data>
+  <data name="LockScreenCard.Description" xml:space="preserve">
+    <value>استخدم نفس الصورة لشاشة القفل عندما تتغير خلفية سطح المكتب.</value>
+  </data>
+  <data name="LockScreenCard.Header" xml:space="preserve">
+    <value>مزامنة شاشة القفل وسطح المكتب</value>
+  </data>
+  <data name="LockScreenToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="LockScreenToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="ModeTitle.Text" xml:space="preserve">
+    <value>جارٍ تحميل الحالة الحالية…</value>
+  </data>
+  <data name="NightExpander.Description" xml:space="preserve">
+    <value>بعد غروب الشمس حتى الفجر</value>
+  </data>
+  <data name="NightExpander.Header" xml:space="preserve">
+    <value>ليلة</value>
+  </data>
+  <data name="NightPlaceholder.Text" xml:space="preserve">
+    <value>لم يتم تحديد أي صورة</value>
+  </data>
+  <data name="NightStartCard.Description" xml:space="preserve">
+    <value>ويبدأ الليل بعد الغسق ويستمر حتى فجر اليوم التالي.</value>
+  </data>
+  <data name="NightStartCard.Header" xml:space="preserve">
+    <value>يبدأ الليل</value>
+  </data>
+  <data name="Period.Dawn" xml:space="preserve">
+    <value>الفجر</value>
+  </data>
+  <data name="Period.Day" xml:space="preserve">
+    <value>النهار</value>
+  </data>
+  <data name="Period.Dusk" xml:space="preserve">
+    <value>الغسق</value>
+  </data>
+  <data name="Period.Night" xml:space="preserve">
+    <value>ليلة</value>
+  </data>
+  <data name="PeriodWallpaperCard.Header" xml:space="preserve">
+    <value>ورق جدران</value>
+  </data>
+  <data name="PickWallpaperButton.Content" xml:space="preserve">
+    <value>اختر…</value>
+  </data>
+  <data name="PreviewToggleButton.Content" xml:space="preserve">
+    <value>معاينة وضع آخر</value>
+  </data>
+  <data name="ScheduleCard.Description" xml:space="preserve">
+    <value>الأوقات المخصصة أبسط. يتصرف شروق الشمس حتى غروبها بشكل أشبه بالمظهر التلقائي لنظام التشغيل MacOS.</value>
+  </data>
+  <data name="ScheduleCard.Header" xml:space="preserve">
+    <value>طريقة الجدولة</value>
+  </data>
+  <data name="ScheduleCustom.Content" xml:space="preserve">
+    <value>الأوقات المخصصة</value>
+  </data>
+  <data name="ScheduleSunrise.Content" xml:space="preserve">
+    <value>شروق الشمس إلى غروب الشمس</value>
+  </data>
+  <data name="SectionAppearance.Text" xml:space="preserve">
+    <value>المظهر حسب الفترة</value>
+  </data>
+  <data name="SectionGeneral.Text" xml:space="preserve">
+    <value>عام</value>
+  </data>
+  <data name="SectionLanguage.Text" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="SectionSchedule.Text" xml:space="preserve">
+    <value>الجدول الزمني</value>
+  </data>
+  <data name="SectionWindowsColors.Text" xml:space="preserve">
+    <value>ألوان النوافذ</value>
+  </data>
+  <data name="Startup.Disabled" xml:space="preserve">
+    <value>تم تعطيل بدء التشغيل.</value>
+  </data>
+  <data name="Startup.ElevationCancelled" xml:space="preserve">
+    <value>تم إلغاء موافقة المسؤول. لم يتم تغيير إعدادات بدء التشغيل.</value>
+  </data>
+  <data name="Startup.EnableStandardFirst" xml:space="preserve">
+    <value>قم بتشغيل "البدء عند تسجيل الدخول" أولاً. هذه الميزة معطلة بشكل افتراضي وتتطلب إذن المسؤول.</value>
+  </data>
+  <data name="Startup.EnabledHigh" xml:space="preserve">
+    <value>تم تمكين بدء التشغيل ذو الأولوية العالية. ستبدأ خدمة Windows تشغيل التطبيق في الخلفية عند تسجيل الدخول.</value>
+  </data>
+  <data name="Startup.EnabledStandard" xml:space="preserve">
+    <value>تم تمكين بدء التشغيل القياسي.</value>
+  </data>
+  <data name="Startup.HighRequiresStandard" xml:space="preserve">
+    <value>يتطلب الإعداد اليدوي وإذن المسؤول. يستخدم خدمة Windows لبدء التطبيق مبكرًا عند تسجيل الدخول.</value>
+  </data>
+  <data name="Startup.HighServiceRepair" xml:space="preserve">
+    <value>تم إيقاف الخدمة أو تعطيلها. قم بإيقاف تشغيل هذا وتشغيله مرة أخرى لإصلاحه (مطلوب إذن المسؤول).</value>
+  </data>
+  <data name="Startup.HighServiceRunning" xml:space="preserve">
+    <value>ممكّن: تقوم خدمة Windows بتشغيل التطبيق في الخلفية كمستخدم حالي.</value>
+  </data>
+  <data name="Startup.ReadFailed" xml:space="preserve">
+    <value>لا يمكن قراءة حالة بدء التشغيل: {0}</value>
+  </data>
+  <data name="Startup.SetFailed" xml:space="preserve">
+    <value>لا يمكن تحديث إعدادات بدء التشغيل: {0}</value>
+  </data>
+  <data name="Startup.Updating" xml:space="preserve">
+    <value>تحديث إعدادات بدء التشغيل. أكمل أي مطالبة مسؤول تظهر...</value>
+  </data>
+  <data name="StartupCard.Description" xml:space="preserve">
+    <value>استمر في التبديل في الخلفية بعد تسجيل الدخول إلى Windows</value>
+  </data>
+  <data name="StartupCard.Header" xml:space="preserve">
+    <value>ابدأ عند تسجيل الدخول</value>
+  </data>
+  <data name="StartupToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="StartupToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="StartupToggle.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>ابدأ عند تسجيل الدخول</value>
+  </data>
+  <data name="Status.Current" xml:space="preserve">
+    <value>{0} · {1}</value>
+  </data>
+  <data name="Status.CurrentPeriod" xml:space="preserve">
+    <value>الفترة الحالية: {0}</value>
+  </data>
+  <data name="Status.DarkMode" xml:space="preserve">
+    <value>الوضع الداكن</value>
+  </data>
+  <data name="Status.DawnSolar" xml:space="preserve">
+    <value>حوالي {0}–{1} (ارتفاع الشمس من −6° إلى 10°)</value>
+  </data>
+  <data name="Status.DisabledPreview" xml:space="preserve">
+    <value>التبديل التلقائي معطل. معاينة {0} في {1}.</value>
+  </data>
+  <data name="Status.ErrorTitle" xml:space="preserve">
+    <value>حدث خطأ ما</value>
+  </data>
+  <data name="Status.LightMode" xml:space="preserve">
+    <value>الوضع الفاتح</value>
+  </data>
+  <data name="Status.Preview" xml:space="preserve">
+    <value>معاينة ({0}). {1}</value>
+  </data>
+  <data name="Status.PreviewNext" xml:space="preserve">
+    <value>معاينة {0}</value>
+  </data>
+  <data name="Status.StartsAround" xml:space="preserve">
+    <value>يبدأ حوالي {0}.</value>
+  </data>
+  <data name="Status.SuccessTitle" xml:space="preserve">
+    <value>تم</value>
+  </data>
+  <data name="Status.SunTimes" xml:space="preserve">
+    <value>الفجر {0}–{1} · الشروق {2} · الغروب {3} · الغسق {4}</value>
+  </data>
+  <data name="Status.SunriseLocationRequired" xml:space="preserve">
+    <value>جدولة شروق الشمس وغروبها تحتاج إلى موقع. حدد "استخدام الموقع الحالي" أو قم بالتبديل مرة أخرى إلى الأوقات المخصصة.</value>
+  </data>
+  <data name="Status.WarningTitle" xml:space="preserve">
+    <value>خطوة أخرى</value>
+  </data>
+  <data name="SystemThemeCard.Description" xml:space="preserve">
+    <value>يمكنك أيضًا تغيير الوضع الفاتح أو الداكن لشريط المهام وقائمة "ابدأ" وواجهة Windows.</value>
+  </data>
+  <data name="SystemThemeCard.Header" xml:space="preserve">
+    <value>تبديل موضوع ويندوز</value>
+  </data>
+  <data name="SystemThemeToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="SystemThemeToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="ThemeDark.Content" xml:space="preserve">
+    <value>داكن</value>
+  </data>
+  <data name="ThemeLight.Content" xml:space="preserve">
+    <value>فاتح</value>
+  </data>
+  <data name="ThemeModeCard.Header" xml:space="preserve">
+    <value>الموضوع</value>
+  </data>
+  <data name="TitleBarAppName.Text" xml:space="preserve">
+    <value>تبديل الخلفية</value>
+  </data>
+  <data name="Tray.ApplyPlan" xml:space="preserve">
+    <value>تطبيق الجدول الزمني الآن</value>
+  </data>
+  <data name="Tray.Exit" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Tray.OpenWindow" xml:space="preserve">
+    <value>فتح النافذة الرئيسية</value>
+  </data>
+  <data name="TrayCard.Description" xml:space="preserve">
+    <value>حافظ على تشغيل التطبيق في الخلفية عند إغلاق النافذة.</value>
+  </data>
+  <data name="TrayCard.Header" xml:space="preserve">
+    <value>تصغير إلى الدرج عند الإغلاق</value>
+  </data>
+  <data name="TrayToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="TrayToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="UseLocationButton.Content" xml:space="preserve">
+    <value>استخدام الموقع الحالي</value>
+  </data>
+  <data name="WallpaperCenter.Content" xml:space="preserve">
+    <value>مركز</value>
+  </data>
+  <data name="WallpaperFill.Content" xml:space="preserve">
+    <value>ملء</value>
+  </data>
+  <data name="WallpaperFit.Content" xml:space="preserve">
+    <value>احتواء</value>
+  </data>
+  <data name="WallpaperFitCard.Description" xml:space="preserve">
+    <value>يطابق خيارات التعبئة والملاءمة والتمدد وغيرها من الخيارات في تخصيص Windows.</value>
+  </data>
+  <data name="WallpaperFitCard.Header" xml:space="preserve">
+    <value>خلفية مناسبة</value>
+  </data>
+  <data name="WallpaperSpan.Content" xml:space="preserve">
+    <value>سبان</value>
+  </data>
+  <data name="WallpaperStretch.Content" xml:space="preserve">
+    <value>تمتد</value>
+  </data>
+  <data name="WallpaperTile.Content" xml:space="preserve">
+    <value>بلاط</value>
+  </data>
+  <data name="WallpaperToggle.OffContent" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="WallpaperToggle.OnContent" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="WindowTitle.Title" xml:space="preserve">
+    <value>تبديل الخلفية</value>
+  </data>
+</root>
