@@ -60,7 +60,14 @@ For desktop UI tests, publish the app first. The UI runner uses isolated setting
 
 ```powershell
 $env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.1\WallpaperSwitch.exe).Path
-.\Tests\bin\x64\Release\net8.0-windows\WallpaperSwitch.Tests.exe --filter 'TestCategory=UI' --report-trx
+.\Tests\bin\x64\Release\net8.0-windows\WallpaperSwitch.Tests.exe --filter 'TestCategory=UI&TestCategory!=Installed' --report-trx
+```
+
+After an upgrade, check the actual installed instance separately. This verifies obsolete resource files were removed, the tray icon is registered, and a second launch exits without creating another instance:
+
+```powershell
+$env:WALLPAPERSWITCH_INSTALLED_APP = "$env:LOCALAPPDATA\Programs\WallpaperSwitch\WallpaperSwitch.exe"
+.\Tests\bin\x64\Release\net8.0-windows\WallpaperSwitch.Tests.exe --filter 'TestCategory=Installed' --report-trx
 ```
 
 ## Project layout
@@ -75,3 +82,5 @@ $env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.1\Wallpape
 Generated output, IDE caches, local screenshots, and machine-specific cleanup inventories are excluded from Git.
 
 Settings writes use detached snapshots and serialized atomic replacement. Existing settings remain valid while a disk operation is pending or fails; exiting waits asynchronously for pending saves. The UI automation tests hold a real settings-file lock to verify that the loading indicator stays visible while other actions still complete. Tray tests deliver `TaskbarCreated` only to the isolated test process, without restarting Explorer.
+
+Upgrades remove the old root `resources.pri`, `App.xbf`, and `MainWindow.xbf` from version 1.2 so they cannot shadow the current combined `WallpaperSwitch.pri`. User settings are preserved. UI regression tests cover both system-language settings and legacy settings with no language preference.

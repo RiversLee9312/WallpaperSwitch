@@ -167,6 +167,14 @@ Name: "startup"; Description: "{cm:StartupTaskDescription}"; GroupDescription: "
 [Files]
 Source: "{#PublishDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
+[InstallDelete]
+; Version 1.2 shipped loose XBF files and resources.pri. MRT can load these
+; before the current WallpaperSwitch.pri, breaking WinUI and translated strings.
+; These exact obsolete files are absent from the current publish payload.
+Type: files; Name: "{app}\resources.pri"
+Type: files; Name: "{app}\App.xbf"
+Type: files; Name: "{app}\MainWindow.xbf"
+
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; WorkingDir: "{app}"
 Name: "{group}\{cm:UninstallProgram,WallpaperSwitch}"; Filename: "{uninstallexe}"

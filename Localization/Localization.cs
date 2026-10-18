@@ -21,12 +21,12 @@ public static class Localizer
     public static void Initialize(string? language)
     {
         LanguagePreference = LanguageCatalog.NormalizePreference(language);
-        ApplicationLanguages.PrimaryLanguageOverride = LanguagePreference == LanguageCatalog.SystemLanguage
-            ? string.Empty
-            : LanguagePreference;
-
         if (LanguagePreference != LanguageCatalog.SystemLanguage)
         {
+            // This unpackaged app starts a new process when the preference changes.
+            // Leave MRT's default untouched for system language: an empty override
+            // is rejected by the Windows App SDK runtime used by this application.
+            ApplicationLanguages.PrimaryLanguageOverride = LanguagePreference;
             var culture = LanguageCatalog.GetFormattingCulture(LanguagePreference);
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;

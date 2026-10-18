@@ -173,6 +173,38 @@ public sealed partial class StartupUiTests
 
     [STATestMethod]
     [TestCategory("UI")]
+    [DataRow(false)]
+    [DataRow(true)]
+    public void SystemLanguageAndLegacySettingsStartSuccessfully(bool legacySettings)
+    {
+        if (!File.Exists(ApplicationPath)) Assert.Inconclusive("Publish the application before running UI tests.");
+        var directory = CreateIsolatedSettings(out var settingsFile, "system");
+        if (legacySettings)
+        {
+            var settings = JsonNode.Parse(File.ReadAllText(settingsFile))!.AsObject();
+            settings.Remove("language");
+            File.WriteAllText(settingsFile, settings.ToJsonString());
+        }
+        using var process = Process.Start(CreateAppStartInfo(settingsFile, Guid.NewGuid().ToString("N")))!;
+        try
+        {
+            var window = FindAppWindow(process, settingsFile);
+            _ = Find(window, "LanguageCombo");
+            _ = Find(window, "PreviewToggleButton");
+            WaitUntil(() => ReadSharedLog(Path.Combine(directory, "startup.log")).Contains("SetupTrayIcon ready", StringComparison.Ordinal)
+                && TrayIsPresent(ApplicationPath));
+            Assert.IsFalse(ReadSharedLog(Path.Combine(directory, "startup.log")).Contains("UnhandledException:", StringComparison.Ordinal));
+            Assert.AreNotEqual("App.Title", window.Current.Name);
+        }
+        finally
+        {
+            if (!process.HasExited) { process.Kill(); process.WaitForExit(); }
+            Directory.Delete(directory, recursive: true);
+        }
+    }
+
+    [STATestMethod]
+    [TestCategory("UI")]
     public void LanguageChoicePersistsAndAppliesAfterRestart()
     {
         if (!File.Exists(ApplicationPath)) Assert.Inconclusive("Publish the application before running UI tests.");
