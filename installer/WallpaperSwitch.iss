@@ -1,10 +1,10 @@
 #define MyAppName "WallpaperSwitch"
-#define MyAppVersion "1.3.0"
+#define MyAppVersion "1.3.1"
 #define MyAppPublisher "WallpaperSwitch"
 #define MyAppExeName "WallpaperSwitch.exe"
 #define MyAppId "{{8F3A2B91-6D4E-4C17-A9B8-E1F0C4D7A256}"
 #ifndef PublishDir
-  #define PublishDir "..\artifacts\publish-1.3.0"
+  #define PublishDir "..\artifacts\publish-1.3.1"
 #endif
 
 [Setup]

@@ -516,4 +516,5 @@
   <data name="WindowTitle.Title" xml:space="preserve">
     <value>تبديل الخلفية</value>
   </data>
+  <data name="ActivityWorking.Text" xml:space="preserve"><value>جارٍ التنفيذ…</value></data>
 </root>

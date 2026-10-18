@@ -4,6 +4,7 @@ using H.NotifyIcon;
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Automation;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Windowing;
 using WallpaperSwitch.Models;
@@ -26,6 +27,15 @@ public sealed partial class MainWindow : Window
     private CancellationTokenSource? _showCts;
     private readonly StartupService _startupService = new();
     private bool _changingStartup;
+    private bool _startupReady;
+    private bool _closed;
+    private bool _explicitShowRequested;
+    private readonly CancellationTokenSource _lifetime = new();
+    private readonly AsyncOperations _operations = new();
+    private readonly Dictionary<Image, int> _previewVersions = new();
+    private Task? _trayMonitor;
+    private readonly SemaphoreSlim _trayAccess = new(1, 1);
+    private readonly AsyncRelayCommand _applyCommand;
 
     public ICommand RestoreCommand { get; }
     public ICommand ApplyNowCommand { get; }
@@ -34,8 +44,9 @@ public sealed partial class MainWindow : Window
     public MainWindow()
     {
         RestoreCommand = new RelayCommand(RestoreFromTray);
-        ApplyNowCommand = new RelayCommand(() => AppearanceController.Instance.ApplyNow());
-        ExitCommand = new RelayCommand(ExitFromTray);
+        _applyCommand = new AsyncRelayCommand(ApplyNowAsync);
+        ApplyNowCommand = _applyCommand;
+        ExitCommand = new AsyncRelayCommand(ExitFromTrayAsync);
         CrashLog.Write("MainWindow ctor start");
         InitializeComponent();
         Title = Localizer.GetString("WindowTitle.Title");
@@ -54,16 +65,16 @@ public sealed partial class MainWindow : Window
         AppWindow.Resize(new SizeInt32(860, 1040));
         CenterOnScreen();
 
-        var pngPath = Path.Combine(AppContext.BaseDirectory, "Assets", "AppIcon.png");
-        if (File.Exists(pngPath))
-        {
-            TitleBarIcon.Source = new BitmapImage(new Uri(pngPath));
-        }
+        TitleBarIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/AppIcon.png"));
+        _operations.Changed += RefreshBusyUi;
+        AutomationProperties.SetName(ActivityProgressRing, Localizer.GetString("ActivityWorking.Text"));
+        AutomationProperties.SetName(StartupProgressRing, Localizer.GetString("Startup.Updating"));
+        AutomationProperties.SetName(LocationProgressRing, Localizer.GetString("Location.Fetching"));
 
         AppWindow.Closing += AppWindow_Closing;
-        Activated += (_, _) =>
+        Activated += async (_, _) =>
         {
-            if (!_isLoading && !_changingStartup) RefreshStartupUi();
+            if (!_isLoading && !_changingStartup) await RefreshStartupUiAsync();
         };
         AppearanceController.Instance.StateChanged += OnControllerStateChanged;
         LocationUpdateService.Instance.StateChanged += OnLocationUpdateStateChanged;
@@ -71,6 +82,8 @@ public sealed partial class MainWindow : Window
         {
             AppearanceController.Instance.StateChanged -= OnControllerStateChanged;
             LocationUpdateService.Instance.StateChanged -= OnLocationUpdateStateChanged;
+            _closed = true;
+            _lifetime.Cancel();
             _showCts?.Cancel();
             DisposeTrayIcon();
         };
@@ -82,62 +95,106 @@ public sealed partial class MainWindow : Window
         CrashLog.Write("MainWindow ctor done");
     }
 
-    public void SetupTrayIcon()
+    public Task InitializeAsync() => Task.WhenAll(
+        RefreshStartupUiAsync(),
+        RunUiOperationAsync("previews", () => Task.WhenAll(
+            SetPreviewAsync(DawnPreview, DawnPlaceholder, SettingsStore.Current.Dawn.WallpaperPath),
+            SetPreviewAsync(DayPreview, DayPlaceholder, SettingsStore.Current.Day.WallpaperPath),
+            SetPreviewAsync(DuskPreview, DuskPlaceholder, SettingsStore.Current.Dusk.WallpaperPath),
+            SetPreviewAsync(NightPreview, NightPlaceholder, SettingsStore.Current.Night.WallpaperPath))));
+
+    public async Task SetupTrayIconAsync()
     {
-        if (_trayIcon is not null)
+        await RunUiOperationAsync("tray", async () =>
         {
-            return;
-        }
-
-        try
-        {
-            CrashLog.Write("SetupTrayIcon");
-            var flyout = new MenuFlyout();
-            flyout.Items.Add(new MenuFlyoutItem { Text = Localizer.GetString("Tray.OpenWindow"), Command = RestoreCommand });
-            flyout.Items.Add(new MenuFlyoutItem { Text = Localizer.GetString("Tray.ApplyPlan"), Command = ApplyNowCommand });
-            flyout.Items.Add(new MenuFlyoutSeparator());
-            flyout.Items.Add(new MenuFlyoutItem { Text = Localizer.GetString("Tray.Exit"), Command = ExitCommand });
-
-            var period = AppearanceController.Instance.AppliedPeriod;
-            var trayIconPath = GetTrayIconPath(period);
-            if (!File.Exists(trayIconPath))
+            if (_trayIcon is null)
             {
-                throw new FileNotFoundException(Localizer.GetString("App.TrayIconMissing"), trayIconPath);
+                var period = AppearanceController.Instance.AppliedPeriod;
+                var icon = await Task.Run(() => new System.Drawing.Icon(GetTrayIconPath(period)));
+                if (_closed) { icon.Dispose(); return; }
+                _trayDrawingIcon = icon;
+                _trayIconPeriod = period;
+                var flyout = new MenuFlyout();
+                flyout.Items.Add(new MenuFlyoutItem { Text = Localizer.GetString("Tray.OpenWindow"), Command = RestoreCommand });
+                flyout.Items.Add(new MenuFlyoutItem { Text = Localizer.GetString("Tray.ApplyPlan"), Command = ApplyNowCommand });
+                flyout.Items.Add(new MenuFlyoutSeparator());
+                flyout.Items.Add(new MenuFlyoutItem { Text = Localizer.GetString("Tray.Exit"), Command = ExitCommand });
+                _trayIcon = new TaskbarIcon
+                {
+                    ToolTipText = Localizer.GetString("App.TrayTooltip"),
+                    ContextMenuMode = ContextMenuMode.PopupMenu,
+                    NoLeftClickDelay = true,
+                    LeftClickCommand = RestoreCommand,
+                    ContextFlyout = flyout,
+                    Icon = icon
+                };
             }
 
-            _trayDrawingIcon = new System.Drawing.Icon(trayIconPath);
-            _trayIconPeriod = period;
-
-            _trayIcon = new TaskbarIcon
+            var core = _trayIcon.TrayIcon;
+            // The callback window belongs to the UI message pump. Shell registration
+            // itself can wait for Explorer and runs separately from that pump.
+            if (!core.MessageWindow.IsCreated) core.MessageWindow.Create();
+            var attempt = 0;
+            await AsyncRetry.UntilReadyAsync(async () =>
             {
-                ToolTipText = Localizer.GetString("App.TrayTooltip"),
-                ContextMenuMode = ContextMenuMode.PopupMenu,
-                NoLeftClickDelay = true,
-                LeftClickCommand = RestoreCommand,
-                ContextFlyout = flyout,
-                Icon = _trayDrawingIcon
-            };
-
-            _trayIcon.ForceCreate(enablesEfficiencyMode: false);
-            CrashLog.Write("SetupTrayIcon done");
-        }
-        catch (Exception ex)
-        {
-            CrashLog.Write("SetupTrayIcon failed: " + ex);
-            DisposeTrayIcon();
-        }
+                await _trayAccess.WaitAsync(_lifetime.Token);
+                try
+                {
+                    // Retain the message window even if Explorer is not ready yet.
+                    // H.NotifyIcon also handles TaskbarCreated; the monitor retries failures.
+                    await Task.Run(core.Create);
+                    CrashLog.Write("SetupTrayIcon ready");
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    if (attempt++ % 30 == 0) CrashLog.Write("SetupTrayIcon will retry: " + ex);
+                    return false;
+                }
+                finally { _trayAccess.Release(); }
+            }, TimeSpan.FromSeconds(2), _lifetime.Token);
+        });
+        if (!_closed) _trayMonitor ??= MonitorTrayAsync();
     }
 
-    public void HideToTray()
+    private async Task MonitorTrayAsync()
     {
-        AppWindow.IsShownInSwitchers = false;
+        try
+        {
+            while (true)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(2), _lifetime.Token);
+                if (_trayIcon is { IsCreated: false }) await SetupTrayIconAsync();
+            }
+        }
+        catch (OperationCanceledException) { }
+    }
+
+    public void HideToTray(bool startup = false)
+    {
+        if (_closed || startup && _explicitShowRequested) return;
+        if (_trayIcon?.IsCreated != true)
+        {
+            // Keep a taskbar entry if there is no working tray entry to restore from.
+            (AppWindow.Presenter as OverlappedPresenter)?.Minimize();
+            return;
+        }
+        SetShownInSwitchers(false);
         AppWindow.Hide();
+    }
+
+    private void SetShownInSwitchers(bool shown)
+    {
+        try { AppWindow.IsShownInSwitchers = shown; }
+        catch (Exception ex) { CrashLog.Write("Switchers visibility unavailable: " + ex.Message); }
     }
 
     public void RestoreFromTray()
     {
-        AppWindow.IsShownInSwitchers = true;
+        _explicitShowRequested = true;
+        SetShownInSwitchers(true);
         AppWindow.Show();
+        (AppWindow.Presenter as OverlappedPresenter)?.Restore();
         Activate();
     }
 
@@ -185,7 +242,8 @@ public sealed partial class MainWindow : Window
             .ToArray();
         LanguageCombo.SelectedValue = LanguageCatalog.NormalizePreference(settings.Language);
         EnabledToggle.IsOn = settings.IsEnabled;
-        RefreshStartupUi();
+        StartupToggle.IsEnabled = false;
+        HighPriorityStartupToggle.IsEnabled = false;
         TrayToggle.IsOn = settings.MinimizeToTray;
         WallpaperToggle.IsOn = settings.SwitchWallpaper;
         LockScreenToggle.IsOn = settings.SyncLockScreen;
@@ -207,13 +265,9 @@ public sealed partial class MainWindow : Window
         UpdateSchedulePanels();
         RefreshLocationText();
         RefreshLocationUpdateUi();
-        SetPreview(DawnPreview, DawnPlaceholder, settings.Dawn.WallpaperPath);
-        SetPreview(DayPreview, DayPlaceholder, settings.Day.WallpaperPath);
-        SetPreview(DuskPreview, DuskPlaceholder, settings.Dusk.WallpaperPath);
-        SetPreview(NightPreview, NightPlaceholder, settings.Night.WallpaperPath);
     }
 
-    private void LanguageCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void LanguageCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (_isLoading || LanguageCombo.SelectedValue is not string language)
         {
@@ -227,11 +281,15 @@ public sealed partial class MainWindow : Window
         }
 
         SettingsStore.Current.Language = language;
-        SettingsStore.Save();
-        var displayName = language == LanguageCatalog.SystemLanguage
-            ? Localizer.GetString("Language.System")
-            : Localizer.LanguageOptions.First(option => option.Tag == language).DisplayName;
-        ShowInfo(Localizer.Format("Language.RestartRequired", displayName));
+        await RunUiOperationAsync("language", async () =>
+        {
+            await SettingsStore.SaveAsync();
+            if (SettingsStore.Current.Language != language) return;
+            var displayName = language == LanguageCatalog.SystemLanguage
+                ? Localizer.GetString("Language.System")
+                : Localizer.LanguageOptions.First(option => option.Tag == language).DisplayName;
+            ShowInfo(Localizer.Format("Language.RestartRequired", displayName));
+        }, allowConcurrent: true);
     }
 
     private void SaveUiToSettings()
@@ -279,10 +337,9 @@ public sealed partial class MainWindow : Window
             settings.Night.StartTime = TimeOnly.FromTimeSpan(night);
         }
 
-        SettingsStore.Save();
     }
 
-    private void SettingToggled(object sender, RoutedEventArgs e)
+    private async void SettingToggled(object sender, RoutedEventArgs e)
     {
         if (_isLoading)
         {
@@ -291,101 +348,99 @@ public sealed partial class MainWindow : Window
 
         SaveUiToSettings();
 
-        if (ReferenceEquals(sender, LockScreenToggle) && SettingsStore.Current.SyncLockScreen)
-        {
-            AppearanceController.Instance.ApplyNow();
-        }
-        else
-        {
-            AppearanceController.Instance.ApplyIfNeeded();
-        }
+        await SaveAndApplyAsync(force: ReferenceEquals(sender, LockScreenToggle) && SettingsStore.Current.SyncLockScreen);
     }
+
+    private Task SaveAndApplyAsync(bool force = false) => RunUiOperationAsync("settings", async () =>
+    {
+        await SettingsStore.SaveAsync();
+        if (force) await AppearanceController.Instance.ApplyNowAsync();
+        else await AppearanceController.Instance.ApplyIfNeededAsync();
+    }, allowConcurrent: true);
 
     private async void StartupToggle_Toggled(object sender, RoutedEventArgs e)
     {
-        if (_isLoading || _changingStartup) return;
+        if (_isLoading || _changingStartup || !_startupReady) return;
         _changingStartup = true;
-        StartupToggle.IsEnabled = false;
-        HighPriorityStartupToggle.IsEnabled = false;
         var mode = !StartupToggle.IsOn ? StartupMode.Disabled
             : HighPriorityStartupToggle.IsOn ? StartupMode.HighPriority : StartupMode.Standard;
-        HighPriorityStartupCard.Description = Localizer.GetString("Startup.Updating");
-        try
+        await RunUiOperationAsync("startup", async () =>
         {
-            await _startupService.SetModeAsync(mode);
-            ShowInfo(mode switch
+            HighPriorityStartupCard.Description = Localizer.GetString("Startup.Updating");
+            try
             {
-                StartupMode.HighPriority => Localizer.GetString("Startup.EnabledHigh"),
-                StartupMode.Standard => Localizer.GetString("Startup.EnabledStandard"),
-                _ => Localizer.GetString("Startup.Disabled")
-            });
-        }
-        catch (OperationCanceledException) { ShowWarning(Localizer.GetString("Startup.ElevationCancelled")); }
-        catch (Exception ex)
-        {
-            var details = ex is AggregateException aggregate
-                ? string.Join(Environment.NewLine, aggregate.InnerExceptions.Select(inner => inner.Message))
-                : ex.Message;
-            ShowError(Localizer.Format("Startup.SetFailed", details));
-        }
-        finally
-        {
-            _changingStartup = false;
-            RefreshStartupUi();
-            SettingsStore.Save();
-        }
+                await _startupService.SetModeAsync(mode);
+                ShowInfo(Localizer.GetString(mode switch
+                {
+                    StartupMode.HighPriority => "Startup.EnabledHigh",
+                    StartupMode.Standard => "Startup.EnabledStandard",
+                    _ => "Startup.Disabled"
+                }));
+            }
+            catch (OperationCanceledException) { ShowWarning(Localizer.GetString("Startup.ElevationCancelled")); }
+            catch (Exception ex)
+            {
+                var details = ex is AggregateException aggregate
+                    ? string.Join(Environment.NewLine, aggregate.InnerExceptions.Select(inner => inner.Message)) : ex.Message;
+                ShowError(Localizer.Format("Startup.SetFailed", details));
+            }
+            finally
+            {
+                _changingStartup = false;
+                await ReadStartupStateAsync();
+                await SettingsStore.SaveAsync();
+            }
+        });
     }
 
-    private void RefreshStartupUi()
+    private Task RefreshStartupUiAsync() => RunUiOperationAsync("startup-read", ReadStartupStateAsync);
+
+    private async Task ReadStartupStateAsync()
     {
+        var state = await _startupService.GetStateAsync();
+        if (_closed) return;
         var wasLoading = _isLoading;
         _isLoading = true;
         try
         {
-            var mode = _startupService.Mode;
+            var mode = state.Mode;
             StartupToggle.IsOn = mode != StartupMode.Disabled;
             HighPriorityStartupToggle.IsOn = mode == StartupMode.HighPriority;
-            StartupToggle.IsEnabled = !_changingStartup;
-            HighPriorityStartupToggle.IsEnabled = StartupToggle.IsOn && !_changingStartup;
             SettingsStore.Current.LaunchAtStartup = StartupToggle.IsOn;
             SettingsStore.Current.HighPriorityStartup = HighPriorityStartupToggle.IsOn;
             HighPriorityStartupCard.Description = mode == StartupMode.HighPriority
-                ? (_startupService.ServiceRunning
-                    ? Localizer.GetString("Startup.HighServiceRunning")
-                    : Localizer.GetString("Startup.HighServiceRepair"))
-                : (StartupToggle.IsOn
-                    ? Localizer.GetString("Startup.HighRequiresStandard")
-                    : Localizer.GetString("Startup.EnableStandardFirst"));
+                ? Localizer.GetString(state.ServiceRunning ? "Startup.HighServiceRunning" : "Startup.HighServiceRepair")
+                : Localizer.GetString(StartupToggle.IsOn ? "Startup.HighRequiresStandard" : "Startup.EnableStandardFirst");
+            _startupReady = true;
         }
-        catch (Exception ex) { ShowError(Localizer.Format("Startup.ReadFailed", ex.Message)); }
-        finally { _isLoading = wasLoading; }
+        finally { _isLoading = wasLoading; RefreshBusyUi(); }
     }
 
-    private void ScheduleCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void ScheduleCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         UpdateSchedulePanels();
         SaveUiToSettings();
         if (!_isLoading)
         {
-            AppearanceController.Instance.ApplyIfNeeded();
+            await SaveAndApplyAsync();
         }
     }
 
-    private void ScheduleTimeChanged(TimePicker sender, TimePickerSelectedValueChangedEventArgs args)
+    private async void ScheduleTimeChanged(TimePicker sender, TimePickerSelectedValueChangedEventArgs args)
     {
         SaveUiToSettings();
         if (!_isLoading)
         {
-            AppearanceController.Instance.ApplyIfNeeded();
+            await SaveAndApplyAsync();
         }
     }
 
-    private void FitCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void FitCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         SaveUiToSettings();
         if (!_isLoading)
         {
-            AppearanceController.Instance.ApplyIfNeeded();
+            await SaveAndApplyAsync();
         }
     }
 
@@ -399,13 +454,8 @@ public sealed partial class MainWindow : Window
 
     private async void AutoLocationToggle_Toggled(object sender, RoutedEventArgs e)
     {
-        if (_isLoading)
-        {
-            return;
-        }
-
-        AutoLocationToggle.IsEnabled = false;
-        try
+        if (_isLoading) return;
+        await RunUiOperationAsync("location", async () =>
         {
             if (AutoLocationToggle.IsOn)
             {
@@ -416,35 +466,24 @@ public sealed partial class MainWindow : Window
                     AutoLocationToggle.IsOn = false;
                     _isLoading = false;
                     SettingsStore.Current.AutoUpdateLocation = false;
-                    SettingsStore.Save();
+                    await SettingsStore.SaveAsync();
                     ShowError(Localizer.Format("Location.EnableFailed", result.Error));
                     return;
                 }
-
                 SettingsStore.Current.AutoUpdateLocation = true;
                 SettingsStore.Current.LocationRefreshFrequency = LocationFrequencyCombo.SelectedIndex >= 0
-                    ? (LocationRefreshFrequency)LocationFrequencyCombo.SelectedIndex
-                    : LocationRefreshFrequency.Daily;
-                SettingsStore.Save();
-                LocationUpdateService.Instance.SettingsChanged();
+                    ? (LocationRefreshFrequency)LocationFrequencyCombo.SelectedIndex : LocationRefreshFrequency.Daily;
                 ShowInfo(Localizer.GetString("Location.Enabled"));
             }
-            else
-            {
-                SettingsStore.Current.AutoUpdateLocation = false;
-                SettingsStore.Save();
-                LocationUpdateService.Instance.SettingsChanged();
-            }
-        }
-        finally
-        {
-            AutoLocationToggle.IsEnabled = true;
+            else SettingsStore.Current.AutoUpdateLocation = false;
+            await SettingsStore.SaveAsync();
+            LocationUpdateService.Instance.SettingsChanged();
             RefreshLocationText();
             RefreshLocationUpdateUi();
-        }
+        });
     }
 
-    private void LocationFrequencyCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void LocationFrequencyCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (_isLoading)
         {
@@ -452,16 +491,17 @@ public sealed partial class MainWindow : Window
         }
 
         SaveUiToSettings();
+        await SaveAndApplyAsync();
         LocationUpdateService.Instance.SettingsChanged();
         RefreshLocationUpdateUi();
     }
 
-    private void PeriodThemeChanged(object sender, SelectionChangedEventArgs e)
+    private async void PeriodThemeChanged(object sender, SelectionChangedEventArgs e)
     {
         SaveUiToSettings();
         if (!_isLoading)
         {
-            AppearanceController.Instance.ApplyIfNeeded();
+            await SaveAndApplyAsync();
         }
     }
 
@@ -477,19 +517,15 @@ public sealed partial class MainWindow : Window
     private async void PickNightWallpaper_Click(object sender, RoutedEventArgs e) =>
         await PickPeriodWallpaperAsync(SettingsStore.Current.Night, NightPreview, NightPlaceholder);
 
-    private async Task PickPeriodWallpaperAsync(PeriodSettings period, Image preview, TextBlock placeholder)
-    {
-        var path = await PickWallpaperAsync();
-        if (path is null)
+    private Task PickPeriodWallpaperAsync(PeriodSettings period, Image preview, TextBlock placeholder) =>
+        RunUiOperationAsync("wallpaper", async () =>
         {
-            return;
-        }
-
-        period.WallpaperPath = path;
-        SettingsStore.Save();
-        SetPreview(preview, placeholder, path);
-        AppearanceController.Instance.ApplyIfNeeded();
-    }
+            var path = await PickWallpaperAsync();
+            if (path is null || _closed) return;
+            period.WallpaperPath = path;
+            await Task.WhenAll(SettingsStore.SaveAsync(), SetPreviewAsync(preview, placeholder, path));
+            await AppearanceController.Instance.ApplyIfNeededAsync();
+        });
 
     private async Task<string?> PickWallpaperAsync()
     {
@@ -510,52 +546,50 @@ public sealed partial class MainWindow : Window
         return file?.Path;
     }
 
-    private async void UseLocation_Click(object sender, RoutedEventArgs e)
-    {
-        var result = await LocationUpdateService.Instance.RefreshNowAsync(requestAccess: true);
-        if (!result.Success)
+    private async void UseLocation_Click(object sender, RoutedEventArgs e) =>
+        await RunUiOperationAsync("location", async () =>
         {
-            ShowError(Localizer.Format("Location.RefreshFailed", result.Error));
-            return;
-        }
+            var result = await LocationUpdateService.Instance.RefreshNowAsync(requestAccess: true);
+            if (!result.Success) { ShowError(Localizer.Format("Location.RefreshFailed", result.Error)); return; }
+            RefreshLocationText();
+            RefreshLocationUpdateUi();
+            ShowInfo(Localizer.GetString("Location.Updated"));
+        });
 
-        RefreshLocationText();
-        RefreshLocationUpdateUi();
-        ShowInfo(Localizer.GetString("Location.Updated"));
-    }
+    private Task ApplyNowAsync() => RunUiOperationAsync("appearance", () => AppearanceController.Instance.ApplyNowAsync());
 
-    private void ApplyNow_Click(object sender, RoutedEventArgs e)
-    {
-        AppearanceController.Instance.ApplyNow();
-    }
+    private async void ApplyNow_Click(object sender, RoutedEventArgs e) => await ApplyNowAsync();
 
-    private void PreviewOtherMode_Click(object sender, RoutedEventArgs e)
-    {
-        var next = AppSettings.NextPeriod(AppearanceController.Instance.AppliedPeriod);
-        AppearanceController.Instance.ApplyPeriod(next, force: true);
-    }
+    private async void PreviewOtherMode_Click(object sender, RoutedEventArgs e) =>
+        await RunUiOperationAsync("appearance", () => AppearanceController.Instance.ApplyPeriodAsync(
+            AppSettings.NextPeriod(AppearanceController.Instance.AppliedPeriod), force: true));
 
     private void Restore_Click(object sender, RoutedEventArgs e) => RestoreFromTray();
 
-    private void Exit_Click(object sender, RoutedEventArgs e) => ExitFromTray();
+    private async void Exit_Click(object sender, RoutedEventArgs e) => await ExitFromTrayAsync();
 
-    private void ExitFromTray()
+    private Task ExitFromTrayAsync() => RunUiOperationAsync("exit", async () =>
     {
-        _allowClose = true;
-        DisposeTrayIcon();
-        Close();
-    }
-
-    private void AppWindow_Closing(AppWindow sender, AppWindowClosingEventArgs args)
-    {
-        if (_allowClose || !SettingsStore.Current.MinimizeToTray)
+        await SettingsStore.FlushAsync();
+        _lifetime.Cancel();
+        await _trayAccess.WaitAsync();
+        try
         {
+            var core = _trayIcon?.TrayIcon;
+            if (core is not null) await Task.Run(() => core.TryRemove());
             DisposeTrayIcon();
-            return;
         }
+        finally { _trayAccess.Release(); }
+        _allowClose = true;
+        Close();
+    });
 
+    private async void AppWindow_Closing(AppWindow sender, AppWindowClosingEventArgs args)
+    {
+        if (_allowClose) return;
         args.Cancel = true;
-        HideToTray();
+        if (SettingsStore.Current.MinimizeToTray) HideToTray();
+        else await ExitFromTrayAsync();
     }
 
     private void DisposeTrayIcon()
@@ -569,15 +603,17 @@ public sealed partial class MainWindow : Window
 
     private void OnControllerStateChanged()
     {
-        DispatcherQueue.TryEnqueue(RefreshStatus);
+        DispatcherQueue.TryEnqueue(() => { if (!_closed) { RefreshStatus(); RefreshBusyUi(); } });
     }
 
     private void OnLocationUpdateStateChanged()
     {
         DispatcherQueue.TryEnqueue(() =>
         {
+            if (_closed) return;
             RefreshLocationText();
             RefreshLocationUpdateUi();
+            RefreshBusyUi();
         });
     }
 
@@ -587,7 +623,7 @@ public sealed partial class MainWindow : Window
         var period = AppearanceController.Instance.AppliedPeriod;
         var light = AppearanceController.Instance.AppliedLight;
         var periodName = Localizer.GetString($"Period.{period}");
-        UpdateTrayIcon(period);
+        _ = RunUiOperationAsync("tray-image", UpdateTrayIconAsync);
         RootLayout.RequestedTheme = light ? ElementTheme.Light : ElementTheme.Dark;
         var isNight = period == DayPeriod.Night;
         ModeIcon.Visibility = isNight ? Visibility.Collapsed : Visibility.Visible;
@@ -640,26 +676,38 @@ public sealed partial class MainWindow : Window
         }
     }
 
-    private void UpdateTrayIcon(DayPeriod period)
+    private async Task UpdateTrayIconAsync()
     {
-        if (_trayIcon is null || _trayIconPeriod == period)
+        while (!_closed && _trayIcon is not null && _trayIconPeriod != AppearanceController.Instance.AppliedPeriod)
         {
-            return;
+            var period = AppearanceController.Instance.AppliedPeriod;
+            var newIcon = await Task.Run(() => new System.Drawing.Icon(GetTrayIconPath(period)));
+            await _trayAccess.WaitAsync();
+            try
+            {
+                if (_closed || _trayIcon is null) { newIcon.Dispose(); return; }
+                var core = _trayIcon.TrayIcon;
+                var handle = newIcon.Handle;
+                await Task.Run(() =>
+                {
+                    try { core.UpdateIcon(handle); }
+                    catch (Exception ex)
+                    {
+                        // Explorer may disappear during an icon change. Retain the new
+                        // live handle for registration retry instead of caching a disposed one.
+                        CrashLog.Write("Tray image update will recover: " + ex);
+                        core.TryRemove();
+                        core.Icon = handle;
+                    }
+                });
+                var previous = _trayDrawingIcon;
+                _trayDrawingIcon = newIcon;
+                _trayIconPeriod = period;
+                previous?.Dispose();
+            }
+            catch { newIcon.Dispose(); throw; }
+            finally { _trayAccess.Release(); }
         }
-
-        var trayIconPath = GetTrayIconPath(period);
-        if (!File.Exists(trayIconPath))
-        {
-            CrashLog.Write("Tray icon missing: " + trayIconPath);
-            return;
-        }
-
-        var newIcon = new System.Drawing.Icon(trayIconPath);
-        var previousIcon = _trayDrawingIcon;
-        _trayDrawingIcon = newIcon;
-        _trayIcon.Icon = newIcon;
-        _trayIconPeriod = period;
-        previousIcon?.Dispose();
     }
 
     private static string GetTrayIconPath(DayPeriod period)
@@ -734,17 +782,67 @@ public sealed partial class MainWindow : Window
 
     private static string FormatTime(TimeOnly value) => value.ToString("t", CultureInfo.CurrentCulture);
 
-    private static void SetPreview(Image image, TextBlock placeholder, string? path)
+    private async Task SetPreviewAsync(Image image, TextBlock placeholder, string? path)
     {
-        if (string.IsNullOrWhiteSpace(path) || !File.Exists(path))
+        var version = _previewVersions.GetValueOrDefault(image) + 1;
+        _previewVersions[image] = version;
+        var ring = image == DawnPreview ? DawnPreviewProgress : image == DayPreview ? DayPreviewProgress
+            : image == DuskPreview ? DuskPreviewProgress : NightPreviewProgress;
+        image.Source = null;
+        placeholder.Visibility = Visibility.Visible;
+        if (string.IsNullOrWhiteSpace(path)) return;
+        SetProgress(ring, true);
+        try
         {
-            image.Source = null;
-            placeholder.Visibility = Visibility.Visible;
-            return;
+            // File opening may block on network/removable drives; decoding remains asynchronous.
+            using var stream = await Task.Run(() => File.OpenRead(path));
+            using var randomAccess = stream.AsRandomAccessStream();
+            if (_closed || _previewVersions[image] != version) return;
+            var bitmap = new BitmapImage { DecodePixelWidth = 192 };
+            await bitmap.SetSourceAsync(randomAccess);
+            if (_closed || _previewVersions[image] != version) return;
+            image.Source = bitmap;
+            placeholder.Visibility = Visibility.Collapsed;
         }
+        catch (Exception ex) { CrashLog.Write("Wallpaper preview failed: " + ex); }
+        finally { if (!_closed && _previewVersions[image] == version) SetProgress(ring, false); }
+    }
 
-        image.Source = new BitmapImage(new Uri(path));
-        placeholder.Visibility = Visibility.Collapsed;
+    private async Task RunUiOperationAsync(string key, Func<Task> action, bool allowConcurrent = false)
+    {
+        if (_closed) return;
+        try { await _operations.RunAsync(key, action, allowConcurrent); }
+        catch (OperationCanceledException) when (_lifetime.IsCancellationRequested) { }
+        catch (Exception ex) { CrashLog.Write(ex.ToString()); if (!_closed) ShowError(ex.Message); }
+    }
+
+    private static void SetProgress(ProgressRing ring, bool active)
+    {
+        ring.IsActive = active;
+        ring.Visibility = active ? Visibility.Visible : Visibility.Collapsed;
+    }
+
+    private void RefreshBusyUi()
+    {
+        if (_closed) return;
+        var location = _operations.Contains("location") || LocationUpdateService.Instance.IsRefreshing;
+        var appearance = _operations.Contains("appearance") || AppearanceController.Instance.IsApplying;
+        var startup = _operations.Contains("startup") || _operations.Contains("startup-read");
+        var exiting = _operations.Contains("exit");
+        SettingsScrollViewer.IsEnabled = !exiting;
+        var busy = _operations.IsBusy || location || appearance;
+        ActivityBar.Visibility = busy ? Visibility.Visible : Visibility.Collapsed;
+        SetProgress(ActivityProgressRing, busy);
+        SetProgress(StartupProgressRing, startup);
+        SetProgress(LocationProgressRing, location);
+        ApplyNowButton.IsEnabled = PreviewToggleButton.IsEnabled = !appearance;
+        _applyCommand.IsEnabled = !appearance && !exiting;
+        StartupToggle.IsEnabled = _startupReady && !startup;
+        HighPriorityStartupToggle.IsEnabled = _startupReady && !startup && StartupToggle.IsOn;
+        AutoLocationToggle.IsEnabled = UseLocationButton.IsEnabled = !location;
+        LocationFrequencyCard.IsEnabled = AutoLocationToggle.IsOn && !location;
+        DawnPickButton.IsEnabled = DayPickButton.IsEnabled = DuskPickButton.IsEnabled = NightPickButton.IsEnabled
+            = !_operations.Contains("wallpaper");
     }
 
     private void ShowError(string message)
@@ -783,4 +881,25 @@ internal sealed class RelayCommand(Action action) : ICommand
     public bool CanExecute(object? parameter) => true;
 
     public void Execute(object? parameter) => action();
+}
+
+internal sealed class AsyncRelayCommand(Func<Task> action) : ICommand
+{
+    private bool _running;
+    private bool _isEnabled = true;
+    public bool IsEnabled
+    {
+        get => _isEnabled;
+        set { if (_isEnabled == value) return; _isEnabled = value; CanExecuteChanged?.Invoke(this, EventArgs.Empty); }
+    }
+    public event EventHandler? CanExecuteChanged;
+    public bool CanExecute(object? parameter) => !_running && IsEnabled;
+    public async void Execute(object? parameter)
+    {
+        if (!CanExecute(parameter)) return;
+        _running = true;
+        CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        try { await action(); }
+        finally { _running = false; CanExecuteChanged?.Invoke(this, EventArgs.Empty); }
+    }
 }

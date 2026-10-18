@@ -8,6 +8,7 @@ namespace WallpaperSwitch.Services;
 
 internal sealed class StartupService : IStartupBackend
 {
+    public Task<StartupState> GetStateAsync() => Task.Run(() => new StartupState(Mode, ServiceRunning));
     private readonly string _applicationPath = Environment.ProcessPath
         ?? throw new InvalidOperationException(Localizer.GetString("Error.StartupPathMissing"));
 
@@ -37,7 +38,7 @@ internal sealed class StartupService : IStartupBackend
         }
     }
 
-    public Task SetModeAsync(StartupMode mode) => new StartupModeController(this).SetModeAsync(mode);
+    public Task SetModeAsync(StartupMode mode) => Task.Run(() => new StartupModeController(this).SetModeAsync(mode));
 
     public void SetStandard(bool enabled)
     {
@@ -73,3 +74,5 @@ internal sealed class StartupService : IStartupBackend
         }
     }
 }
+
+internal readonly record struct StartupState(StartupMode Mode, bool ServiceRunning);

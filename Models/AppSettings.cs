@@ -35,6 +35,7 @@ public enum LocationRefreshFrequency
 
 public sealed class PeriodSettings
 {
+    public PeriodSettings Clone() => (PeriodSettings)MemberwiseClone();
     public TimeOnly StartTime { get; set; }
     public bool UseLightTheme { get; set; } = true;
     public string? WallpaperPath { get; set; }
@@ -42,6 +43,15 @@ public sealed class PeriodSettings
 
 public sealed class AppSettings
 {
+    public AppSettings Clone()
+    {
+        var copy = (AppSettings)MemberwiseClone();
+        copy.Dawn = Dawn.Clone();
+        copy.Day = Day.Clone();
+        copy.Dusk = Dusk.Clone();
+        copy.Night = Night.Clone();
+        return copy;
+    }
     public string Language { get; set; } = "system";
     public bool IsEnabled { get; set; } = true;
     public bool SwitchAppTheme { get; set; } = true;

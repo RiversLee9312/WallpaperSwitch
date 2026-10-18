@@ -1,7 +1,11 @@
+using System.Threading.Channels;
+
 namespace WallpaperSwitch.Services;
 
 internal static class CrashLog
 {
+    private static readonly Channel<string> Entries = Channel.CreateUnbounded<string>(new UnboundedChannelOptions { SingleReader = true });
+    static CrashLog() => _ = Task.Run(WriteEntriesAsync);
     public static string FilePath { get; } = GetFilePath();
 
     private static string GetFilePath()
@@ -19,20 +23,18 @@ internal static class CrashLog
     }
 
     public static void Write(string message)
-    {
-        try
-        {
-            var directory = Path.GetDirectoryName(FilePath);
-            if (!string.IsNullOrEmpty(directory))
-            {
-                Directory.CreateDirectory(directory);
-            }
+        => Entries.Writer.TryWrite($"[{DateTime.Now:HH:mm:ss.fff}] {message}{Environment.NewLine}");
 
-            File.AppendAllText(FilePath, $"[{DateTime.Now:HH:mm:ss.fff}] {message}{Environment.NewLine}");
-        }
-        catch
+    private static async Task WriteEntriesAsync()
+    {
+        await foreach (var entry in Entries.Reader.ReadAllAsync())
         {
-            // Logging must never crash the app.
+            try
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(FilePath)!);
+                await File.AppendAllTextAsync(FilePath, entry);
+            }
+            catch { /* Diagnostics must never block or crash the app. */ }
         }
     }
 }

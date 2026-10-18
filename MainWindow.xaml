@@ -10,7 +10,7 @@
     </Window.SystemBackdrop>
 
     <Grid x:Name="RootLayout">
-        <Grid RowDefinitions="Auto,*">
+        <Grid RowDefinitions="Auto,32,*">
             <Grid x:Name="AppTitleBar" Height="48">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10" Margin="16,0,0,0">
                     <Image x:Name="TitleBarIcon" Width="16" Height="16"/>
@@ -20,7 +20,13 @@
                 </StackPanel>
             </Grid>
 
-            <ScrollViewer Grid.Row="1" AutomationProperties.AutomationId="SettingsScrollViewer">
+            <StackPanel x:Name="ActivityBar" Grid.Row="1" Visibility="Collapsed"
+                Orientation="Horizontal" Spacing="12" Margin="36,0,36,8">
+                <ProgressRing x:Name="ActivityProgressRing" AutomationProperties.AutomationId="ActivityProgressRing"
+                    Width="20" Height="20" IsActive="False" Visibility="Collapsed"/>
+                <TextBlock x:Uid="ActivityWorking" VerticalAlignment="Center"/>
+            </StackPanel>
+            <ScrollViewer x:Name="SettingsScrollViewer" Grid.Row="2" AutomationProperties.AutomationId="SettingsScrollViewer">
                 <StackPanel MaxWidth="760" Padding="36,4,36,40" Spacing="4" HorizontalAlignment="Stretch">
                     <InfoBar
                         x:Name="StatusInfoBar"
@@ -76,7 +82,7 @@
                                     Visibility="Collapsed"/>
                             </StackPanel>
                             <Grid Grid.Row="1" Grid.ColumnSpan="2" ColumnDefinitions="*,*" ColumnSpacing="8">
-                                <Button x:Uid="ApplyNowButton"
+                                <Button x:Uid="ApplyNowButton" x:Name="ApplyNowButton" AutomationProperties.AutomationId="ApplyNowButton"
                                     HorizontalAlignment="Stretch"
                                     Style="{StaticResource AccentButtonStyle}"
                                     Click="ApplyNow_Click">
@@ -122,7 +128,11 @@
                         <controls:SettingsCard.HeaderIcon>
                             <FontIcon Glyph="&#xE83D;"/>
                         </controls:SettingsCard.HeaderIcon>
-                        <ToggleSwitch x:Uid="HighPriorityStartupToggle" x:Name="HighPriorityStartupToggle" AutomationProperties.AutomationId="HighPriorityStartupToggle" Toggled="StartupToggle_Toggled"/>
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <ProgressRing x:Name="StartupProgressRing" AutomationProperties.AutomationId="StartupProgressRing"
+                                Width="20" Height="20" IsActive="False" Visibility="Collapsed"/>
+                            <ToggleSwitch x:Uid="HighPriorityStartupToggle" x:Name="HighPriorityStartupToggle" AutomationProperties.AutomationId="HighPriorityStartupToggle" Toggled="StartupToggle_Toggled"/>
+                        </StackPanel>
                     </controls:SettingsCard>
 
                     <controls:SettingsCard x:Uid="TrayCard">
@@ -172,7 +182,11 @@
                             <controls:SettingsCard.HeaderIcon>
                                 <FontIcon Glyph="&#xE81D;"/>
                             </controls:SettingsCard.HeaderIcon>
-                            <Button x:Uid="UseLocationButton" Click="UseLocation_Click"/>
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <ProgressRing x:Name="LocationProgressRing" AutomationProperties.AutomationId="LocationProgressRing"
+                                    Width="20" Height="20" IsActive="False" Visibility="Collapsed"/>
+                                <Button x:Uid="UseLocationButton" x:Name="UseLocationButton" Click="UseLocation_Click"/>
+                            </StackPanel>
                         </controls:SettingsCard>
 
                         <controls:SettingsCard x:Uid="AutoLocationCard"
@@ -240,9 +254,10 @@
                                         <Grid>
                                             <TextBlock x:Uid="DawnPlaceholder" x:Name="DawnPlaceholder" Opacity="0.55" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             <Image x:Name="DawnPreview" Stretch="UniformToFill"/>
+                                            <ProgressRing x:Name="DawnPreviewProgress" Width="24" Height="24" IsActive="False" Visibility="Collapsed"/>
                                         </Grid>
                                     </Border>
-                                    <Button x:Uid="PickWallpaperButton" Click="PickDawnWallpaper_Click" VerticalAlignment="Center"/>
+                                    <Button x:Uid="PickWallpaperButton" x:Name="DawnPickButton" Click="PickDawnWallpaper_Click" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </controls:SettingsCard>
                         </controls:SettingsExpander.Items>
@@ -269,9 +284,10 @@
                                         <Grid>
                                             <TextBlock x:Uid="DayPlaceholder" x:Name="DayPlaceholder" Opacity="0.55" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             <Image x:Name="DayPreview" Stretch="UniformToFill"/>
+                                            <ProgressRing x:Name="DayPreviewProgress" Width="24" Height="24" IsActive="False" Visibility="Collapsed"/>
                                         </Grid>
                                     </Border>
-                                    <Button x:Uid="PickWallpaperButton" Click="PickDayWallpaper_Click" VerticalAlignment="Center"/>
+                                    <Button x:Uid="PickWallpaperButton" x:Name="DayPickButton" Click="PickDayWallpaper_Click" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </controls:SettingsCard>
                         </controls:SettingsExpander.Items>
@@ -298,9 +314,10 @@
                                         <Grid>
                                             <TextBlock x:Uid="DuskPlaceholder" x:Name="DuskPlaceholder" Opacity="0.55" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             <Image x:Name="DuskPreview" Stretch="UniformToFill"/>
+                                            <ProgressRing x:Name="DuskPreviewProgress" Width="24" Height="24" IsActive="False" Visibility="Collapsed"/>
                                         </Grid>
                                     </Border>
-                                    <Button x:Uid="PickWallpaperButton" Click="PickDuskWallpaper_Click" VerticalAlignment="Center"/>
+                                    <Button x:Uid="PickWallpaperButton" x:Name="DuskPickButton" Click="PickDuskWallpaper_Click" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </controls:SettingsCard>
                         </controls:SettingsExpander.Items>
@@ -323,9 +340,10 @@
                                         <Grid>
                                             <TextBlock x:Uid="NightPlaceholder" x:Name="NightPlaceholder" Opacity="0.55" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             <Image x:Name="NightPreview" Stretch="UniformToFill"/>
+                                            <ProgressRing x:Name="NightPreviewProgress" Width="24" Height="24" IsActive="False" Visibility="Collapsed"/>
                                         </Grid>
                                     </Border>
-                                    <Button x:Uid="PickWallpaperButton" Click="PickNightWallpaper_Click" VerticalAlignment="Center"/>
+                                    <Button x:Uid="PickWallpaperButton" x:Name="NightPickButton" Click="PickNightWallpaper_Click" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </controls:SettingsCard>
                         </controls:SettingsExpander.Items>

@@ -516,4 +516,5 @@
   <data name="WindowTitle.Title" xml:space="preserve">
     <value>Chuyển hình nền</value>
   </data>
+  <data name="ActivityWorking.Text" xml:space="preserve"><value>Đang xử lý…</value></data>
 </root>

@@ -11,8 +11,6 @@ public partial class App : Application
     public App()
     {
         CrashLog.Write("App ctor");
-        SettingsStore.Load();
-        Localizer.Initialize(SettingsStore.Current.Language);
         UnhandledException += (_, args) =>
         {
             CrashLog.Write("UnhandledException: " + args.Exception);
@@ -26,9 +24,11 @@ public partial class App : Application
 
     public static MainWindow? MainAppWindow { get; private set; }
 
-    protected override void OnLaunched(LaunchActivatedEventArgs args)
+    protected override async void OnLaunched(LaunchActivatedEventArgs args)
     {
         CrashLog.Write("OnLaunched");
+        await SettingsStore.LoadAsync();
+        Localizer.Initialize(SettingsStore.Current.Language);
         MainAppWindow = new MainWindow();
         _window = MainAppWindow;
         CrashLog.Write("MainWindow created");
@@ -37,20 +37,24 @@ public partial class App : Application
             .Any(argument => string.Equals(argument, "--minimized", StringComparison.OrdinalIgnoreCase));
 
         MainAppWindow.Activate();
+        if (startMinimized) MainAppWindow.HideToTray(startup: true);
         CrashLog.Write("MainWindow activated");
 
-        MainAppWindow.DispatcherQueue.TryEnqueue(() =>
+        MainAppWindow.DispatcherQueue.TryEnqueue(async () =>
         {
             try
             {
                 CrashLog.Write("Deferred startup");
-                AppearanceController.Instance.Start();
+                var tray = MainAppWindow.SetupTrayIconAsync();
+                var initialize = MainAppWindow.InitializeAsync();
                 LocationUpdateService.Instance.Start();
-                MainAppWindow.SetupTrayIcon();
+                var appearance = AppearanceController.Instance.StartAsync();
                 if (startMinimized)
                 {
-                    MainAppWindow.HideToTray();
+                    await tray;
+                    MainAppWindow.HideToTray(startup: true);
                 }
+                await Task.WhenAll(tray, initialize, appearance);
             }
             catch (Exception ex)
             {

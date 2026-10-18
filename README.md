@@ -10,6 +10,9 @@ A Windows desktop app that switches wallpapers and light/dark appearance across 
 - Opt-in high-priority startup through a Windows service. Administrator approval is required when changing service registration; the desktop app runs as the signed-in user.
 - Localized UI and runtime messages in 24 languages, with a system-language default, English fallback, a saved language preference, and right-to-left layout for Arabic and Hebrew.
 - A multilingual Inno Setup installer.
+- Asynchronous settings, wallpaper/theme changes, location refresh and image previews, with progress rings and duplicate-action guards.
+- A single instance per Windows session. Normal launches restore the running window; background startup leaves it in the background.
+- Tray registration retries while Explorer is starting and recovers when the taskbar is recreated.
 
 ## Technology
 
@@ -42,7 +45,7 @@ To publish the app and service helper, run the unit tests, and build the install
 .\tools\Build-Release.ps1
 ```
 
-The script accepts `-InnoCompiler` when Inno Setup is installed elsewhere, and `-NuGetSource` for an optional package source. It writes the release app to `artifacts/publish-1.3.0/` and the installer to `artifacts/RiyeQiehuan-Setup.exe`. Published builds bundle the Windows App SDK runtime.
+The script accepts `-InnoCompiler` when Inno Setup is installed elsewhere, and `-NuGetSource` for an optional package source. It writes the release app to `artifacts/publish-1.3.1/` and the installer to `artifacts/RiyeQiehuan-Setup.exe`. Published builds bundle the Windows App SDK runtime.
 
 ## Tests
 
@@ -56,7 +59,7 @@ dotnet build .\Tests\WallpaperSwitch.Tests.csproj -c Release
 For desktop UI tests, publish the app first. The UI runner uses isolated settings and an independent instance name, so an installed instance can keep running. `WALLPAPERSWITCH_TEST_APP` can point to the executable being tested. Service integration tests require `WALLPAPERSWITCH_SERVICE_TEST=1` and Windows administrator approval; they temporarily register a service and remove it afterwards. Run those only on a machine without an existing WallpaperSwitch startup service registration.
 
 ```powershell
-$env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.0\WallpaperSwitch.exe).Path
+$env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.1\WallpaperSwitch.exe).Path
 .\Tests\bin\x64\Release\net8.0-windows\WallpaperSwitch.Tests.exe --filter 'TestCategory=UI' --report-trx
 ```
 
@@ -70,3 +73,5 @@ $env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.0\Wallpape
 - `installer/`: Inno Setup configuration and Chinese installer language files.
 
 Generated output, IDE caches, local screenshots, and machine-specific cleanup inventories are excluded from Git.
+
+Settings writes use detached snapshots and serialized atomic replacement. Existing settings remain valid while a disk operation is pending or fails; exiting waits asynchronously for pending saves. The UI automation tests hold a real settings-file lock to verify that the loading indicator stays visible while other actions still complete. Tray tests deliver `TaskbarCreated` only to the isolated test process, without restarting Explorer.

@@ -13,6 +13,9 @@
     <Compile Include="..\Shared\StartupConfiguration.cs" Link="StartupConfiguration.cs" />
     <Compile Include="..\Shared\StartupModeController.cs" Link="StartupModeController.cs" />
     <Compile Include="..\Models\AppSettings.cs" Link="AppSettings.cs" />
+    <Compile Include="..\Services\SettingsFile.cs" Link="SettingsFile.cs" />
+    <Compile Include="..\Services\AsyncOperations.cs" Link="AsyncOperations.cs" />
+    <Compile Include="..\Services\AsyncRetry.cs" Link="AsyncRetry.cs" />
     <Compile Include="..\Localization\LanguageCatalog.cs" Link="Localization\LanguageCatalog.cs" />
     <Content Include="..\Strings\**\Resources.resw" Link="Strings\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\StartupHost\HostText*.resx" Link="HostResources\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />

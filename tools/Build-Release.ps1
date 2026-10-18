@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $repository = Split-Path $PSScriptRoot -Parent
-$publish = Join-Path $repository 'artifacts\publish-1.3.0'
+$publish = Join-Path $repository 'artifacts\publish-1.3.1'
 $restore = @('-p:NuGetAudit=false')
 if ($NuGetSource) {
     if (Test-Path -LiteralPath $NuGetSource) { $NuGetSource = (Resolve-Path -LiteralPath $NuGetSource).Path }

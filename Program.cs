@@ -47,6 +47,7 @@ public static class Program
             NativeDialog.Show(Localizer.GetString("App.LaunchFailed"), ex.Message);
             return 1;
         }
+        finally { SingleInstance.Release(); }
 
         CrashLog.Write("Main end");
         return 0;

@@ -77,20 +77,19 @@ internal sealed class LocationUpdateService
                 }
             }
 
-            var locator = new Geolocator { DesiredAccuracyInMeters = 5000 };
-            var position = await locator.GetGeopositionAsync()
+            var position = await Task.Run(async () => await new Geolocator { DesiredAccuracyInMeters = 5000 }.GetGeopositionAsync()
                 .AsTask()
-                .WaitAsync(TimeSpan.FromSeconds(12));
+                .WaitAsync(TimeSpan.FromSeconds(12)));
             var settings = SettingsStore.Current;
             settings.Latitude = position.Coordinate.Point.Position.Latitude;
             settings.Longitude = position.Coordinate.Point.Position.Longitude;
             settings.LastLocationUpdateUtc = DateTimeOffset.UtcNow;
             settings.LastLocationUpdateAttemptUtc = settings.LastLocationUpdateUtc;
-            SettingsStore.Save();
+            await SettingsStore.SaveAsync();
 
             CrashLog.Write(
                 $"Location updated: {settings.Latitude:F4}, {settings.Longitude:F4}");
-            AppearanceController.Instance.ApplyIfNeeded();
+            await AppearanceController.Instance.ApplyIfNeededAsync();
             return new LocationRefreshResult(true, null);
         }
         catch (Exception ex)
@@ -99,7 +98,8 @@ internal sealed class LocationUpdateService
                 ? Localizer.GetString("Error.LocationTimeout")
                 : ex.Message;
             SettingsStore.Current.LastLocationUpdateAttemptUtc = attemptUtc;
-            SettingsStore.Save();
+            try { await SettingsStore.SaveAsync(); }
+            catch (Exception saveError) { CrashLog.Write("Saving location retry state failed: " + saveError); }
             LastError = message;
             CrashLog.Write("Location update failed: " + ex);
             return new LocationRefreshResult(false, message);

@@ -12,7 +12,8 @@ internal sealed class AppearanceController
     private DispatcherQueue? _dispatcherQueue;
     private DispatcherQueueTimer? _timer;
     private bool _started;
-    private bool _applying;
+    private readonly SemaphoreSlim _applyGate = new(1, 1);
+    public bool IsApplying { get; private set; }
     private string? _lastLockScreenPath;
 
     public event Action? StateChanged;
@@ -26,7 +27,7 @@ internal sealed class AppearanceController
 
     public string? LastError { get; private set; }
 
-    public void Start()
+    public async Task StartAsync()
     {
         if (_started)
         {
@@ -39,48 +40,36 @@ internal sealed class AppearanceController
 
         _timer = _dispatcherQueue.CreateTimer();
         _timer.Interval = TimeSpan.FromMinutes(1);
-        _timer.Tick += (_, _) => ApplyIfNeeded();
+        _timer.Tick += async (_, _) => await ApplyIfNeededAsync();
         _timer.Start();
 
         SystemEvents.TimeChanged += OnSystemTimeChanged;
         SystemEvents.PowerModeChanged += OnPowerModeChanged;
 
-        ApplyIfNeeded();
+        await ApplyIfNeededAsync();
     }
 
-    public void ApplyIfNeeded() => _ = ApplyAsync(force: false);
+    public Task ApplyIfNeededAsync() => ApplyAsync(null, force: false);
+    public Task ApplyNowAsync() => ApplyAsync(null, force: true);
+    public Task ApplyPeriodAsync(DayPeriod period, bool force) => ApplyAsync(period, force);
 
-    public void ApplyNow() => _ = ApplyAsync(force: true);
-
-    public void ApplyPeriod(DayPeriod period, bool force) => _ = ApplyPeriodAsync(period, force);
-
-    private async Task ApplyAsync(bool force)
+    private async Task ApplyAsync(DayPeriod? requestedPeriod, bool force)
     {
-        var settings = SettingsStore.Current;
-        Snapshot = ScheduleService.Evaluate(settings, DateTime.Now);
-        if (!settings.IsEnabled && !force)
-        {
-            StateChanged?.Invoke();
-            return;
-        }
-
-        await ApplyPeriodAsync(Snapshot.Period, force);
-    }
-
-    private async Task ApplyPeriodAsync(DayPeriod period, bool force)
-    {
-        if (_applying)
-        {
-            return;
-        }
-
-        _applying = true;
+        // Serialize desktop changes, including automatic requests arriving during a preview.
+        // Capture the latest UI-owned settings only after obtaining the gate.
+        await _applyGate.WaitAsync();
+        IsApplying = true;
+        StateChanged?.Invoke();
         try
         {
             LastError = null;
-            await ApplyCoreAsync(period, force);
+            var settings = SettingsStore.Current.Clone();
+            Snapshot = ScheduleService.Evaluate(settings, DateTime.Now);
+            if (!settings.IsEnabled && !force) return;
+            var period = requestedPeriod ?? Snapshot.Period;
+            LastError = await Task.Run(() => ApplyCoreAsync(settings, period, force));
             AppliedPeriod = period;
-            AppliedLight = SettingsStore.Current.GetPeriod(period).UseLightTheme;
+            AppliedLight = settings.GetPeriod(period).UseLightTheme;
         }
         catch (Exception ex)
         {
@@ -88,15 +77,15 @@ internal sealed class AppearanceController
         }
         finally
         {
-            _applying = false;
+            IsApplying = false;
+            _applyGate.Release();
             Snapshot = ScheduleService.Evaluate(SettingsStore.Current, DateTime.Now);
             StateChanged?.Invoke();
         }
     }
 
-    private async Task ApplyCoreAsync(DayPeriod period, bool force)
+    private async Task<string?> ApplyCoreAsync(AppSettings settings, DayPeriod period, bool force)
     {
-        var settings = SettingsStore.Current;
         var periodSettings = settings.GetPeriod(period);
         var light = periodSettings.UseLightTheme;
 
@@ -115,13 +104,13 @@ internal sealed class AppearanceController
 
         if (!settings.SwitchWallpaper)
         {
-            return;
+            return null;
         }
 
         var wallpaper = periodSettings.WallpaperPath;
         if (string.IsNullOrWhiteSpace(wallpaper))
         {
-            return;
+            return null;
         }
 
         var desktopMatches = WallpaperService.PathsEqual(WallpaperService.GetCurrentWallpaper(), wallpaper);
@@ -132,7 +121,7 @@ internal sealed class AppearanceController
 
         if (!settings.SyncLockScreen)
         {
-            return;
+            return null;
         }
 
         try
@@ -145,13 +134,14 @@ internal sealed class AppearanceController
         }
         catch (Exception ex)
         {
-            LastError = Localizer.Format("Error.AppearanceLockScreen", ex.Message);
+            return Localizer.Format("Error.AppearanceLockScreen", ex.Message);
         }
+        return null;
     }
 
     private void OnSystemTimeChanged(object? sender, EventArgs e)
     {
-        _dispatcherQueue?.TryEnqueue(ApplyIfNeeded);
+        _dispatcherQueue?.TryEnqueue(async () => await ApplyIfNeededAsync());
     }
 
     private void OnPowerModeChanged(object sender, PowerModeChangedEventArgs e)
@@ -161,7 +151,7 @@ internal sealed class AppearanceController
             _dispatcherQueue?.TryEnqueue(async () =>
             {
                 await Task.Delay(2000);
-                ApplyIfNeeded();
+                await ApplyIfNeededAsync();
             });
         }
     }

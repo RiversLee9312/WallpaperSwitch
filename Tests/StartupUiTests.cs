@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.Json.Nodes;
 using System.Windows.Automation;
 using System.Windows.Interop;
@@ -11,7 +13,7 @@ namespace WallpaperSwitch.Tests;
 
 [TestClass]
 [DoNotParallelize]
-public sealed class StartupUiTests
+public sealed partial class StartupUiTests
 {
     private const string TestSettingsEnvironmentVariable = "WALLPAPERSWITCH_TEST_SETTINGS_FILE";
     private const string TestInstanceEnvironmentVariable = "WALLPAPERSWITCH_TEST_INSTANCE";
@@ -36,7 +38,7 @@ public sealed class StartupUiTests
             if (Environment.GetEnvironmentVariable("WALLPAPERSWITCH_TEST_APP") is { Length: > 0 } configured) return configured;
             var directory = new DirectoryInfo(AppContext.BaseDirectory);
             while (directory is not null && !File.Exists(Path.Combine(directory.FullName, "WallpaperSwitch.csproj"))) directory = directory.Parent;
-            return Path.Combine(directory?.FullName ?? AppContext.BaseDirectory, "artifacts", "publish-1.3.0", "WallpaperSwitch.exe");
+            return Path.Combine(directory?.FullName ?? AppContext.BaseDirectory, "artifacts", "publish-1.3.1", "WallpaperSwitch.exe");
         }
     }
 
@@ -58,6 +60,7 @@ public sealed class StartupUiTests
                 new PropertyCondition(AutomationElement.AutomationIdProperty, "HighPriorityStartupToggle")));
             var standardToggle = (TogglePattern)standard.GetCurrentPattern(TogglePattern.Pattern);
             var highToggle = (TogglePattern)high.GetCurrentPattern(TogglePattern.Pattern);
+            WaitUntil(() => standard.Current.IsEnabled);
             var standardEnabled = string.Equals(
                 run?.GetValue(Startup.StartupConfiguration.RunValueName) as string,
                 Startup.StartupConfiguration.CommandLine(ApplicationPath),
@@ -75,6 +78,21 @@ public sealed class StartupUiTests
             Assert.IsTrue(duplicate.WaitForExit(10000));
             Assert.AreEqual(WindowVisualState.Minimized, windowPattern.Current.WindowVisualState,
                 "A background startup must not restore an existing window.");
+            var duplicates = Enumerable.Range(0, 6)
+                .Select(_ => Process.Start(CreateAppStartInfo(settingsFile, testInstance, "--minimized"))!).ToArray();
+            try
+            {
+                foreach (var candidate in duplicates)
+                {
+                    Assert.IsTrue(candidate.WaitForExit(10000), "A duplicate must hand off and exit.");
+                    Assert.AreEqual(0, candidate.ExitCode);
+                }
+            }
+            finally { foreach (var candidate in duplicates) candidate.Dispose(); }
+            using var foreground = Process.Start(CreateAppStartInfo(settingsFile, testInstance))!;
+            Assert.IsTrue(foreground.WaitForExit(10000));
+            WaitUntil(() => windowPattern.Current.WindowVisualState == WindowVisualState.Normal);
+            Assert.IsFalse(process.HasExited);
         }
         finally
         {
@@ -164,15 +182,8 @@ public sealed class StartupUiTests
         {
             process = Process.Start(CreateAppStartInfo(settingsFile, Guid.NewGuid().ToString("N")))!;
             var window = FindAppWindow(process, settingsFile);
-            var picker = Find(window, "LanguageCombo");
-            var scroll = (ScrollPattern)Find(window, "SettingsScrollViewer").GetCurrentPattern(ScrollPattern.Pattern);
-            scroll.SetScrollPercent(ScrollPattern.NoScroll, 100);
-            WaitUntil(() => !picker.Current.IsOffscreen);
-            ((ExpandCollapsePattern)picker.GetCurrentPattern(ExpandCollapsePattern.Pattern)).Expand();
-            var german = WaitFor(() => window.FindFirst(TreeScope.Descendants,
-                new AndCondition(new PropertyCondition(AutomationElement.NameProperty, "Deutsch"),
-                    new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.ListItem))));
-            ((SelectionItemPattern)german.GetCurrentPattern(SelectionItemPattern.Pattern)).Select();
+            WaitUntil(() => FindSpinner(window) is null);
+            SelectLanguage(window, "Deutsch");
             WaitUntil(() => JsonNode.Parse(File.ReadAllText(settingsFile))?["language"]?.GetValue<string>() == "de-DE");
             Assert.AreEqual("Wallpaper Switch", window.Current.Name, "The current window keeps its language until restart.");
             process.Kill();
@@ -224,13 +235,24 @@ public sealed class StartupUiTests
     private static AutomationElement FindAppWindow(Process process, string settingsFile) => WaitFor(() =>
     {
         var logPath = Path.Combine(Path.GetDirectoryName(settingsFile)!, "startup.log");
-        var log = File.Exists(logPath) ? File.ReadAllText(logPath) : string.Empty;
+        var log = ReadSharedLog(logPath);
         Assert.IsFalse(log.Contains("UnhandledException:", StringComparison.Ordinal), log);
         Assert.IsFalse(process.HasExited, $"Application exited before creating its window. {log}");
         return AutomationElement.RootElement.FindFirst(TreeScope.Children,
             new AndCondition(new PropertyCondition(AutomationElement.ProcessIdProperty, process.Id),
                 new PropertyCondition(AutomationElement.IsWindowPatternAvailableProperty, true)));
     });
+
+    private static string ReadSharedLog(string path)
+    {
+        try
+        {
+            using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete);
+            using var reader = new StreamReader(stream);
+            return reader.ReadToEnd();
+        }
+        catch (IOException) { return string.Empty; }
+    }
 
     private static AutomationElement Find(AutomationElement window, string automationId) => WaitFor(() =>
         window.FindFirst(TreeScope.Descendants,

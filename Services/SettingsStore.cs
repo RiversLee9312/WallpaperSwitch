@@ -1,21 +1,14 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using WallpaperSwitch.Models;
 
 namespace WallpaperSwitch.Services;
 
 internal static class SettingsStore
 {
-    private static readonly JsonSerializerOptions Options = new()
-    {
-        WriteIndented = true,
-        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-        Converters = { new JsonStringEnumConverter() }
-    };
-
     public static AppSettings Current { get; private set; } = new();
 
     public static string FilePath { get; } = GetFilePath();
+    private static readonly SettingsFile FileStore = new(FilePath);
+    private static readonly HashSet<Task> PendingWrites = new();
 
     private static string GetFilePath()
     {
@@ -31,18 +24,11 @@ internal static class SettingsStore
             "settings.json");
     }
 
-    public static void Load()
+    public static async Task LoadAsync()
     {
         try
         {
-            if (!File.Exists(FilePath))
-            {
-                Current = new AppSettings();
-                return;
-            }
-
-            var json = File.ReadAllText(FilePath);
-            Current = JsonSerializer.Deserialize<AppSettings>(json, Options) ?? new AppSettings();
+            Current = await FileStore.LoadAsync();
             MigrateFromLegacy(Current);
         }
         catch
@@ -51,15 +37,24 @@ internal static class SettingsStore
         }
     }
 
-    public static void Save()
+    public static Task SaveAsync()
     {
-        var directory = Path.GetDirectoryName(FilePath);
-        if (!string.IsNullOrEmpty(directory))
-        {
-            Directory.CreateDirectory(directory);
-        }
+        var write = FileStore.SaveAsync(Current);
+        lock (PendingWrites) PendingWrites.Add(write);
+        _ = ObserveWriteAsync(write);
+        return write;
+    }
 
-        File.WriteAllText(FilePath, JsonSerializer.Serialize(Current, Options));
+    private static async Task ObserveWriteAsync(Task write)
+    {
+        try { await write; }
+        catch { /* The initiating operation reports the failure to the user. */ }
+        finally { lock (PendingWrites) PendingWrites.Remove(write); }
+    }
+
+    public static Task FlushAsync()
+    {
+        lock (PendingWrites) return Task.WhenAll(PendingWrites.ToArray());
     }
 
     private static void MigrateFromLegacy(AppSettings settings)

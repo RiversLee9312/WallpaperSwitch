@@ -9,6 +9,7 @@ internal static class SingleInstance
     private static string ShowEventName => GetTestScopedName(DefaultShowEventName);
 
     private static Mutex? _mutex;
+    private static bool _ownsMutex;
 
     public static EventWaitHandle? ShowEvent { get; private set; }
 
@@ -22,15 +23,19 @@ internal static class SingleInstance
 
     public static bool TryStart(bool showExisting = true)
     {
-        _mutex = new Mutex(true, MutexName, out var createdNew);
-        if (!createdNew)
+        // Open the signal before competing for ownership, so a foreground launch
+        // cannot arrive between mutex acquisition and event creation and get lost.
+        ShowEvent = new EventWaitHandle(false, EventResetMode.AutoReset, ShowEventName);
+        _mutex = new Mutex(false, MutexName);
+        try { _ownsMutex = _mutex.WaitOne(0); }
+        catch (AbandonedMutexException) { _ownsMutex = true; }
+        if (!_ownsMutex)
         {
             try
             {
                 if (showExisting)
                 {
-                    using var existing = EventWaitHandle.OpenExisting(ShowEventName);
-                    existing.Set();
+                    ShowEvent.Set();
                 }
             }
             catch
@@ -38,10 +43,23 @@ internal static class SingleInstance
                 // The other process may be shutting down.
             }
 
+            _mutex.Dispose();
+            _mutex = null;
+            ShowEvent.Dispose();
+            ShowEvent = null;
             return false;
         }
 
-        ShowEvent = new EventWaitHandle(false, EventResetMode.AutoReset, ShowEventName);
         return true;
+    }
+
+    public static void Release()
+    {
+        ShowEvent?.Dispose();
+        ShowEvent = null;
+        if (_ownsMutex) _mutex?.ReleaseMutex();
+        _ownsMutex = false;
+        _mutex?.Dispose();
+        _mutex = null;
     }
 }
