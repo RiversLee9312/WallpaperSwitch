@@ -517,4 +517,15 @@
     <value>Wallpaper Switch</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>Bezig met verwerken…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>Over</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Licenties en kennisgevingen</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>MIT-projectlicentie en oorspronkelijke voorwaarden van derden.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Bekijken</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Licenties en kennisgevingen</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Sluiten</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Document</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Vorige</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Volgende</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Broncode en releases</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Versie {0}</value></data>
 </root>

@@ -517,4 +517,15 @@
     <value>Wallpaper Switch</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>Выполняется…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>О программе</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Лицензии и уведомления</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>Лицензия MIT проекта и исходные условия третьих сторон.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Просмотр</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Лицензии и уведомления</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Закрыть</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Документ</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Назад</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Далее</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Исходный код и выпуски</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Версия {0}</value></data>
 </root>

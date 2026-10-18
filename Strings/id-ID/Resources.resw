@@ -517,4 +517,15 @@
     <value>Ganti Wallpaper</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>Sedang memproses…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>Tentang</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Lisensi dan pemberitahuan</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>Lisensi MIT proyek dan ketentuan asli pihak ketiga.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Lihat</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Lisensi dan pemberitahuan</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Tutup</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Dokumen</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Sebelumnya</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Berikutnya</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Kode sumber dan rilis</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Versi {0}</value></data>
 </root>

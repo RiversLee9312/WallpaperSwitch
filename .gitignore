@@ -16,3 +16,6 @@ __pycache__/
 *.py[cod]
 /cleanup-manifest-*.json
 /computer-screenshot.png
+# Versioned legal texts can live in package directories whose names end in .MSIX.
+!/Licenses/
+!/Licenses/**

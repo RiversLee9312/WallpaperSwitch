@@ -1,10 +1,10 @@
 #define MyAppName "WallpaperSwitch"
-#define MyAppVersion "1.3.1"
+#define MyAppVersion "1.3.2"
 #define MyAppPublisher "WallpaperSwitch"
 #define MyAppExeName "WallpaperSwitch.exe"
 #define MyAppId "{{8F3A2B91-6D4E-4C17-A9B8-E1F0C4D7A256}"
 #ifndef PublishDir
-  #define PublishDir "..\artifacts\publish-1.3.1"
+  #define PublishDir "..\artifacts\publish-1.3.2"
 #endif
 
 [Setup]
@@ -12,6 +12,10 @@ AppId={#MyAppId}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
+AppPublisherURL=https://github.com/RiversLee9312/WallpaperSwitch
+AppSupportURL=https://github.com/RiversLee9312/WallpaperSwitch/issues
+AppUpdatesURL=https://github.com/RiversLee9312/WallpaperSwitch/releases
+LicenseFile=..\DISTRIBUTION_TERMS.txt
 DefaultDirName={localappdata}\Programs\WallpaperSwitch
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes

@@ -38,7 +38,7 @@ public sealed partial class StartupUiTests
             if (Environment.GetEnvironmentVariable("WALLPAPERSWITCH_TEST_APP") is { Length: > 0 } configured) return configured;
             var directory = new DirectoryInfo(AppContext.BaseDirectory);
             while (directory is not null && !File.Exists(Path.Combine(directory.FullName, "WallpaperSwitch.csproj"))) directory = directory.Parent;
-            return Path.Combine(directory?.FullName ?? AppContext.BaseDirectory, "artifacts", "publish-1.3.1", "WallpaperSwitch.exe");
+            return Path.Combine(directory?.FullName ?? AppContext.BaseDirectory, "artifacts", "publish-1.3.2", "WallpaperSwitch.exe");
         }
     }
 

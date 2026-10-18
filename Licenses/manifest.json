@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 1,
+  "documents": [
+    {
+      "title": "WallpaperSwitch - MIT License",
+      "path": "LICENSE",
+      "sha256": "f5df41c75d81e6455c89ac2bb39f4c37af018f3686249aea3e2ad1eddda83de8",
+      "kind": "project"
+    },
+    {
+      "title": "Privacy and local data",
+      "path": "docs/PRIVACY.md",
+      "sha256": "6af0735ad6c97bf50141ccfcb4e49de1162fabc15a1022fab088f8c8d91ce505",
+      "kind": "privacy"
+    },
+    {
+      "title": "CommunityToolkit.Common 8.2.1 - License.md",
+      "path": "Licenses/CommunityToolkit.Common/8.2.1/License.md",
+      "sha256": "651997ef19dbb9ecb8dd660dbc86444a65af21f18cfe08daa69bf201cd5cfdfc",
+      "kind": "third-party"
+    },
+    {
+      "title": "CommunityToolkit.WinUI.Controls.SettingsControls 8.2.250402 - License.md",
+      "path": "Licenses/CommunityToolkit.WinUI.Controls.SettingsControls/8.2.250402/License.md",
+      "sha256": "c12410935503a2c9c4d3d4d14fdfdff49d0a37ad0046dc761b07867e8d499e97",
+      "kind": "third-party"
+    },
+    {
+      "title": "CommunityToolkit.WinUI.Extensions 8.2.250402 - License.md",
+      "path": "Licenses/CommunityToolkit.WinUI.Extensions/8.2.250402/License.md",
+      "sha256": "c12410935503a2c9c4d3d4d14fdfdff49d0a37ad0046dc761b07867e8d499e97",
+      "kind": "third-party"
+    },
+    {
+      "title": "CommunityToolkit.WinUI.Helpers 8.2.250402 - License.md",
+      "path": "Licenses/CommunityToolkit.WinUI.Helpers/8.2.250402/License.md",
+      "sha256": "c12410935503a2c9c4d3d4d14fdfdff49d0a37ad0046dc761b07867e8d499e97",
+      "kind": "third-party"
+    },
+    {
+      "title": "CommunityToolkit.WinUI.Triggers 8.2.250402 - License.md",
+      "path": "Licenses/CommunityToolkit.WinUI.Triggers/8.2.250402/License.md",
+      "sha256": "c12410935503a2c9c4d3d4d14fdfdff49d0a37ad0046dc761b07867e8d499e97",
+      "kind": "third-party"
+    },
+    {
+      "title": "H.GeneratedIcons.System.Drawing 2.3.2 - H.NotifyIcon-LICENSE.md",
+      "path": "Licenses/H.GeneratedIcons.System.Drawing/2.3.2/H.NotifyIcon-LICENSE.md",
+      "sha256": "b41f5adb8391601e3c693462925317e4cbe446270bcd646bdb8d02572821fe80",
+      "kind": "third-party"
+    },
+    {
+      "title": "H.NotifyIcon.WinUI 2.3.2 - H.NotifyIcon-LICENSE.md",
+      "path": "Licenses/H.NotifyIcon.WinUI/2.3.2/H.NotifyIcon-LICENSE.md",
+      "sha256": "b41f5adb8391601e3c693462925317e4cbe446270bcd646bdb8d02572821fe80",
+      "kind": "third-party"
+    },
+    {
+      "title": "H.NotifyIcon 2.3.2 - H.NotifyIcon-LICENSE.md",
+      "path": "Licenses/H.NotifyIcon/2.3.2/H.NotifyIcon-LICENSE.md",
+      "sha256": "b41f5adb8391601e3c693462925317e4cbe446270bcd646bdb8d02572821fe80",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NET.ILLink.Tasks 8.0.30 - LICENSE.TXT",
+      "path": "Licenses/Microsoft.NET.ILLink.Tasks/8.0.30/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NET.ILLink.Tasks 8.0.30 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/Microsoft.NET.ILLink.Tasks/8.0.30/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "b60b2912da28eaa6518593c9e2efb5334ee062d3c42e80d8fdfa806b3dc52977",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NETCore.App.Host.win-x64 8.0.30 - LICENSE.TXT",
+      "path": "Licenses/Microsoft.NETCore.App.Host.win-x64/8.0.30/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NETCore.App.Host.win-x64 8.0.30 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/Microsoft.NETCore.App.Host.win-x64/8.0.30/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "b60b2912da28eaa6518593c9e2efb5334ee062d3c42e80d8fdfa806b3dc52977",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NETCore.App.Ref 8.0.30 - LICENSE.TXT",
+      "path": "Licenses/Microsoft.NETCore.App.Ref/8.0.30/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NETCore.App.Ref 8.0.30 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/Microsoft.NETCore.App.Ref/8.0.30/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "b60b2912da28eaa6518593c9e2efb5334ee062d3c42e80d8fdfa806b3dc52977",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NETCore.App.Runtime.win-x64 8.0.30 - LICENSE.TXT",
+      "path": "Licenses/Microsoft.NETCore.App.Runtime.win-x64/8.0.30/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.NETCore.App.Runtime.win-x64 8.0.30 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/Microsoft.NETCore.App.Runtime.win-x64/8.0.30/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "b60b2912da28eaa6518593c9e2efb5334ee062d3c42e80d8fdfa806b3dc52977",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Web.WebView2 1.0.3719.77 - LICENSE.txt",
+      "path": "Licenses/Microsoft.Web.WebView2/1.0.3719.77/LICENSE.txt",
+      "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Web.WebView2 1.0.3719.77 - NOTICE.txt",
+      "path": "Licenses/Microsoft.Web.WebView2/1.0.3719.77/NOTICE.txt",
+      "sha256": "106423785c5b7eba0a8e61d1837f2132e9c828e20ad530f565d981c1df60dd90",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Win32.SystemEvents 9.0.1 - LICENSE.TXT",
+      "path": "Licenses/Microsoft.Win32.SystemEvents/9.0.1/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Win32.SystemEvents 9.0.1 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/Microsoft.Win32.SystemEvents/9.0.1/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Windows.AI.MachineLearning 2.1.74 - license.txt",
+      "path": "Licenses/Microsoft.Windows.AI.MachineLearning/2.1.74/license.txt",
+      "sha256": "66395f8cb219087fae2bd025010bd9076b736c14f03b48f20295471c0c376814",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Windows.SDK.BuildTools.MSIX 1.7.251221100 - NOTICE.txt",
+      "path": "Licenses/Microsoft.Windows.SDK.BuildTools.MSIX/1.7.251221100/NOTICE.txt",
+      "sha256": "f09ebf5de6a5c8e7ebc900bb2e52af2f75e13610a1cf91e1514530e448d956c3",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.Windows.SDK.BuildTools.MSIX 1.7.251221100 - sdk_license.txt",
+      "path": "Licenses/Microsoft.Windows.SDK.BuildTools.MSIX/1.7.251221100/sdk_license.txt",
+      "sha256": "a7a5c7e7ff998558983d6aca2702117c328aeb0c6404d298cb275f5623c6fd13",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.AI 2.5.5 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.AI/2.5.5/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Base 2.0.4 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Base/2.0.4/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Base 2.0.4 - NOTICE.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Base/2.0.4/NOTICE.txt",
+      "sha256": "572b43d41dea717dae7dc5de69acb20a74df025e8f5a3c0aa6f7bca02615e23c",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.DWrite 2.1.0 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.DWrite/2.1.0/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Foundation 2.3.12 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Foundation/2.3.12/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.InteractiveExperiences 2.1.9 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.InteractiveExperiences/2.1.9/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.ML 2.1.94 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.ML/2.1.94/license.txt",
+      "sha256": "656aab74c15aa9f9964bcdcc993eb2755cbdb4822d5e0e3bc61d2e281897f758",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Runtime 2.5.1 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Runtime/2.5.1/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Runtime 2.5.1 - NOTICE.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Runtime/2.5.1/NOTICE.txt",
+      "sha256": "572b43d41dea717dae7dc5de69acb20a74df025e8f5a3c0aa6f7bca02615e23c",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Search 2.5.5 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Search/2.5.5/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.Widgets 2.0.5 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.Widgets/2.0.5/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.WinUI 2.3.9 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.WinUI/2.3.9/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK.WinUI 2.3.9 - NOTICE.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK.WinUI/2.3.9/NOTICE.txt",
+      "sha256": "e25393c0d340a1821827b093fa4dbbfcccd8feb7bf769e7fa773e3955cd5314b",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK 2.5.1 - license.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK/2.5.1/license.txt",
+      "sha256": "5b11e6347756e40fe0274bc08c97f89201b94f0d50181a09a00f1f4740840501",
+      "kind": "third-party"
+    },
+    {
+      "title": "Microsoft.WindowsAppSDK 2.5.1 - NOTICE.txt",
+      "path": "Licenses/Microsoft.WindowsAppSDK/2.5.1/NOTICE.txt",
+      "sha256": "572b43d41dea717dae7dc5de69acb20a74df025e8f5a3c0aa6f7bca02615e23c",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Collections.Immutable 9.0.1 - LICENSE.TXT",
+      "path": "Licenses/System.Collections.Immutable/9.0.1/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Collections.Immutable 9.0.1 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/System.Collections.Immutable/9.0.1/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Diagnostics.EventLog 10.0.0 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/System.Diagnostics.EventLog/10.0.0/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Diagnostics.EventLog 10.0.0 - dotnet-10-LICENSE.txt",
+      "path": "Licenses/System.Diagnostics.EventLog/10.0.0/dotnet-10-LICENSE.txt",
+      "sha256": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Drawing.Common 9.0.1 - LICENSE.TXT",
+      "path": "Licenses/System.Drawing.Common/9.0.1/LICENSE.TXT",
+      "sha256": "a89886665765362eb77e0f8e26602c924520041d1711b2eedc136434fe4d01ab",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Drawing.Common 9.0.1 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/System.Drawing.Common/9.0.1/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "2ffe89f325685881e9fb3a64451632abe784db07a193a2633b241ea8d85e7a85",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Numerics.Tensors 9.0.0 - LICENSE.TXT",
+      "path": "Licenses/System.Numerics.Tensors/9.0.0/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Numerics.Tensors 9.0.0 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/System.Numerics.Tensors/9.0.0/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Reflection.Metadata 9.0.1 - LICENSE.TXT",
+      "path": "Licenses/System.Reflection.Metadata/9.0.1/LICENSE.TXT",
+      "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.Reflection.Metadata 9.0.1 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/System.Reflection.Metadata/9.0.1/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.ServiceProcess.ServiceController 10.0.0 - THIRD-PARTY-NOTICES.TXT",
+      "path": "Licenses/System.ServiceProcess.ServiceController/10.0.0/THIRD-PARTY-NOTICES.TXT",
+      "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+      "kind": "third-party"
+    },
+    {
+      "title": "System.ServiceProcess.ServiceController 10.0.0 - dotnet-10-LICENSE.txt",
+      "path": "Licenses/System.ServiceProcess.ServiceController/10.0.0/dotnet-10-LICENSE.txt",
+      "sha256": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310",
+      "kind": "third-party"
+    },
+    {
+      "title": "Inno Setup - License",
+      "path": "Licenses/Upstream/Inno-Setup-LICENSE.txt",
+      "sha256": "2e5346868c2a18434489824e11d65c3031620f792fefc415d05f19cd441abf5c",
+      "kind": "installer"
+    },
+    {
+      "title": "Upstream document sources",
+      "path": "Licenses/Upstream/README.md",
+      "sha256": "86ee27cd1e661fd819bd19e503d3d82a961c521c99060c098e773716231f6b30",
+      "kind": "provenance"
+    },
+    {
+      "title": "Third-party licenses and notices - Index",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "f3111cc8add39127686f40aa555164b31aa4fdc9282b93e27ebc4fbe0665437d",
+      "kind": "index"
+    },
+    {
+      "title": "Distribution terms",
+      "path": "DISTRIBUTION_TERMS.txt",
+      "sha256": "51ef79acf554c3f5b05bb61461ee522cf2becaeecd57c05c5e92bcdebac001e7",
+      "kind": "distribution"
+    }
+  ],
+  "packages": [
+    {
+      "id": "CommunityToolkit.Common",
+      "version": "8.2.1",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/CommunityToolkit/dotnet",
+      "sourceCommit": "2258fd310359fb7434d2040b34f04366efbacbf8",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/CommunityToolkit.Common/8.2.1/License.md"
+      ]
+    },
+    {
+      "id": "CommunityToolkit.WinUI.Controls.SettingsControls",
+      "version": "8.2.250402",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/CommunityToolkit/Windows",
+      "sourceCommit": "6d537b47e243a8193e36258a5319d4ec7ea3197c",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/CommunityToolkit.WinUI.Controls.SettingsControls/8.2.250402/License.md"
+      ]
+    },
+    {
+      "id": "CommunityToolkit.WinUI.Extensions",
+      "version": "8.2.250402",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/CommunityToolkit/Windows",
+      "sourceCommit": "6d537b47e243a8193e36258a5319d4ec7ea3197c",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/CommunityToolkit.WinUI.Extensions/8.2.250402/License.md"
+      ]
+    },
+    {
+      "id": "CommunityToolkit.WinUI.Helpers",
+      "version": "8.2.250402",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/CommunityToolkit/Windows",
+      "sourceCommit": "6d537b47e243a8193e36258a5319d4ec7ea3197c",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/CommunityToolkit.WinUI.Helpers/8.2.250402/License.md"
+      ]
+    },
+    {
+      "id": "CommunityToolkit.WinUI.Triggers",
+      "version": "8.2.250402",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/CommunityToolkit/Windows",
+      "sourceCommit": "6d537b47e243a8193e36258a5319d4ec7ea3197c",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/CommunityToolkit.WinUI.Triggers/8.2.250402/License.md"
+      ]
+    },
+    {
+      "id": "H.GeneratedIcons.System.Drawing",
+      "version": "2.3.2",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/HavenDV/H.NotifyIcon",
+      "sourceCommit": "6b97277d084f68bcf60f08fcd769503e8e703bfa",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/H.GeneratedIcons.System.Drawing/2.3.2/H.NotifyIcon-LICENSE.md"
+      ]
+    },
+    {
+      "id": "H.NotifyIcon.WinUI",
+      "version": "2.3.2",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/HavenDV/H.NotifyIcon",
+      "sourceCommit": "6b97277d084f68bcf60f08fcd769503e8e703bfa",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/H.NotifyIcon.WinUI/2.3.2/H.NotifyIcon-LICENSE.md"
+      ]
+    },
+    {
+      "id": "H.NotifyIcon",
+      "version": "2.3.2",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/HavenDV/H.NotifyIcon",
+      "sourceCommit": "6b97277d084f68bcf60f08fcd769503e8e703bfa",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/H.NotifyIcon/2.3.2/H.NotifyIcon-LICENSE.md"
+      ]
+    },
+    {
+      "id": "Microsoft.NET.ILLink.Tasks",
+      "version": "8.0.30",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "a83db3e0eb2defb6220e15dae2f1a0462fdbf99f",
+      "developmentOnly": true,
+      "documents": [
+        "Licenses/Microsoft.NET.ILLink.Tasks/8.0.30/LICENSE.TXT",
+        "Licenses/Microsoft.NET.ILLink.Tasks/8.0.30/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "Microsoft.NETCore.App.Host.win-x64",
+      "version": "8.0.30",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "a83db3e0eb2defb6220e15dae2f1a0462fdbf99f",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.NETCore.App.Host.win-x64/8.0.30/LICENSE.TXT",
+        "Licenses/Microsoft.NETCore.App.Host.win-x64/8.0.30/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "Microsoft.NETCore.App.Ref",
+      "version": "8.0.30",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "a83db3e0eb2defb6220e15dae2f1a0462fdbf99f",
+      "developmentOnly": true,
+      "documents": [
+        "Licenses/Microsoft.NETCore.App.Ref/8.0.30/LICENSE.TXT",
+        "Licenses/Microsoft.NETCore.App.Ref/8.0.30/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "Microsoft.NETCore.App.Runtime.win-x64",
+      "version": "8.0.30",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "a83db3e0eb2defb6220e15dae2f1a0462fdbf99f",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.NETCore.App.Runtime.win-x64/8.0.30/LICENSE.TXT",
+        "Licenses/Microsoft.NETCore.App.Runtime.win-x64/8.0.30/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "Microsoft.Web.WebView2",
+      "version": "1.0.3719.77",
+      "license": "LICENSE.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.Web.WebView2/1.0.3719.77/LICENSE.txt",
+        "Licenses/Microsoft.Web.WebView2/1.0.3719.77/NOTICE.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.Win32.SystemEvents",
+      "version": "9.0.1",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "c8acea22626efab11c13778c028975acdc34678f",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.Win32.SystemEvents/9.0.1/LICENSE.TXT",
+        "Licenses/Microsoft.Win32.SystemEvents/9.0.1/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "Microsoft.Windows.AI.MachineLearning",
+      "version": "2.1.74",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.Windows.AI.MachineLearning/2.1.74/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.Windows.SDK.BuildTools.MSIX",
+      "version": "1.7.251221100",
+      "license": "sdk_license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "3d99c4ab878d466b1742f96929ec6ccc46e6530b",
+      "developmentOnly": true,
+      "documents": [
+        "Licenses/Microsoft.Windows.SDK.BuildTools.MSIX/1.7.251221100/NOTICE.txt",
+        "Licenses/Microsoft.Windows.SDK.BuildTools.MSIX/1.7.251221100/sdk_license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.Windows.SDK.BuildTools",
+      "version": "10.0.26100.4654",
+      "license": "",
+      "licenseUrl": "https://aka.ms/WinSDKLicenseURL",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": true,
+      "documents": []
+    },
+    {
+      "id": "Microsoft.Windows.SDK.NET.Ref",
+      "version": "10.0.19041.57",
+      "license": "",
+      "licenseUrl": "https://aka.ms/WinSDKLicenseURL",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": true,
+      "documents": []
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.AI",
+      "version": "2.5.5",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.AI/2.5.5/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.Base",
+      "version": "2.0.4",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.Base/2.0.4/license.txt",
+        "Licenses/Microsoft.WindowsAppSDK.Base/2.0.4/NOTICE.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.DWrite",
+      "version": "2.1.0",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.DWrite/2.1.0/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.Foundation",
+      "version": "2.3.12",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.Foundation/2.3.12/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.InteractiveExperiences",
+      "version": "2.1.9",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.InteractiveExperiences/2.1.9/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.ML",
+      "version": "2.1.94",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "https://github.com/microsoft/windowsml",
+      "sourceCommit": "0cc53295b396ea9c054b717a6cfbcee10e4bc40f",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.ML/2.1.94/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.Runtime",
+      "version": "2.5.1",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.Runtime/2.5.1/license.txt",
+        "Licenses/Microsoft.WindowsAppSDK.Runtime/2.5.1/NOTICE.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.Search",
+      "version": "2.5.5",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.Search/2.5.5/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.Widgets",
+      "version": "2.0.5",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.Widgets/2.0.5/license.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK.WinUI",
+      "version": "2.3.9",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK.WinUI/2.3.9/license.txt",
+        "Licenses/Microsoft.WindowsAppSDK.WinUI/2.3.9/NOTICE.txt"
+      ]
+    },
+    {
+      "id": "Microsoft.WindowsAppSDK",
+      "version": "2.5.1",
+      "license": "license.txt",
+      "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+      "source": "",
+      "sourceCommit": "",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/Microsoft.WindowsAppSDK/2.5.1/license.txt",
+        "Licenses/Microsoft.WindowsAppSDK/2.5.1/NOTICE.txt"
+      ]
+    },
+    {
+      "id": "System.Collections.Immutable",
+      "version": "9.0.1",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "c8acea22626efab11c13778c028975acdc34678f",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/System.Collections.Immutable/9.0.1/LICENSE.TXT",
+        "Licenses/System.Collections.Immutable/9.0.1/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "System.Diagnostics.EventLog",
+      "version": "10.0.0",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/dotnet",
+      "sourceCommit": "b0f34d51fccc69fd334253924abd8d6853fad7aa",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/System.Diagnostics.EventLog/10.0.0/THIRD-PARTY-NOTICES.TXT",
+        "Licenses/System.Diagnostics.EventLog/10.0.0/dotnet-10-LICENSE.txt"
+      ]
+    },
+    {
+      "id": "System.Drawing.Common",
+      "version": "9.0.1",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/winforms",
+      "sourceCommit": "5a82e6f3c764285d3e2c5307e46fd5cbd546c7cd",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/System.Drawing.Common/9.0.1/LICENSE.TXT",
+        "Licenses/System.Drawing.Common/9.0.1/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "System.Numerics.Tensors",
+      "version": "9.0.0",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/System.Numerics.Tensors/9.0.0/LICENSE.TXT",
+        "Licenses/System.Numerics.Tensors/9.0.0/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "System.Reflection.Metadata",
+      "version": "9.0.1",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/runtime",
+      "sourceCommit": "c8acea22626efab11c13778c028975acdc34678f",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/System.Reflection.Metadata/9.0.1/LICENSE.TXT",
+        "Licenses/System.Reflection.Metadata/9.0.1/THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "id": "System.ServiceProcess.ServiceController",
+      "version": "10.0.0",
+      "license": "MIT",
+      "licenseUrl": "https://licenses.nuget.org/MIT",
+      "source": "https://github.com/dotnet/dotnet",
+      "sourceCommit": "b0f34d51fccc69fd334253924abd8d6853fad7aa",
+      "developmentOnly": false,
+      "documents": [
+        "Licenses/System.ServiceProcess.ServiceController/10.0.0/THIRD-PARTY-NOTICES.TXT",
+        "Licenses/System.ServiceProcess.ServiceController/10.0.0/dotnet-10-LICENSE.txt"
+      ]
+    }
+  ]
+}

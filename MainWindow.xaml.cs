@@ -50,6 +50,7 @@ public sealed partial class MainWindow : Window
         CrashLog.Write("MainWindow ctor start");
         InitializeComponent();
         Title = Localizer.GetString("WindowTitle.Title");
+        AboutVersionText.Text = Localizer.Format("Legal.Version", typeof(App).Assembly.GetName().Version?.ToString(3) ?? "1.3.2");
         CrashLog.Write("MainWindow InitializeComponent done");
         RootLayout.FlowDirection = Localizer.IsRightToLeft
             ? FlowDirection.RightToLeft

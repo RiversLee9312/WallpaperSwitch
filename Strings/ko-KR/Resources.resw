@@ -517,4 +517,15 @@
     <value>배경화면 전환</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>처리 중…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>정보</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>라이선스 및 고지</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>프로젝트 MIT 라이선스 및 타사 원본 약관.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>보기</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>라이선스 및 고지</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>닫기</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>문서</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>이전</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>다음</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>소스 코드 및 릴리스</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>버전 {0}</value></data>
 </root>

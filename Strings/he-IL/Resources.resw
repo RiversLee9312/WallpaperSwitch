@@ -517,4 +517,15 @@
     <value>מחליף טפטים</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>הפעולה מתבצעת…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>אודות</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>רישיונות והודעות</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>רישיון MIT של הפרויקט והתנאים המקוריים של צדדים שלישיים.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>הצגה</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>רישיונות והודעות</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>סגירה</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>מסמך</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>הקודם</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>הבא</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>קוד מקור וגרסאות</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>גרסה {0}</value></data>
 </root>

@@ -517,4 +517,15 @@
     <value>壁紙切り替え</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>処理中…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>バージョン情報</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>ライセンスと通知</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>プロジェクトの MIT ライセンスと第三者の原文の利用条件。</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>表示</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>ライセンスと通知</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>閉じる</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>文書</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>前へ</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>次へ</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>ソースコードとリリース</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>バージョン {0}</value></data>
 </root>

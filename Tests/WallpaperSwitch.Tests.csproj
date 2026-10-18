@@ -16,9 +16,13 @@
     <Compile Include="..\Services\SettingsFile.cs" Link="SettingsFile.cs" />
     <Compile Include="..\Services\AsyncOperations.cs" Link="AsyncOperations.cs" />
     <Compile Include="..\Services\AsyncRetry.cs" Link="AsyncRetry.cs" />
+    <Compile Include="..\Services\LegalDocuments.cs" Link="LegalDocuments.cs" />
     <Compile Include="..\Localization\LanguageCatalog.cs" Link="Localization\LanguageCatalog.cs" />
     <Content Include="..\Strings\**\Resources.resw" Link="Strings\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\StartupHost\HostText*.resx" Link="HostResources\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\MainWindow.xaml" Link="MainWindow.xaml" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\LICENSE;..\THIRD_PARTY_NOTICES.md;..\DISTRIBUTION_TERMS.txt" Link="%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\Licenses\**\*" Link="Licenses\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\docs\PRIVACY.md" Link="docs\PRIVACY.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

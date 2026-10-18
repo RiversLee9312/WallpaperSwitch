@@ -517,4 +517,15 @@
     <value>वॉलपेपर स्विच</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>प्रक्रिया जारी है…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>परिचय</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>लाइसेंस और सूचनाएँ</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>परियोजना का MIT लाइसेंस और तृतीय पक्ष की मूल शर्तें।</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>देखें</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>लाइसेंस और सूचनाएँ</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>बंद करें</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>दस्तावेज़</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>पिछला</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>अगला</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>स्रोत कोड और रिलीज़</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>संस्करण {0}</value></data>
 </root>

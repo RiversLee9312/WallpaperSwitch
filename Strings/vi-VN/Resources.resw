@@ -517,4 +517,15 @@
     <value>Chuyển hình nền</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>Đang xử lý…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>Giới thiệu</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Giấy phép và thông báo</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>Giấy phép MIT của dự án và điều khoản gốc của bên thứ ba.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Xem</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Giấy phép và thông báo</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Đóng</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Tài liệu</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Trước</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Tiếp</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Mã nguồn và bản phát hành</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Phiên bản {0}</value></data>
 </root>

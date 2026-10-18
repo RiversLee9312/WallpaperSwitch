@@ -517,4 +517,15 @@
     <value>Wallpaper Switch</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>Käsitellään…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>Tietoja</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Lisenssit ja ilmoitukset</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>Projektin MIT-lisenssi ja kolmansien osapuolten alkuperäiset ehdot.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Näytä</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Lisenssit ja ilmoitukset</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Sulje</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Asiakirja</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Edellinen</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Seuraava</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Lähdekoodi ja julkaisut</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Versio {0}</value></data>
 </root>

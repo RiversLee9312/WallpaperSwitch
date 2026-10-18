@@ -14,4 +14,4 @@ When adding or changing text:
 
 The standalone `StartupHost` helper uses standard .NET `ResourceManager` `.resx` resources in `StartupHost/HostText*.resx`. It receives the selected UI language for interactive startup changes and keeps its resources beside the protected helper; the SYSTEM service path does not read per-user settings or load dependencies from a user profile.
 
-The UI MSTest launches a published build. Set `WALLPAPERSWITCH_TEST_APP` to a published `WallpaperSwitch.exe` path when it is outside the default `artifacts/publish-1.3.1` folder. Its settings file and single-instance name are isolated to the test process, and it leaves the user's saved settings and startup service registration untouched.
+The UI MSTest launches a published build. Set `WALLPAPERSWITCH_TEST_APP` to a published `WallpaperSwitch.exe` path when it is outside the default `artifacts/publish-1.3.2` folder. Its settings file and single-instance name are isolated to the test process, and it leaves the user's saved settings and startup service registration untouched.

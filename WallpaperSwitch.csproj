@@ -20,7 +20,7 @@
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
     <PublishTrimmed>false</PublishTrimmed>
-    <Version>1.3.1</Version>
+    <Version>1.3.2</Version>
     <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
 
@@ -32,6 +32,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- These files are read from disk, not resolved through MRT resource qualifiers. -->
+    <None Update="LICENSE;THIRD_PARTY_NOTICES.md;DISTRIBUTION_TERMS.txt;docs\PRIVACY.md;Licenses\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
     <Content Include="Assets\AppIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

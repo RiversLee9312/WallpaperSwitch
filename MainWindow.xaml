@@ -394,6 +394,18 @@
                             MinWidth="200"
                             SelectionChanged="LanguageCombo_SelectionChanged"/>
                     </controls:SettingsCard>
+
+                    <TextBlock x:Uid="SectionAbout" Style="{StaticResource SectionHeaderStyle}"/>
+                    <controls:SettingsCard Header="WallpaperSwitch">
+                        <StackPanel Spacing="4">
+                            <TextBlock x:Name="AboutVersionText" AutomationProperties.AutomationId="AboutVersionText"/>
+                            <HyperlinkButton x:Uid="SourceLink" NavigateUri="https://github.com/RiversLee9312/WallpaperSwitch"/>
+                        </StackPanel>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="LegalCard">
+                        <Button x:Uid="LegalButton" x:Name="LegalNoticesButton"
+                            AutomationProperties.AutomationId="LegalNoticesButton" Click="LegalNotices_Click"/>
+                    </controls:SettingsCard>
                 </StackPanel>
             </ScrollViewer>
         </Grid>

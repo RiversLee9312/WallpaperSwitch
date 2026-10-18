@@ -1,0 +1,7 @@
+# Preserve the original bytes of legal documents, including upstream whitespace.
+# Their SHA-256 hashes are recorded in Licenses/manifest.json.
+/Licenses/** -text -whitespace
+/LICENSE -text
+/THIRD_PARTY_NOTICES.md -text
+/DISTRIBUTION_TERMS.txt -text -whitespace
+/docs/PRIVACY.md -text

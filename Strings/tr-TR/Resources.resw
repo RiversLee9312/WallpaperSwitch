@@ -517,4 +517,15 @@
     <value>Duvar Kağıdı Geçişi</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>İşleniyor…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>Hakkında</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Lisanslar ve bildirimler</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>Projenin MIT lisansı ve üçüncü tarafların özgün koşulları.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Görüntüle</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Lisanslar ve bildirimler</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Kapat</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Belge</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Önceki</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Sonraki</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Kaynak kodu ve sürümler</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Sürüm {0}</value></data>
 </root>

@@ -517,4 +517,15 @@
     <value>Hintergrundbild wechseln</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>Wird verarbeitet…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>Info</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>Lizenzen und Hinweise</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>MIT-Projektlizenz und Originalbedingungen Dritter.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>Anzeigen</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>Lizenzen und Hinweise</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>Schließen</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>Dokument</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>Zurück</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>Weiter</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>Quellcode und Veröffentlichungen</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>Version {0}</value></data>
 </root>

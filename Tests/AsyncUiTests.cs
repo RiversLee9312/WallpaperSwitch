@@ -16,7 +16,7 @@ public sealed partial class StartupUiTests
     {
         var app = Environment.GetEnvironmentVariable("WALLPAPERSWITCH_INSTALLED_APP");
         if (string.IsNullOrWhiteSpace(app)) Assert.Inconclusive("Set WALLPAPERSWITCH_INSTALLED_APP for the installed-app health check.");
-        Assert.AreEqual("1.3.1", FileVersionInfo.GetVersionInfo(app).ProductVersion?.Split('+')[0]);
+        Assert.AreEqual("1.3.2", FileVersionInfo.GetVersionInfo(app).ProductVersion?.Split('+')[0]);
         foreach (var legacyResource in new[] { "resources.pri", "App.xbf", "MainWindow.xbf" })
             Assert.IsFalse(File.Exists(Path.Combine(Path.GetDirectoryName(app)!, legacyResource)),
                 $"Upgrade left an obsolete resource that can shadow the current PRI: {legacyResource}");

@@ -517,4 +517,15 @@
     <value>日夜切换</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>正在处理…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>关于</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>许可证与声明</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>项目 MIT 许可证及第三方原始条款。</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>查看</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>许可证与声明</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>文档</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>上一页</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>下一页</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>源代码与版本发布</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>版本 {0}</value></data>
 </root>

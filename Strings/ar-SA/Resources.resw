@@ -517,4 +517,15 @@
     <value>تبديل الخلفية</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>جارٍ التنفيذ…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>حول</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>التراخيص والإشعارات</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>ترخيص MIT للمشروع والشروط الأصلية للأطراف الثالثة.</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>عرض</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>التراخيص والإشعارات</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>إغلاق</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>المستند</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>السابق</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>التالي</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>الشيفرة المصدرية والإصدارات</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>الإصدار {0}</value></data>
 </root>

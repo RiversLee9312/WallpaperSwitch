@@ -1,6 +1,20 @@
 # WallpaperSwitch
 
+[简体中文](README.zh-CN.md) · [Download installer](https://github.com/RiversLee9312/WallpaperSwitch/releases/latest) · [MIT License](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+
 A Windows desktop app that switches wallpapers and light/dark appearance across dawn, daytime, dusk, and night. It supports custom schedules or sunrise/sunset times calculated from your location.
+
+## Download and install
+
+Download `WallpaperSwitch-Setup-<version>-win-x64.exe` from the
+[latest GitHub Release](https://github.com/RiversLee9312/WallpaperSwitch/releases/latest).
+The installer bundles .NET and Windows App SDK runtime files. Windows 10 version
+1809 or later, x64, is required. Install in the default per-user location; enable
+high-priority startup manually in the app if desired. Existing preferences are
+preserved during upgrades. Releases include a `SHA256SUMS.txt` checksum file.
+
+The app's **About** section shows its version, the source repository, and offline
+licenses/notices, including the privacy and local-data document.
 
 ## Features
 
@@ -13,6 +27,22 @@ A Windows desktop app that switches wallpapers and light/dark appearance across 
 - Asynchronous settings, wallpaper/theme changes, location refresh and image previews, with progress rings and duplicate-action guards.
 - A single instance per Windows session. Normal launches restore the running window; background startup leaves it in the background.
 - Tray registration retries while Explorer is starting and recovers when the taskbar is recreated.
+- Offline legal-document viewer with asynchronous loading and pagination for long notices.
+
+## License, privacy, and contribution
+
+Original project work is released under the **MIT License**, allowing use,
+modification, and redistribution with the copyright and permission notice kept.
+Bundled dependencies retain their original terms, including Microsoft binary
+redistribution terms. See [LICENSE](LICENSE), [licensing details](docs/LICENSES.md),
+[third-party notices](THIRD_PARTY_NOTICES.md), and
+[distribution terms](DISTRIBUTION_TERMS.txt).
+
+Read [privacy and local data](docs/PRIVACY.md) before sharing diagnostics.
+Changes are listed in [CHANGELOG.md](CHANGELOG.md). Bug reports and pull requests
+are welcome through [GitHub Issues](https://github.com/RiversLee9312/WallpaperSwitch/issues).
+For UI changes, keep all 24 `.resw` files aligned and use MSTest for automated
+coverage. Keep generated output, personal settings, and logs out of commits.
 
 ## Technology
 
@@ -45,7 +75,7 @@ To publish the app and service helper, run the unit tests, and build the install
 .\tools\Build-Release.ps1
 ```
 
-The script accepts `-InnoCompiler` when Inno Setup is installed elsewhere, and `-NuGetSource` for an optional package source. It writes the release app to `artifacts/publish-1.3.1/` and the installer to `artifacts/RiyeQiehuan-Setup.exe`. Published builds bundle the Windows App SDK runtime.
+The script accepts `-InnoCompiler` when Inno Setup is installed elsewhere, and `-NuGetSource` for an optional package source. It writes the release app to `artifacts/publish-1.3.2/` and the installer to `artifacts/RiyeQiehuan-Setup.exe`. Published builds bundle the Windows App SDK runtime.
 
 ## Tests
 
@@ -59,7 +89,7 @@ dotnet build .\Tests\WallpaperSwitch.Tests.csproj -c Release
 For desktop UI tests, publish the app first. The UI runner uses isolated settings and an independent instance name, so an installed instance can keep running. `WALLPAPERSWITCH_TEST_APP` can point to the executable being tested. Service integration tests require `WALLPAPERSWITCH_SERVICE_TEST=1` and Windows administrator approval; they temporarily register a service and remove it afterwards. Run those only on a machine without an existing WallpaperSwitch startup service registration.
 
 ```powershell
-$env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.1\WallpaperSwitch.exe).Path
+$env:WALLPAPERSWITCH_TEST_APP = (Resolve-Path .\artifacts\publish-1.3.2\WallpaperSwitch.exe).Path
 .\Tests\bin\x64\Release\net8.0-windows\WallpaperSwitch.Tests.exe --filter 'TestCategory=UI&TestCategory!=Installed' --report-trx
 ```
 

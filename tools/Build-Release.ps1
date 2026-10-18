@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $repository = Split-Path $PSScriptRoot -Parent
-$publish = Join-Path $repository 'artifacts\publish-1.3.1'
+$publish = Join-Path $repository 'artifacts\publish-1.3.2'
 $restore = @('-p:NuGetAudit=false')
 if ($NuGetSource) {
     if (Test-Path -LiteralPath $NuGetSource) { $NuGetSource = (Resolve-Path -LiteralPath $NuGetSource).Path }
@@ -15,10 +15,11 @@ Push-Location $repository
 try {
     & dotnet restore WallpaperSwitch.csproj -r win-x64 -p:SelfContained=true @restore
     if ($LASTEXITCODE) { throw 'Application restore failed.' }
-    & dotnet publish WallpaperSwitch.csproj --no-restore -c Release -p:Platform=x64 -r win-x64 --self-contained true -o $publish
-    if ($LASTEXITCODE) { throw 'Application publish failed.' }
     & dotnet restore StartupHost\WallpaperSwitch.StartupHost.csproj @restore
     if ($LASTEXITCODE) { throw 'Startup service restore failed.' }
+    & (Join-Path $PSScriptRoot 'Update-ThirdPartyNotices.ps1')
+    & dotnet publish WallpaperSwitch.csproj --no-restore -c Release -p:Platform=x64 -r win-x64 --self-contained true -o $publish
+    if ($LASTEXITCODE) { throw 'Application publish failed.' }
     & dotnet publish StartupHost\WallpaperSwitch.StartupHost.csproj --no-restore -c Release -o (Join-Path $publish 'StartupService') -p:DebugType=None -p:DebugSymbols=false
     if ($LASTEXITCODE) { throw 'Startup service publish failed.' }
     & dotnet restore Tests\WallpaperSwitch.Tests.csproj @restore

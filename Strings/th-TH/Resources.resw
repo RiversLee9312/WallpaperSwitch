@@ -517,4 +517,15 @@
     <value>สลับวอลเปเปอร์</value>
   </data>
   <data name="ActivityWorking.Text" xml:space="preserve"><value>กำลังดำเนินการ…</value></data>
+  <data name="SectionAbout.Text" xml:space="preserve"><value>เกี่ยวกับ</value></data>
+  <data name="LegalCard.Header" xml:space="preserve"><value>ใบอนุญาตและประกาศ</value></data>
+  <data name="LegalCard.Description" xml:space="preserve"><value>ใบอนุญาต MIT ของโครงการและข้อกำหนดต้นฉบับของบุคคลที่สาม</value></data>
+  <data name="LegalButton.Content" xml:space="preserve"><value>ดู</value></data>
+  <data name="Legal.DialogTitle" xml:space="preserve"><value>ใบอนุญาตและประกาศ</value></data>
+  <data name="Legal.Close" xml:space="preserve"><value>ปิด</value></data>
+  <data name="Legal.Document" xml:space="preserve"><value>เอกสาร</value></data>
+  <data name="Legal.Previous" xml:space="preserve"><value>ก่อนหน้า</value></data>
+  <data name="Legal.Next" xml:space="preserve"><value>ถัดไป</value></data>
+  <data name="SourceLink.Content" xml:space="preserve"><value>ซอร์สโค้ดและรุ่นที่เผยแพร่</value></data>
+  <data name="Legal.Version" xml:space="preserve"><value>เวอร์ชัน {0}</value></data>
 </root>
