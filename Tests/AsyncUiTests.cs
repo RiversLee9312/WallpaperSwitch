@@ -9,7 +9,7 @@ namespace WallpaperSwitch.Tests;
 
 public sealed partial class StartupUiTests
 {
-    [TestMethod]
+    [STATestMethod]
     [TestCategory("UI")]
     [TestCategory("Installed")]
     public void InstalledAppHasOneRunningInstanceAndARegisteredTrayIcon()
@@ -20,17 +20,28 @@ public sealed partial class StartupUiTests
         foreach (var legacyResource in new[] { "resources.pri", "App.xbf", "MainWindow.xbf" })
             Assert.IsFalse(File.Exists(Path.Combine(Path.GetDirectoryName(app)!, legacyResource)),
                 $"Upgrade left an obsolete resource that can shadow the current PRI: {legacyResource}");
-        int RunningCount()
+        int[] RunningIds()
         {
             var processes = Process.GetProcessesByName("WallpaperSwitch");
-            try { return processes.Count(process => string.Equals(process.MainModule?.FileName, app, StringComparison.OrdinalIgnoreCase)); }
+            try { return processes.Where(process => string.Equals(process.MainModule?.FileName, app, StringComparison.OrdinalIgnoreCase)).Select(process => process.Id).ToArray(); }
             finally { foreach (var process in processes) process.Dispose(); }
         }
-        WaitUntil(() => RunningCount() == 1 && TrayIsPresent(app));
+        WaitUntil(() => RunningIds().Length == 1 && TrayIsPresent(app));
         using var duplicate = Process.Start(new ProcessStartInfo(app, "--minimized") { UseShellExecute = false })!;
         Assert.IsTrue(duplicate.WaitForExit(10000));
         Assert.AreEqual(0, duplicate.ExitCode);
-        WaitUntil(() => RunningCount() == 1 && TrayIsPresent(app));
+        WaitUntil(() => RunningIds().Length == 1 && TrayIsPresent(app));
+        using var foreground = Process.Start(new ProcessStartInfo(app) { UseShellExecute = false })!;
+        Assert.IsTrue(foreground.WaitForExit(10000));
+        Assert.AreEqual(0, foreground.ExitCode);
+        var installedProcessId = RunningIds().Single();
+        var window = WaitFor(() => AutomationElement.RootElement.FindFirst(TreeScope.Children,
+            new AndCondition(new PropertyCondition(AutomationElement.ProcessIdProperty, installedProcessId),
+                new PropertyCondition(AutomationElement.IsWindowPatternAvailableProperty, true))));
+        _ = Find(window, "LanguageCombo");
+        _ = Find(window, "PreviewToggleButton");
+        Assert.AreEqual(WindowVisualState.Normal, ((WindowPattern)window.GetCurrentPattern(WindowPattern.Pattern)).Current.WindowVisualState);
+        Assert.AreEqual(1, RunningIds().Length);
     }
 
     [StructLayout(LayoutKind.Sequential)]
